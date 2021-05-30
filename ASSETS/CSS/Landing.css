@@ -1,0 +1,990 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.productAd,
+.productAd2,
+.productAd3 {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+.productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+  width: 32%;
+  height: 25%;
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 90;
+}
+.productAd-suggestion strong,
+.productAd2-suggestion strong,
+.productAd3-suggestion strong {
+  font-size: 2.8rem;
+}
+.productAd-suggestion-links,
+.productAd2-suggestion-links,
+.productAd3-suggestion-links {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productAd-suggestion-links a,
+.productAd2-suggestion-links a,
+.productAd3-suggestion-links a {
+  display: inline-block;
+  width: 48%;
+  height: 63%;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  font-size: 1.3rem !important;
+  text-align: center;
+  line-height: 75px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productAd-suggestion-links a:first-child,
+.productAd2-suggestion-links a:first-child,
+.productAd3-suggestion-links a:first-child {
+  background: #989699;
+  color: white;
+}
+.productAd-suggestion-links a:first-child:hover,
+.productAd2-suggestion-links a:first-child:hover,
+.productAd3-suggestion-links a:first-child:hover {
+  background: #313639;
+}
+.productAd-suggestion-links a:last-child,
+.productAd2-suggestion-links a:last-child,
+.productAd3-suggestion-links a:last-child {
+  background: #009e89;
+  color: white;
+}
+.productAd-suggestion-links a:last-child:hover,
+.productAd2-suggestion-links a:last-child:hover,
+.productAd3-suggestion-links a:last-child:hover {
+  background: #d8144f;
+}
+.productAd figure img,
+.productAd2 figure img,
+.productAd3 figure img {
+  pointer-events: none;
+  display: inline-block;
+  width: 100%;
+  height: 65%;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  transform: scale(1.5);
+}
+
+.backToTop {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  border: 2px solid #313639;
+  transition: 0.3s;
+}
+.backToTop img {
+  width: 100%;
+  height: 100%;
+}
+.backToTop.active {
+  opacity: 0.5;
+  visibility: visible;
+  z-index: 50;
+}
+
+.productAd2,
+.productAd3 {
+  background: black;
+}
+.productAd2-suggestion,
+.productAd3-suggestion {
+  top: 25%;
+}
+.productAd2 figure img,
+.productAd3 figure img {
+  top: 8%;
+  transform: scale(1.9);
+  pointer-events: none;
+}
+
+.productAd3 figure img {
+  top: 35%;
+  transform: scale(1.3);
+}
+
+.helper {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  padding: 50px;
+}
+.helper strong {
+  font-size: 2.8rem;
+  font-weight: 500;
+  display: inline-block;
+  padding: 30px 0 50px 40px;
+}
+.helper-option {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.helper-option-content, .helper-option-content2, .helper-option-content3 {
+  width: 28%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.02), 0 0 3.6px rgba(0, 0, 0, 0.03), 0 0 6.8px rgba(0, 0, 0, 0.04), 0 0 12.1px rgba(0, 0, 0, 0.04), 0 0 22.6px rgba(0, 0, 0, 0.05), 0 0 54px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.helper-option-content:hover, .helper-option-content2:hover, .helper-option-content3:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.02), 0 0 8px rgba(0, 0, 0, 0.03), 0 0 10px rgba(0, 0, 0, 0.04), 0 0 30px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.2), 0 0 60px rgba(0, 0, 0, 0.2);
+}
+.helper-option-content::before, .helper-option-content2::before, .helper-option-content3::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 100%;
+  background: #0da20d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.helper-option-content span, .helper-option-content2 span, .helper-option-content3 span {
+  display: inline-block;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: #02a49a;
+  font-weight: 500;
+}
+.helper-option-content img, .helper-option-content2 img, .helper-option-content3 img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 70%;
+  object-fit: contain;
+}
+.helper-option-content2::before {
+  background: #00a19b;
+}
+.helper-option-content2 img {
+  width: 60%;
+  height: 60%;
+}
+.helper-option-content3::before {
+  background: #0096d8;
+}
+.helper-option-content3 img {
+  width: 45%;
+  height: 45%;
+}
+
+.moreinfo {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  padding: 50px;
+}
+.moreinfo strong {
+  font-size: 2.8rem;
+  font-weight: 500;
+  display: inline-block;
+  padding: 30px 0 50px 40px;
+}
+.moreinfo-box {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.moreinfo-box-details, .moreinfo-box-details2 {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-shadow: 0 0 1.5px rgba(0, 0, 0, 0.02), 0 0 3.6px rgba(0, 0, 0, 0.03), 0 0 6.8px rgba(0, 0, 0, 0.04), 0 0 12.1px rgba(0, 0, 0, 0.04), 0 0 22.6px rgba(0, 0, 0, 0.05), 0 0 54px rgba(0, 0, 0, 0.07);
+}
+.moreinfo-box-details:hover, .moreinfo-box-details2:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.02), 0 0 8px rgba(0, 0, 0, 0.03), 0 0 10px rgba(0, 0, 0, 0.04), 0 0 25px rgba(0, 0, 0, 0.2), 0 0 25px rgba(0, 0, 0, 0.2), 0 0 55px rgba(0, 0, 0, 0.2);
+}
+.moreinfo-box-details p, .moreinfo-box-details2 p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+.moreinfo-box-details p:first-child, .moreinfo-box-details2 p:first-child {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.moreinfo-box-details a, .moreinfo-box-details2 a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  color: #02a49a;
+  font-size: 1.2rem;
+}
+.moreinfo-box-details a:hover, .moreinfo-box-details2 a:hover {
+  color: #e20d66;
+  text-decoration: underline;
+}
+.moreinfo-box-details figure, .moreinfo-box-details2 figure {
+  width: 60%;
+  height: 60%;
+  overflow: hidden;
+}
+.moreinfo-box-details figure img, .moreinfo-box-details2 figure img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
+  object-fit: contain;
+}
+.moreinfo-box-details2 figure {
+  position: relative;
+}
+.moreinfo-box-details2 figure img {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.invitation {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: white;
+}
+.invitation figure {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.invitation figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+.invitation-suggestion {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.invitation-suggestion p {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  font-weight: 400;
+}
+.invitation-suggestion p:first-child strong {
+  font-size: 4.5rem;
+  letter-spacing: 1.3px;
+}
+.invitation-suggestion-link {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 40px;
+}
+.invitation-suggestion-link a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  line-height: 65px;
+  border-radius: 10px;
+}
+.invitation-suggestion-link a:first-child {
+  color: #02a49a;
+  border: 1px solid white;
+}
+.invitation-suggestion-link a:first-child:hover {
+  color: #005dff;
+  border: 1px solid #005dff;
+}
+.invitation-suggestion-link a:last-child {
+  color: #4323eb;
+  margin-left: 20px;
+  border: 1px solid white;
+}
+.invitation-suggestion-link a:last-child:hover {
+  color: #e20d66;
+  border: 1px solid #e20d66;
+}
+
+/**
+* Responsive: Breakpoint = 1920px
+*/
+@media screen and (min-width: 1920px) {
+  .productAd,
+.productAd2,
+.productAd3 {
+    height: 1200px;
+  }
+  .productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+    width: 30%;
+    height: 25%;
+    font-size: 20px;
+  }
+  .productAd-suggestion strong,
+.productAd2-suggestion strong,
+.productAd3-suggestion strong {
+    font-size: 4rem;
+  }
+  .productAd-suggestion-links,
+.productAd2-suggestion-links,
+.productAd3-suggestion-links {
+    font-size: 20px;
+  }
+  .productAd-suggestion-links a,
+.productAd2-suggestion-links a,
+.productAd3-suggestion-links a {
+    font-size: 2rem !important;
+  }
+  .productAd-suggestion-links a span,
+.productAd2-suggestion-links a span,
+.productAd3-suggestion-links a span {
+    font-size: 1.9rem !important;
+  }
+
+  .productAd figure img {
+    transform: scale(1.5);
+  }
+
+  .helper {
+    width: 100%;
+    height: 900px;
+    font-size: 20px;
+  }
+  .helper strong {
+    padding: 50px 0 50px 50px;
+    font-size: 4.5rem;
+  }
+  .helper-option {
+    font-size: 20px;
+  }
+  .helper-option-content, .helper-option-content2, .helper-option-content3 {
+    width: 30%;
+  }
+  .helper-option-content span, .helper-option-content2 span, .helper-option-content3 span {
+    margin-top: 80px;
+    font-size: 4em;
+  }
+
+  .moreinfo {
+    width: 100%;
+    height: 1100px;
+    font-size: 20px;
+  }
+  .moreinfo strong {
+    font-size: 4.5em;
+  }
+  .moreinfo-box {
+    height: 80%;
+  }
+  .moreinfo-box-details, .moreinfo-box-details2 {
+    width: 48%;
+    height: 100%;
+    font-size: 20px;
+  }
+  .moreinfo-box-details p, .moreinfo-box-details2 p {
+    font-size: 2rem;
+  }
+  .moreinfo-box-details p:first-child, .moreinfo-box-details2 p:first-child {
+    font-size: 3rem;
+  }
+  .moreinfo-box-details a, .moreinfo-box-details2 a {
+    font-size: 2.3rem;
+  }
+  .moreinfo-box-details p:first-child {
+    font-size: 3rem;
+  }
+  .moreinfo-box-details2 figure {
+    width: 65%;
+    height: 60%;
+  }
+
+  .invitation {
+    height: 1200px;
+    top: 0;
+  }
+  .invitation figure img {
+    width: 60%;
+    height: 80%;
+  }
+  .invitation-suggestion {
+    font-size: 20px;
+  }
+  .invitation-suggestion p {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .invitation-suggestion p strong {
+    font-size: 2em !important;
+  }
+  .invitation-suggestion-link {
+    font-size: 20px;
+    height: 100px;
+  }
+  .invitation-suggestion-link a {
+    width: 100%;
+    height: 100%;
+    font-size: 2.3rem;
+    line-height: 250%;
+  }
+}
+/**
+* Responsive: Breakpoint = 1100px
+*/
+@media screen and (max-width: 1100px) {
+  .productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+    width: 50%;
+    height: 25%;
+  }
+
+  .helper {
+    width: 100%;
+    height: 550px;
+  }
+
+  .moreinfo-box-details, .moreinfo-box-details2 {
+    width: 48%;
+    height: 100%;
+  }
+  .moreinfo-box-details p:first-child {
+    font-size: 1.8rem;
+  }
+  .moreinfo-box-details2 figure {
+    width: 65%;
+    height: 60%;
+  }
+
+  .invitation-suggestion p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .invitation-suggestion-link a {
+    width: 100%;
+    height: 100%;
+  }
+}
+/**
+* Responsive: Breakpoint = 850px
+*/
+@media screen and (max-width: 850px) {
+  .productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+    width: 50%;
+    height: 25%;
+  }
+
+  .helper {
+    width: 100%;
+    height: 550px;
+  }
+
+  .moreinfo-box-details, .moreinfo-box-details2 {
+    width: 48%;
+    height: 100%;
+  }
+  .moreinfo-box-details p:first-child {
+    font-size: 1.8rem;
+  }
+  .moreinfo-box-details2 figure {
+    width: 65%;
+    height: 60%;
+  }
+
+  .invitation-suggestion p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .invitation-suggestion-link a {
+    width: 100%;
+    height: 100%;
+  }
+}
+/**
+* Responsive: Breakpoint = 800px
+*/
+@media screen and (max-width: 800px) {
+  .productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+    top: 27%;
+    font-size: 16px;
+    width: 70%;
+    height: 25%;
+  }
+  .productAd-suggestion h2,
+.productAd2-suggestion h2,
+.productAd3-suggestion h2 {
+    font-size: 1.5rem;
+  }
+  .productAd-suggestion-links a,
+.productAd2-suggestion-links a,
+.productAd3-suggestion-links a {
+    height: 55%;
+  }
+  .productAd-suggestion-links a:first-child span,
+.productAd2-suggestion-links a:first-child span,
+.productAd3-suggestion-links a:first-child span {
+    font-size: 1em;
+  }
+  .productAd-suggestion-links a:first-child img,
+.productAd2-suggestion-links a:first-child img,
+.productAd3-suggestion-links a:first-child img {
+    width: 24px;
+    height: 24px;
+  }
+  .productAd-suggestion-links a:last-child,
+.productAd2-suggestion-links a:last-child,
+.productAd3-suggestion-links a:last-child {
+    font-size: 1.2em !important;
+  }
+
+  .productAd figure img {
+    top: 30%;
+    transform: scale(1.2);
+  }
+
+  .helper {
+    width: 100%;
+    height: 800px;
+    padding: 30px 20px;
+  }
+  .helper strong {
+    padding: 30px 0 30px 50px;
+  }
+  .helper-option {
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+  }
+  .helper-option-content, .helper-option-content2, .helper-option-content3 {
+    width: 40%;
+    height: 47%;
+  }
+  .helper-option-content span, .helper-option-content2 span, .helper-option-content3 span {
+    font-size: 2rem;
+  }
+  .helper-option-content img, .helper-option-content2 img, .helper-option-content3 img {
+    height: 50%;
+  }
+
+  .moreinfo {
+    width: 100%;
+    height: 500px;
+    padding: 30px 10px;
+  }
+  .moreinfo strong {
+    padding: 40px 0;
+  }
+  .moreinfo-box {
+    font-size: 16px;
+  }
+  .moreinfo-box-details, .moreinfo-box-details2 {
+    width: 48%;
+    height: 100%;
+  }
+  .moreinfo-box-details p:first-child, .moreinfo-box-details2 p:first-child {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .moreinfo-box-details p:nth-child(2), .moreinfo-box-details2 p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  .moreinfo-box-details figure, .moreinfo-box-details2 figure {
+    width: 50%;
+    height: 50%;
+  }
+
+  .invitation {
+    width: 100%;
+    height: 550px;
+    padding: 50px 20px;
+  }
+  .invitation-suggestion {
+    font-size: 16px;
+  }
+  .invitation-suggestion p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .invitation-suggestion p:first-child strong {
+    font-size: 3rem;
+  }
+  .invitation-suggestion-link {
+    margin-top: 20px;
+  }
+  .invitation-suggestion-link a {
+    width: 45%;
+    height: 62%;
+    font-size: 1.2em;
+    line-height: 200%;
+  }
+}
+/**
+* Responsive: Breakpoint = 600px
+*/
+@media screen and (max-width: 600px) {
+  .productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+    font-size: 16px;
+    width: 70%;
+    height: 25%;
+  }
+  .productAd-suggestion h2,
+.productAd2-suggestion h2,
+.productAd3-suggestion h2 {
+    font-size: 1.2rem;
+  }
+  .productAd-suggestion-links a,
+.productAd2-suggestion-links a,
+.productAd3-suggestion-links a {
+    height: 55%;
+  }
+  .productAd-suggestion-links a:first-child span,
+.productAd2-suggestion-links a:first-child span,
+.productAd3-suggestion-links a:first-child span {
+    font-size: 0.8em;
+  }
+  .productAd-suggestion-links a:first-child img,
+.productAd2-suggestion-links a:first-child img,
+.productAd3-suggestion-links a:first-child img {
+    width: 24px;
+    height: 24px;
+  }
+  .productAd-suggestion-links a:last-child,
+.productAd2-suggestion-links a:last-child,
+.productAd3-suggestion-links a:last-child {
+    font-size: 1em !important;
+  }
+
+  .productAd figure img {
+    top: 23%;
+    transform: scale(1);
+  }
+
+  .helper {
+    width: 100%;
+    height: 800px;
+    padding: 30px 20px;
+  }
+  .helper strong {
+    padding: 30px 0;
+  }
+  .helper-option {
+    justify-content: space-around;
+    width: 100%;
+    height: 85%;
+  }
+  .helper-option-content, .helper-option-content2, .helper-option-content3 {
+    width: 40%;
+    height: 43%;
+  }
+  .helper-option-content span, .helper-option-content2 span, .helper-option-content3 span {
+    font-size: 2rem;
+  }
+  .helper-option-content img, .helper-option-content2 img, .helper-option-content3 img {
+    height: 50%;
+  }
+
+  .moreinfo {
+    width: 100%;
+    height: 550px;
+    padding: 30px 10px;
+    font-size: 16px;
+  }
+  .moreinfo strong {
+    padding: 40px 0 !important;
+    font-size: 2rem !important;
+  }
+  .moreinfo-box {
+    font-size: 16px;
+  }
+  .moreinfo-box-details, .moreinfo-box-details2 {
+    width: 48%;
+    height: 100%;
+  }
+  .moreinfo-box-details p:first-child, .moreinfo-box-details2 p:first-child {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .moreinfo-box-details p:nth-child(2), .moreinfo-box-details2 p:nth-child(2) {
+    font-size: 1rem;
+  }
+  .moreinfo-box-details figure {
+    width: 50%;
+    height: 50%;
+  }
+  .moreinfo-box-details2 figure {
+    width: 65%;
+    height: 60%;
+  }
+
+  .invitation {
+    width: 100%;
+    height: 550px;
+    padding: 50px 20px;
+  }
+  .invitation-suggestion {
+    font-size: 16px;
+  }
+  .invitation-suggestion p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .invitation-suggestion p:first-child strong {
+    font-size: 3rem;
+  }
+  .invitation-suggestion-link {
+    margin-top: 20px;
+  }
+  .invitation-suggestion-link a {
+    height: 60%;
+    font-size: 1em;
+    line-height: 250%;
+  }
+}
+/**
+* Responsive: Breakpoint = 500px
+*/
+@media screen and (max-width: 500px) {
+  .productAd,
+.productAd2,
+.productAd3 {
+    height: 500px;
+  }
+  .productAd-suggestion,
+.productAd2-suggestion,
+.productAd3-suggestion {
+    font-size: 16px;
+    top: 30%;
+    width: 80%;
+    height: 25%;
+  }
+  .productAd-suggestion strong,
+.productAd2-suggestion strong,
+.productAd3-suggestion strong {
+    font-size: 1.8rem;
+  }
+  .productAd-suggestion h2,
+.productAd2-suggestion h2,
+.productAd3-suggestion h2 {
+    font-size: 1rem;
+  }
+  .productAd-suggestion-links,
+.productAd2-suggestion-links,
+.productAd3-suggestion-links {
+    height: 70%;
+  }
+  .productAd-suggestion-links a,
+.productAd2-suggestion-links a,
+.productAd3-suggestion-links a {
+    height: 50%;
+  }
+  .productAd-suggestion-links a:first-child span,
+.productAd2-suggestion-links a:first-child span,
+.productAd3-suggestion-links a:first-child span {
+    font-size: 0.7em;
+  }
+  .productAd-suggestion-links a:first-child img,
+.productAd2-suggestion-links a:first-child img,
+.productAd3-suggestion-links a:first-child img {
+    width: 24px;
+    height: 24px;
+  }
+  .productAd-suggestion-links a:last-child,
+.productAd2-suggestion-links a:last-child,
+.productAd3-suggestion-links a:last-child {
+    font-size: 1em !important;
+  }
+
+  .productAd figure img {
+    margin-top: 23%;
+    transform: scale(0.95);
+  }
+
+  .productAd2 figure img {
+    margin-top: 20%;
+    transform: scale(1.5);
+  }
+
+  .productAd3-suggestion {
+    top: 20%;
+  }
+  .productAd3 figure img {
+    margin-top: 10%;
+    transform: scale(1.2);
+  }
+
+  .helper {
+    width: 100%;
+    height: 650px;
+    padding: 30px 10px;
+    font-size: 16px;
+  }
+  .helper strong {
+    padding: 30px 0;
+    font-size: 2.3rem;
+  }
+  .helper-option {
+    justify-content: space-around;
+    width: 100%;
+    height: 83%;
+  }
+  .helper-option-content, .helper-option-content2, .helper-option-content3 {
+    width: 47.5%;
+    height: 48%;
+  }
+  .helper-option-content span, .helper-option-content2 span, .helper-option-content3 span {
+    font-size: 2rem;
+  }
+  .helper-option-content img, .helper-option-content2 img, .helper-option-content3 img {
+    height: 50%;
+    margin-top: 10%;
+  }
+
+  .moreinfo {
+    width: 100%;
+    height: 980px;
+    padding: 30px 15px;
+    font-size: 16px;
+  }
+  .moreinfo strong {
+    padding: 20px 0;
+    font-size: 2.3rem;
+  }
+  .moreinfo-box {
+    font-size: 16px;
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .moreinfo-box-details, .moreinfo-box-details2 {
+    width: 100%;
+    height: 48%;
+  }
+  .moreinfo-box-details p:first-child, .moreinfo-box-details2 p:first-child {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .moreinfo-box-details p:nth-child(2), .moreinfo-box-details2 p:nth-child(2) {
+    font-size: 1rem;
+  }
+  .moreinfo-box-details figure {
+    width: 50%;
+    height: 50%;
+  }
+  .moreinfo-box-details2 figure {
+    width: 65%;
+    height: 60%;
+  }
+
+  .invitation {
+    width: 100%;
+    height: 800px;
+    padding: 50px 20px;
+    position: relative;
+    top: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .invitation figure {
+    width: 100%;
+    height: 50%;
+  }
+  .invitation-suggestion {
+    width: 100%;
+    height: 50%;
+    font-size: 16px;
+  }
+  .invitation-suggestion p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .invitation-suggestion p:first-child strong {
+    font-size: 3rem;
+  }
+  .invitation-suggestion-link {
+    margin-top: 20px;
+  }
+  .invitation-suggestion-link a {
+    height: 60%;
+    font-size: 1em;
+    line-height: 250%;
+  }
+}
+
+/*# sourceMappingURL=Landing.css.map */

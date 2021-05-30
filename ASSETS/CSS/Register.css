@@ -1,0 +1,303 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: 55rem;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+}
+.container-title {
+  width: 100%;
+  height: 6rem;
+  text-align: center;
+}
+.container-title strong {
+  font-size: 2.5rem;
+  line-height: 6.5rem;
+  font-weight: 450;
+  opacity: 0.8;
+}
+.container-wrapper {
+  width: 100%;
+}
+.container-wrapper-form {
+  width: 28rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.container-wrapper-form-fullname {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.container-wrapper-form-fullname-firstname, .container-wrapper-form-fullname-lastname {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.container-wrapper-form-fullname-firstname-box, .container-wrapper-form-fullname-lastname-box {
+  position: relative;
+  height: 3.8rem;
+  transition: 0.3s;
+  border-radius: 0.6rem;
+}
+.container-wrapper-form-fullname-firstname-box.active, .container-wrapper-form-fullname-lastname-box.active {
+  box-shadow: -1px -1px 3px #15d3f5, 1px -1px 3px #15d3f5, -1px 1px 3px #15d3f5, 1px 1px 3px #15d3f5;
+}
+.container-wrapper-form-fullname-firstname-box.active span, .container-wrapper-form-fullname-lastname-box.active span {
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+.container-wrapper-form-fullname-firstname-box.active input, .container-wrapper-form-fullname-lastname-box.active input {
+  border: 1px solid #15d3f5;
+}
+.container-wrapper-form-fullname-firstname-box span, .container-wrapper-form-fullname-lastname-box span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1rem;
+  transition: 0.15s ease;
+  pointer-events: none;
+}
+.container-wrapper-form-fullname-firstname-box input, .container-wrapper-form-fullname-lastname-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border: 1px solid black;
+  padding-top: 1.1rem;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.6rem;
+  background-color: white;
+  border: 1px solid #989699;
+}
+.container-wrapper-form-fullname-firstname span, .container-wrapper-form-fullname-lastname span {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+.container-wrapper-form-birthday, .container-wrapper-form-email, .container-wrapper-form-password, .container-wrapper-form-confirmPassword, .container-wrapper-form-phone {
+  width: 100%;
+  margin-top: 1rem;
+}
+.container-wrapper-form-birthday-box, .container-wrapper-form-email-box, .container-wrapper-form-password-box, .container-wrapper-form-confirmPassword-box, .container-wrapper-form-phone-box {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-wrapper-form-birthday-box-mainbox, .container-wrapper-form-email-box-mainbox, .container-wrapper-form-password-box-mainbox, .container-wrapper-form-confirmPassword-box-mainbox, .container-wrapper-form-phone-box-mainbox {
+  width: 100%;
+  height: 3.8rem;
+  background: white;
+  position: relative;
+  transition: 0.3s;
+  border-radius: 0.6rem;
+}
+.container-wrapper-form-birthday-box-mainbox.active, .container-wrapper-form-email-box-mainbox.active, .container-wrapper-form-password-box-mainbox.active, .container-wrapper-form-confirmPassword-box-mainbox.active, .container-wrapper-form-phone-box-mainbox.active {
+  box-shadow: -1px -1px 3px #15d3f5, 1px -1px 3px #15d3f5, -1px 1px 3px #15d3f5, 1px 1px 3px #15d3f5;
+}
+.container-wrapper-form-birthday-box-mainbox.active::after, .container-wrapper-form-email-box-mainbox.active::after, .container-wrapper-form-password-box-mainbox.active::after, .container-wrapper-form-confirmPassword-box-mainbox.active::after, .container-wrapper-form-phone-box-mainbox.active::after {
+  height: 0;
+}
+.container-wrapper-form-birthday-box-mainbox.active span, .container-wrapper-form-email-box-mainbox.active span, .container-wrapper-form-password-box-mainbox.active span, .container-wrapper-form-confirmPassword-box-mainbox.active span, .container-wrapper-form-phone-box-mainbox.active span {
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+.container-wrapper-form-birthday-box-mainbox.active input, .container-wrapper-form-email-box-mainbox.active input, .container-wrapper-form-password-box-mainbox.active input, .container-wrapper-form-confirmPassword-box-mainbox.active input, .container-wrapper-form-phone-box-mainbox.active input {
+  color: black;
+  border: 1px solid #15d3f5;
+}
+.container-wrapper-form-birthday-box-mainbox::after, .container-wrapper-form-email-box-mainbox::after, .container-wrapper-form-password-box-mainbox::after, .container-wrapper-form-confirmPassword-box-mainbox::after, .container-wrapper-form-phone-box-mainbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.1rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2.4rem;
+  background: white;
+  transition: 0.2s;
+}
+.container-wrapper-form-birthday-box-mainbox span, .container-wrapper-form-email-box-mainbox span, .container-wrapper-form-password-box-mainbox span, .container-wrapper-form-confirmPassword-box-mainbox span, .container-wrapper-form-phone-box-mainbox span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1rem;
+  transition: 0.15s ease;
+}
+.container-wrapper-form-birthday-box-mainbox input, .container-wrapper-form-email-box-mainbox input, .container-wrapper-form-password-box-mainbox input, .container-wrapper-form-confirmPassword-box-mainbox input, .container-wrapper-form-phone-box-mainbox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border: 1px solid black;
+  padding-top: 1.1rem;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  border-radius: 0.6rem;
+  background-color: white;
+  border: 1px solid #989699;
+  color: white;
+  cursor: text;
+}
+.container-wrapper-form-birthday-box span, .container-wrapper-form-email-box span, .container-wrapper-form-password-box span, .container-wrapper-form-confirmPassword-box span, .container-wrapper-form-phone-box span {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  pointer-events: none;
+}
+.container-wrapper-form-email-box {
+  height: 6.5rem;
+}
+.container-wrapper-form-phone-box-mainbox.active::after {
+  height: 2.4rem;
+}
+.container-wrapper-form-verify {
+  width: 100%;
+  height: 2rem;
+}
+.container-wrapper-form-verify-box span {
+  font-size: 1rem;
+}
+.container-wrapper-form-verify-box input {
+  margin-left: 1.5rem;
+}
+.container-wrapper-form-verify-box label {
+  margin-left: 0.3rem;
+  font-size: 1rem;
+}
+.container-wrapper-form-submit {
+  width: 100%;
+  height: 4rem;
+  margin-top: 0.5rem;
+}
+.container-wrapper-form-submit button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.6rem;
+  background: #009e89;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+.container-wrapper-form-submit button:hover {
+  background: #28a745;
+}
+
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 18px;
+  }
+
+  .container {
+    height: 58rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  * {
+    font-size: 18px;
+  }
+
+  .container {
+    height: 73rem;
+    padding: 10rem 0;
+  }
+  .container-wrapper-form {
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  * {
+    font-size: 18px;
+  }
+
+  .container {
+    height: 58rem;
+    padding: 2rem;
+  }
+  .container-wrapper-form {
+    width: 33rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  * {
+    font-size: 15px;
+  }
+
+  .container {
+    height: 58rem;
+    padding: 2rem;
+  }
+  .container-title strong {
+    font-size: 2rem;
+  }
+  .container-wrapper-form {
+    width: 28rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  * {
+    font-size: 15px;
+  }
+
+  .container {
+    height: 58rem;
+    padding: 2rem;
+  }
+  .container-title strong {
+    font-size: 2rem;
+  }
+  .container-wrapper-form {
+    width: 23rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container {
+    height: 58rem;
+    padding: 2rem;
+  }
+  .container-title strong {
+    font-size: 2rem;
+  }
+  .container-wrapper-form {
+    width: 22rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  * {
+    font-size: 13px;
+  }
+
+  .container {
+    height: 58rem;
+    padding: 1.5rem;
+  }
+  .container-title strong {
+    font-size: 1.5rem;
+  }
+  .container-wrapper-form {
+    width: 22rem;
+  }
+}
+
+/*# sourceMappingURL=Register.css.map */

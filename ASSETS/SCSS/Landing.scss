@@ -1,0 +1,943 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.productAd,
+.productAd2,
+.productAd3 {
+  @include setSize(100%, 1000px);
+  position: relative;
+  background: white;
+  overflow: hidden;
+  &-suggestion {
+    @include setSize($suggestion-width, $suggestion-height);
+    @include absolutely_Center(21%);
+    text-align: center;
+    z-index: 90;
+    strong {
+      font-size: ($text-slg-size + 1rem);
+    }
+    &-links {
+      @include setSize($suggestion-links-width, $suggestion-links-height);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        display: inline-block;
+        @include setSize(48%, 63%);
+        @include reset_A_Tag();
+        font-size: 1.3rem !important;
+        text-align: center;
+        line-height: 75px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-child {
+          background: $leaf-gray;
+          color: white;
+          &:hover {
+            background: $vest-gray;
+          }
+        }
+        &:last-child {
+          background: $cadet-blue;
+          color: white;
+          &:hover {
+            background: $van-red;
+          }
+        }
+      }
+    }
+  }
+  figure {
+    img {
+      pointer-events: none;
+      display: inline-block;
+      @include setSize(100%, 65%);
+      @include absolutely_Center(30%, 0%);
+      object-fit: contain;
+      transform: scale(1.5);
+    }
+  }
+}
+
+.backToTop {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  border: 2px solid $vest-gray;
+  transition: 0.3s;
+  img {
+    @include setSize();
+  }
+  &.active {
+    opacity: 0.5;
+    visibility: visible;
+    z-index: 50;
+  }
+}
+
+.productAd2,
+.productAd3 {
+  background: black;
+  &-suggestion {
+    top: 25%;
+  }
+  figure {
+    img {
+      top: 8%;
+      transform: scale(1.9);
+      pointer-events: none;
+    }
+  }
+}
+
+.productAd3 {
+  figure {
+    img {
+      top: 35%;
+      transform: scale(1.3);
+    }
+  }
+}
+
+.helper {
+  @include setSize(100%, 700px);
+  position: relative;
+  padding: 50px;
+  strong {
+    font-size: ($text-slg-size + 1rem);
+    font-weight: 500;
+    display: inline-block;
+    padding: 30px 0 50px 40px;
+  }
+  &-option {
+    @include setSize(100%, 70%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    &-content,
+    &-content2,
+    &-content3 {
+      @include setSize(28%, 100%);
+      position: relative;
+      text-align: center;
+      @include reset_A_Tag();
+      box-shadow: 0 0 1.5px rgb(0 0 0 / 2%), 0 0 3.6px rgb(0 0 0 / 3%), 0 0 6.8px rgb(0 0 0 / 4%),
+        0 0 12.1px rgb(0 0 0 / 4%), 0 0 22.6px rgb(0 0 0 / 5%), 0 0 54px rgb(0 0 0 / 7%);
+      border-radius: 10px;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 0 6px rgb(0 0 0 / 2%), 0 0 8px rgb(0 0 0 / 3%), 0 0 10px rgb(0 0 0 / 4%),
+          0 0 30px rgb(0 0 0 / 20%), 0 0 30px rgb(0 0 0 / 20%), 0 0 60px rgb(0 0 0 / 20%);
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 2rem;
+        width: 100%;
+        background: #0da20d;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      span {
+        display: inline-block;
+        font-size: 2.5rem;
+        margin-top: 3rem;
+        color: #02a49a;
+        font-weight: 500;
+      }
+      img {
+        @include absolutely_Center(60%);
+        @include setSize(60%, 70%);
+        object-fit: contain;
+      }
+    }
+    &-content2 {
+      &::before {
+        background: #00a19b;
+      }
+      img {
+        @include setSize(60%, 60%);
+      }
+    }
+    &-content3 {
+      &::before {
+        background: #0096d8;
+      }
+      img {
+        @include setSize(45%, 45%);
+      }
+    }
+  }
+}
+
+.moreinfo {
+  position: relative;
+  @include setSize(100%, 700px);
+  padding: 50px;
+  strong {
+    font-size: ($text-slg-size + 1rem);
+    font-weight: 500;
+    display: inline-block;
+    padding: 30px 0 50px 40px;
+  }
+  &-box {
+    @include setSize(100%, 85%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    &-details,
+    &-details2 {
+      @include setSize(45%, 100%);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      transition: 0.3s;
+      box-shadow: 0 0 1.5px rgb(0 0 0 / 2%), 0 0 3.6px rgb(0 0 0 / 3%), 0 0 6.8px rgb(0 0 0 / 4%),
+        0 0 12.1px rgb(0 0 0 / 4%), 0 0 22.6px rgb(0 0 0 / 5%), 0 0 54px rgb(0 0 0 / 7%);
+      &:hover {
+        box-shadow: 0 0 6px rgb(0 0 0 / 2%), 0 0 8px rgb(0 0 0 / 3%), 0 0 10px rgb(0 0 0 / 4%),
+          0 0 25px rgb(0 0 0 / 20%), 0 0 25px rgb(0 0 0 / 20%), 0 0 55px rgb(0 0 0 / 20%);
+      }
+      p {
+        font-size: 1.4rem;
+        margin-top: 10px;
+        &:first-child {
+          font-weight: 500;
+          font-size: 2rem;
+        }
+      }
+      a {
+        @include reset_A_Tag();
+        color: #02a49a;
+        font-size: 1.2rem;
+        &:hover {
+          color: $apple-pink;
+          text-decoration: underline;
+        }
+      }
+      figure {
+        @include setSize(60%, 60%);
+        overflow: hidden;
+        img {
+          @include setSize(100%, 100%);
+          transform: scale(1.3);
+          object-fit: contain;
+        }
+      }
+    }
+    &-details2 {
+      figure {
+        position: relative;
+        img {
+          @include setSize(60%, 60%);
+          @include absolutely_Center();
+        }
+      }
+    }
+  }
+}
+
+.invitation {
+  @include setSize(100%, 700px);
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: white;
+  figure {
+    @include setSize(50%, 100%);
+    position: relative;
+    img {
+      @include absolutely_Center();
+      @include setSize(60%, 60%);
+      object-fit: cover;
+    }
+  }
+  &-suggestion {
+    @include setSize(50%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      font-size: 1.8rem;
+      margin-top: 10px;
+      font-weight: 400;
+      &:first-child {
+        strong {
+          font-size: 4.5rem;
+          letter-spacing: 1.3px;
+        }
+      }
+    }
+    &-link {
+      @include setSize(100%, 65px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 40px;
+      a {
+        @include reset_A_Tag();
+        font-size: 1.5em;
+        display: inline-block;
+        @include setSize(40%, 100%);
+        text-align: center;
+        line-height: 65px;
+        border-radius: 10px;
+        &:first-child {
+          color: #02a49a;
+          border: 1px solid white;
+          &:hover {
+            color: #005dff;
+            border: 1px solid #005dff;
+          }
+        }
+        &:last-child {
+          color: #4323eb;
+          margin-left: 20px;
+          border: 1px solid white;
+          &:hover {
+            color: $apple-pink;
+            border: 1px solid $apple-pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive: Breakpoint = 1920px
+*/
+@media screen and (min-width: 1920px) {
+  .productAd,
+  .productAd2,
+  .productAd3 {
+    height: 1200px;
+    &-suggestion {
+      @include setSize(30%, 25%);
+      font-size: 20px;
+      strong {
+        font-size: 4rem;
+      }
+      &-links {
+        font-size: 20px;
+        a {
+          font-size: 2rem !important;
+          span {
+            font-size: 1.9rem !important;
+          }
+        }
+      }
+    }
+  }
+  .productAd {
+    figure {
+      img {
+        transform: scale(1.5);
+      }
+    }
+  }
+  .helper {
+    @include setSize(100%, 900px);
+    font-size: 20px;
+    strong {
+      padding: 50px 0 50px 50px;
+      font-size: 4.5rem;
+    }
+    &-option {
+      font-size: 20px;
+      &-content,
+      &-content2,
+      &-content3 {
+        width: 30%;
+        span {
+          margin-top: 80px;
+          font-size: 4em;
+        }
+      }
+    }
+  }
+  .moreinfo {
+    @include setSize(100%, 1100px);
+    font-size: 20px;
+    strong {
+      font-size: 4.5em;
+    }
+    &-box {
+      height: 80%;
+      &-details,
+      &-details2 {
+        @include setSize(48%, 100%);
+        font-size: 20px;
+        p {
+          font-size: 2rem;
+          &:first-child {
+            font-size: 3rem;
+          }
+        }
+        a {
+          font-size: 2.3rem;
+        }
+      }
+      &-details {
+        p {
+          &:first-child {
+            font-size: 3rem;
+          }
+        }
+      }
+      &-details2 {
+        figure {
+          @include setSize(65%, 60%);
+        }
+      }
+    }
+  }
+  .invitation {
+    height: 1200px;
+    top: 0;
+    figure {
+      img {
+        @include setSize(60%, 80%);
+      }
+    }
+    &-suggestion {
+      font-size: 20px;
+      p {
+        font-size: 3rem;
+        text-align: center;
+        strong {
+          font-size: 2em !important;
+        }
+      }
+      &-link {
+        font-size: 20px;
+        height: 100px;
+        a {
+          @include setSize();
+          font-size: 2.3rem;
+          line-height: 250%;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive: Breakpoint = 1100px
+*/
+@media screen and (max-width: 1100px) {
+  .productAd,
+  .productAd2,
+  .productAd3 {
+    &-suggestion {
+      @include setSize(50%, 25%);
+    }
+  }
+  .helper {
+    @include setSize(100%, 550px);
+  }
+  .moreinfo {
+    &-box {
+      &-details,
+      &-details2 {
+        @include setSize(48%, 100%);
+      }
+      &-details {
+        p {
+          &:first-child {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &-details2 {
+        figure {
+          @include setSize(65%, 60%);
+        }
+      }
+    }
+  }
+  .invitation {
+    &-suggestion {
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      &-link {
+        a {
+          @include setSize();
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive: Breakpoint = 850px
+*/
+@media screen and (max-width: 850px) {
+  .productAd,
+  .productAd2,
+  .productAd3 {
+    &-suggestion {
+      @include setSize(50%, 25%);
+    }
+  }
+  .helper {
+    @include setSize(100%, 550px);
+  }
+  .moreinfo {
+    &-box {
+      &-details,
+      &-details2 {
+        @include setSize(48%, 100%);
+      }
+      &-details {
+        p {
+          &:first-child {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &-details2 {
+        figure {
+          @include setSize(65%, 60%);
+        }
+      }
+    }
+  }
+  .invitation {
+    &-suggestion {
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      &-link {
+        a {
+          @include setSize();
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive: Breakpoint = 800px
+*/
+@media screen and (max-width: 800px) {
+  .productAd,
+  .productAd2,
+  .productAd3 {
+    &-suggestion {
+      top: 27%;
+      font-size: 16px;
+      @include setSize(70%, 25%);
+      h2 {
+        font-size: 1.5rem;
+      }
+      &-links {
+        a {
+          height: 55%;
+          &:first-child {
+            span {
+              font-size: 1em;
+            }
+            img {
+              @include setSize(24px, 24px);
+            }
+          }
+          &:last-child {
+            font-size: 1.2em !important;
+          }
+        }
+      }
+    }
+  }
+  .productAd {
+    figure {
+      img {
+        top: 30%;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .helper {
+    @include setSize(100%, 800px);
+    padding: 30px 20px;
+    strong {
+      padding: 30px 0 30px 50px;
+    }
+    &-option {
+      justify-content: space-around;
+      @include setSize(100%, 90%);
+      &-content,
+      &-content2,
+      &-content3 {
+        @include setSize(40%, 47%);
+        span {
+          font-size: 2rem;
+        }
+        img {
+          height: 50%;
+        }
+      }
+    }
+  }
+  .moreinfo {
+    @include setSize(100%, 500px);
+    padding: 30px 10px;
+    strong {
+      padding: 40px 0;
+    }
+    &-box {
+      font-size: 16px;
+      &-details,
+      &-details2 {
+        @include setSize(48%, 100%);
+        p {
+          &:first-child {
+            font-size: 1.8rem;
+            text-align: center;
+          }
+          &:nth-child(2) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      &-details,
+      &-details2 {
+        figure {
+          @include setSize(50%, 50%);
+        }
+      }
+    }
+  }
+  .invitation {
+    @include setSize(100%, 550px);
+    padding: 50px 20px;
+    &-suggestion {
+      font-size: 16px;
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        &:first-child {
+          strong {
+            font-size: 3rem;
+          }
+        }
+      }
+      &-link {
+        margin-top: 20px;
+        a {
+          width: 45%;
+          height: 62%;
+          font-size: 1.2em;
+          line-height: 200%;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive: Breakpoint = 600px
+*/
+@media screen and (max-width: 600px) {
+  .productAd,
+  .productAd2,
+  .productAd3 {
+    &-suggestion {
+      font-size: 16px;
+      @include setSize(70%, 25%);
+      h2 {
+        font-size: 1.2rem;
+      }
+      &-links {
+        a {
+          height: 55%;
+          &:first-child {
+            span {
+              font-size: 0.8em;
+            }
+            img {
+              @include setSize(24px, 24px);
+            }
+          }
+          &:last-child {
+            font-size: 1em !important;
+          }
+        }
+      }
+    }
+  }
+  .productAd {
+    figure {
+      img {
+        top: 23%;
+        transform: scale(1);
+      }
+    }
+  }
+  .helper {
+    @include setSize(100%, 800px);
+    padding: 30px 20px;
+    strong {
+      padding: 30px 0;
+    }
+    &-option {
+      justify-content: space-around;
+      @include setSize(100%, 85%);
+      &-content,
+      &-content2,
+      &-content3 {
+        @include setSize(40%, 43%);
+        span {
+          font-size: 2rem;
+        }
+        img {
+          height: 50%;
+        }
+      }
+    }
+  }
+  .moreinfo {
+    @include setSize(100%, 550px);
+    padding: 30px 10px;
+    font-size: 16px;
+    strong {
+      padding: 40px 0 !important;
+      font-size: 2rem !important;
+    }
+    &-box {
+      font-size: 16px;
+      &-details,
+      &-details2 {
+        @include setSize(48%, 100%);
+        p {
+          &:first-child {
+            font-size: 1.8rem;
+            text-align: center;
+          }
+          &:nth-child(2) {
+            font-size: 1rem;
+          }
+        }
+      }
+      &-details {
+        figure {
+          @include setSize(50%, 50%);
+        }
+      }
+      &-details2 {
+        figure {
+          @include setSize(65%, 60%);
+        }
+      }
+    }
+  }
+  .invitation {
+    @include setSize(100%, 550px);
+    padding: 50px 20px;
+    &-suggestion {
+      font-size: 16px;
+      p {
+        font-size: 1.2rem;
+        text-align: center;
+        &:first-child {
+          strong {
+            font-size: 3rem;
+          }
+        }
+      }
+      &-link {
+        margin-top: 20px;
+        a {
+          height: 60%;
+          font-size: 1em;
+          line-height: 250%;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive: Breakpoint = 500px
+*/
+@media screen and (max-width: 500px) {
+  .productAd,
+  .productAd2,
+  .productAd3 {
+    height: 500px;
+    &-suggestion {
+      font-size: 16px;
+      top: 30%;
+      @include setSize(80%, 25%);
+      strong {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      &-links {
+        height: 70%;
+        a {
+          height: 50%;
+          &:first-child {
+            span {
+              font-size: 0.7em;
+            }
+            img {
+              @include setSize(24px, 24px);
+            }
+          }
+          &:last-child {
+            font-size: 1em !important;
+          }
+        }
+      }
+    }
+  }
+  .productAd {
+    figure {
+      img {
+        margin-top: 23%;
+        transform: scale(0.95);
+      }
+    }
+  }
+  .productAd2 {
+    figure {
+      img {
+        margin-top: 20%;
+        transform: scale(1.5);
+      }
+    }
+  }
+  .productAd3 {
+    &-suggestion {
+      top: 20%;
+    }
+    figure {
+      img {
+        margin-top: 10%;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .helper {
+    @include setSize(100%, 650px);
+    padding: 30px 10px;
+    font-size: 16px;
+    strong {
+      padding: 30px 0;
+      font-size: 2.3rem;
+    }
+    &-option {
+      justify-content: space-around;
+      @include setSize(100%, 83%);
+      &-content,
+      &-content2,
+      &-content3 {
+        @include setSize(47.5%, 48%);
+        span {
+          font-size: 2rem;
+        }
+        img {
+          height: 50%;
+          margin-top: 10%;
+        }
+      }
+    }
+  }
+  .moreinfo {
+    @include setSize(100%, 980px);
+    padding: 30px 15px;
+    font-size: 16px;
+    strong {
+      padding: 20px 0;
+      font-size: 2.3rem;
+    }
+    &-box {
+      font-size: 16px;
+      @include setSize(100%, 90%);
+      flex-direction: column;
+      justify-content: space-between;
+      &-details,
+      &-details2 {
+        @include setSize(100%, 48%);
+        p {
+          &:first-child {
+            font-size: 1.8rem;
+            text-align: center;
+          }
+          &:nth-child(2) {
+            font-size: 1rem;
+          }
+        }
+      }
+      &-details {
+        figure {
+          @include setSize(50%, 50%);
+        }
+      }
+      &-details2 {
+        figure {
+          @include setSize(65%, 60%);
+        }
+      }
+    }
+  }
+  .invitation {
+    @include setSize(100%, 800px);
+    padding: 50px 20px;
+    position: relative;
+    top: 50px;
+    flex-direction: column;
+    align-items: center;
+    figure {
+      @include setSize(100%, 50%);
+    }
+    &-suggestion {
+      @include setSize(100%, 50%);
+      font-size: 16px;
+      p {
+        font-size: 1.2rem;
+        text-align: center;
+        &:first-child {
+          strong {
+            font-size: 3rem;
+          }
+        }
+      }
+      &-link {
+        margin-top: 20px;
+        a {
+          height: 60%;
+          font-size: 1em;
+          line-height: 250%;
+        }
+      }
+    }
+  }
+}

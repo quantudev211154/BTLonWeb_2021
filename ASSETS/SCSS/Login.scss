@@ -1,0 +1,531 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.wrapper {
+  @include setSize(100%, 601px);
+  font-size: 18px;
+  position: relative;
+  top: $header-height;
+  display: flex;
+  padding: 2.79rem;
+  &-banner {
+    @include setSize(50%, 100%);
+    text-align: center;
+    p {
+      font-size: 2rem;
+      &:first-child {
+        font-size: 2.5em;
+        color: $apple-pink;
+      }
+    }
+    figure {
+      @include setSize(100%, 70%);
+      position: relative;
+      img {
+        @include setSize(55%, 100%);
+        margin-top: 20px;
+      }
+    }
+  }
+  &-form {
+    @include setSize(50%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.12rem;
+    &-title {
+      @include setSize(100%, 12%);
+      text-align: center;
+      strong {
+        font-size: 2.5rem;
+      }
+    }
+    &-username,
+    &-password {
+      @include setSize(100%, 18%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 18px;
+      span {
+        font-size: 1.2rem;
+      }
+      input {
+        @include reset_Input_Text(none);
+        @include setSize(100%, 90%);
+        padding: 0 1.2rem;
+        font-size: 1rem;
+        border: 1px solid $leaf-gray;
+        border-radius: 0.6rem;
+        margin-top: 0.5rem;
+        border-radius: 0.6rem;
+        transition: 0.3s;
+        &:focus {
+          box-shadow: -1px -1px 4px $lite-blue, 1px -1px 4px $lite-blue, -1px 1px 4px $lite-blue, 1px 1px 4px $lite-blue;
+          border: 1px solid $lite-blue;
+        }
+      }
+    }
+    &-password {
+      margin-top: 1rem;
+    }
+    &-forgot {
+      @include setSize(100%, 8%);
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      a {
+        @include reset_A_Tag();
+        color: $sky-blue;
+        &:hover {
+          color: $cadet-blue;
+        }
+      }
+      span {
+        font-size: 1rem;
+        color: red;
+        font-weight: bolder;
+      }
+    }
+    &-activeBtn {
+      @include setSize(100%, 11%);
+      button {
+        @include setSize(100%, 100%);
+        background: #08b2b2;
+        color: white;
+        border: none;
+        outline: none;
+        border-radius: 1rem;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background: #03b568;
+        }
+      }
+    }
+    &-fastLogin {
+      @include setSize(100%, 20%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+        padding: 15px 0;
+        font-size: 1rem;
+      }
+      &-option {
+        @include setSize(100%, 80%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          display: inline-block;
+          @include setSize(48%, 100%);
+          @include reset_A_Tag();
+          text-align: center;
+          border-radius: 10px;
+          border: 2px solid #03b568;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            @include setSize(50px, 50px);
+            object-fit: cover;
+          }
+          &:hover {
+            border: 2px solid #08b2b2;
+          }
+        }
+      }
+    }
+    &-register {
+      @include setSize(100%, 5%);
+      text-align: center;
+      a {
+        @include reset_A_Tag();
+        color: #08b2b2;
+        font-size: 1.2rem;
+        line-height: 300%;
+        &:hover {
+          color: $apple-pink;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive for width = 1920px
+*/
+
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+  .wrapper {
+    height: 1050px;
+    padding: 2.5rem;
+    &-banner {
+      p {
+        &:first-child {
+          margin-top: 5rem;
+        }
+      }
+      figure {
+        height: 50%;
+        margin-top: 50px;
+        img {
+          width: 50%;
+        }
+      }
+    }
+    &-form {
+      &-title {
+        strong {
+          font-size: 3rem;
+        }
+      }
+      &-username,
+      &-password {
+        height: 15%;
+        span {
+          font-size: 1.5rem;
+        }
+        input {
+          font-size: 1.3rem;
+        }
+      }
+      &-forgot {
+        a,
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      &-activeBtn {
+        button {
+          font-size: 1.5rem;
+        }
+      }
+      &-fastLogin {
+        height: 16%;
+        margin-top: 1rem;
+        span {
+          font-size: 1.2rem;
+        }
+        &-option {
+          a {
+            span {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+      &-register {
+        height: 10%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+/**
+* Responsive for width = 1100px
+*/
+
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 18px;
+  }
+  .wrapper {
+    height: 75rem;
+    padding: 2rem;
+    &-banner {
+      display: none;
+    }
+    &-form {
+      margin-top: 3rem;
+      width: 100%;
+      &-title {
+        strong {
+          font-size: 5rem;
+        }
+      }
+      &-username,
+      &-password {
+        height: 12%;
+        span {
+          font-size: 2rem;
+        }
+        input {
+          font-size: 1.6rem;
+        }
+      }
+      &-forgot {
+        a,
+        span {
+          font-size: 1.5rem;
+        }
+      }
+      &-activeBtn {
+        height: 10%;
+        button {
+          font-size: 2rem;
+        }
+      }
+      &-fastLogin {
+        height: 14%;
+        margin-top: 2rem;
+        span {
+          font-size: 1.5rem;
+        }
+        &-option {
+          a {
+            img {
+              @include setSize(70px, 70px);
+            }
+            span {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+      &-register {
+        margin-top: 2rem;
+        a {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive for width = 800px
+*/
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 18px;
+  }
+  .wrapper {
+    height: 55rem;
+    padding: 1rem 1.5rem;
+    &-banner {
+      display: none;
+    }
+    &-form {
+      margin-top: 1.5rem;
+      width: 100%;
+      &-title {
+        strong {
+          font-size: 4rem;
+        }
+      }
+      &-username,
+      &-password {
+        height: 15%;
+        span {
+          font-size: 2rem;
+        }
+        input {
+          font-size: 1.6rem;
+        }
+      }
+      &-forgot {
+        a,
+        span {
+          font-size: 1.5rem;
+        }
+      }
+      &-activeBtn {
+        height: 10%;
+        button {
+          font-size: 2rem;
+        }
+      }
+      &-fastLogin {
+        height: 14%;
+        margin-top: 2rem;
+        span {
+          font-size: 1.5rem;
+        }
+        &-option {
+          a {
+            img {
+              @include setSize(50px, 50px);
+            }
+            span {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+      &-register {
+        margin-top: 1rem;
+        a {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive for width = 600px
+*/
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+  .wrapper {
+    height: 50rem;
+    padding: 1rem 1.5rem;
+    &-banner {
+      display: none;
+    }
+    &-form {
+      margin-top: 1rem;
+      width: 100%;
+      &-title {
+        strong {
+          font-size: 3rem;
+        }
+      }
+      &-username,
+      &-password {
+        height: 15%;
+        span {
+          font-size: 1.6rem;
+        }
+        input {
+          font-size: 1.4rem;
+        }
+      }
+      &-forgot {
+        a,
+        span {
+          font-size: 1.5rem;
+        }
+      }
+      &-activeBtn {
+        height: 10%;
+        button {
+          font-size: 1.6rem;
+        }
+      }
+      &-fastLogin {
+        height: 14%;
+        margin-top: 1rem;
+        span {
+          font-size: 1.5rem;
+        }
+        &-option {
+          a {
+            img {
+              @include setSize(50px, 50px);
+            }
+            span {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+      &-register {
+        margin-top: 1.5rem;
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive for width = 500px
+*/
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 15px;
+  }
+  .wrapper {
+    height: 40rem;
+    padding: 1rem 0.6rem;
+    &-banner {
+      display: none;
+    }
+    &-form {
+      margin-top: 1rem;
+      width: 100%;
+      &-title {
+        strong {
+          font-size: 3rem;
+        }
+      }
+      &-username,
+      &-password {
+        height: 15%;
+        span {
+          font-size: 1.3rem;
+        }
+        input {
+          font-size: 1.1rem;
+        }
+      }
+      &-forgot {
+        a,
+        span {
+          font-size: 1.1rem;
+        }
+      }
+      &-activeBtn {
+        height: 10%;
+        button {
+          font-size: 1.4rem;
+        }
+      }
+      &-fastLogin {
+        height: 14%;
+        margin-top: 1rem;
+        span {
+          font-size: 1rem;
+        }
+        &-option {
+          a {
+            img {
+              @include setSize(30px, 30px);
+            }
+            span {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+      &-register {
+        margin-top: 1.5rem;
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Responsive for width = 400px
+*/
+
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 15px;
+  }
+  .wrapper {
+    height: 40rem;
+    padding: 1rem 0.6rem;
+    &-banner {
+      display: none;
+    }
+  }
+}
