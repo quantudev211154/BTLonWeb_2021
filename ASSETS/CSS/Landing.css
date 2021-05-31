@@ -24,6 +24,8 @@
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 90;
+  transition: 1s;
+  transition-delay: 0.2s;
 }
 .productAd-suggestion strong,
 .productAd2-suggestion strong,
@@ -94,28 +96,13 @@
   transform: scale(1.5);
 }
 
-.backToTop {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 3rem;
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-  display: inline-block;
-  background: white;
+.productAd.active figure {
+  opacity: 1;
+}
+.productAd figure {
   opacity: 0;
-  visibility: hidden;
-  border: 2px solid #313639;
-  transition: 0.3s;
-}
-.backToTop img {
-  width: 100%;
-  height: 100%;
-}
-.backToTop.active {
-  opacity: 0.5;
-  visibility: visible;
-  z-index: 50;
+  transition: 1.5s ease;
+  transition-delay: 0.2s;
 }
 
 .productAd2,
@@ -128,14 +115,45 @@
 }
 .productAd2 figure img,
 .productAd3 figure img {
-  top: 8%;
-  transform: scale(1.9);
+  top: 25%;
+  transform: scale(1.5);
   pointer-events: none;
 }
 
-.productAd3 figure img {
-  top: 35%;
-  transform: scale(1.3);
+.productAd2 figure {
+  opacity: 1;
+  transition: 2s ease;
+  transition-delay: 0.5s;
+}
+.productAd2 figure img {
+  top: 10%;
+}
+
+.backToTop {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  border: 2px solid #009e89;
+  transition: 0.3s;
+}
+.backToTop img {
+  width: 100%;
+  height: 100%;
+}
+.backToTop.active {
+  opacity: 0.5;
+  visibility: visible;
+  z-index: 50;
+}
+.backToTop:hover {
+  opacity: 1;
 }
 
 .helper {

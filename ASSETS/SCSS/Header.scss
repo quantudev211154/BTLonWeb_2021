@@ -259,7 +259,7 @@
 
 .footer {
   position: relative;
-  top: 50px;
+  top: $header-height;
   left: 0;
   @include setSize(100%, 15rem);
   padding: 1.5rem 3.61rem;
@@ -362,7 +362,7 @@
         margin-top: 60px;
         img {
           display: inline-block;
-          margin-left: 42%;
+          margin-left: 10%;
           transform: translateX(-50%);
           margin-right: 25px;
         }
@@ -373,7 +373,7 @@
       &-link:nth-child(2) {
         margin-top: 0;
         span {
-          margin-left: -5px;
+          margin-left: -2px;
         }
         img {
           margin-right: 28px;
@@ -407,9 +407,9 @@
           align-items: center;
           img {
             display: inline-block;
-            margin-left: 42%;
+            margin-left: 10%;
             transform: translateX(-50%);
-            margin-right: 28px;
+            margin-right: 27px;
           }
         }
       }
@@ -424,7 +424,7 @@
         }
         img {
           display: inline-block;
-          margin-left: 42%;
+          margin-left: 10%;
           transform: translateX(-50%);
           margin-right: 28px;
         }

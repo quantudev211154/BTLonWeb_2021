@@ -1,3 +1,176 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.wrapper {
+  width: 100%;
+  height: 4rem;
+  padding: 0 3rem;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+  background: #f3f3f5;
+}
+.wrapper-links {
+  width: 100%;
+  height: 100%;
+  padding: 0 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-links strong {
+  font-size: 1.3rem;
+  color: #0037b7;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.wrapper-links strong:hover {
+  color: #e20d66;
+  text-decoration: underline;
+}
 
+.container {
+  padding: 1rem 3rem 3rem;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+  background: white;
+}
+.container-listItem {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: inherit;
+}
+.container-listItem-item {
+  width: 18.5rem;
+  height: 30rem;
+  padding: 0.8rem;
+  margin-top: 2.2rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  color: black;
+  background: white;
+  box-shadow: 0 0 10px #989699;
+  transition: 0.3s;
+}
+.container-listItem-item:hover {
+  box-shadow: 0 0 15px #313639;
+}
+.container-listItem-item:hover > .container-listItem-item-figure img {
+  bottom: 10%;
+  width: 68%;
+  height: 88%;
+}
+.container-listItem-item:hover > .container-listItem-item-overallInfo strong {
+  color: #e20d66;
+}
+.container-listItem-item-figure {
+  width: 100%;
+  height: 48%;
+  position: relative;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.container-listItem-item-figure img {
+  width: 60%;
+  height: 80%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.container-listItem-item-overallInfo {
+  width: 100%;
+  height: 18%;
+  text-align: center;
+  font-weight: 450;
+  padding: 0.5rem;
+}
+.container-listItem-item-overallInfo h2 {
+  font-weight: 500;
+}
+.container-listItem-item-overallInfo strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #009e89;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+.container-listItem-item-detail {
+  border: none;
+  width: 100%;
+  height: 34%;
+}
+.container-listItem-item-detail tr {
+  border: none;
+}
+.container-listItem-item-detail tr td {
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper-links {
+    padding: 0 2rem;
+  }
+
+  .container {
+    padding: 1rem 1.5rem;
+  }
+  .container-listItem {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 15px;
+  }
+
+  .wrapper {
+    padding: 0 2rem;
+  }
+  .wrapper-links {
+    padding: 0 0.4rem;
+  }
+  .wrapper-links a {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 1rem 1.5rem;
+  }
+  .container-listItem {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 15px;
+  }
+
+  .wrapper-links {
+    padding: 0;
+  }
+  .wrapper-links a {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem 1.5rem;
+  }
+  .container-listItem {
+    justify-content: center;
+  }
+}
 
 /*# sourceMappingURL=AllProduct.css.map */

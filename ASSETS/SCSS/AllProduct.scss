@@ -1,0 +1,169 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.wrapper {
+  @include setSize(100%, 4rem);
+  padding: 0 3rem;
+  position: relative;
+  top: $header-height;
+  left: 0;
+  background: #f3f3f5;
+  &-links {
+    @include setSize();
+    padding: 0 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    strong {
+      font-size: 1.3rem;
+      color: $ocean-blue;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: $apple-pink;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 1rem 3rem 3rem;
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: $header-height;
+  left: 0;
+  background: white;
+  &-listItem {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: inherit;
+    &-item {
+      @include setSize(18.5rem, 30rem);
+      padding: 0.8rem;
+      margin-top: 2.2rem;
+      border-radius: 0.8rem;
+      text-decoration: none;
+      color: black;
+      background: white;
+      box-shadow: 0 0 10px $leaf-gray;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 0 15px $vest-gray;
+      }
+      &:hover > &-figure {
+        img {
+          bottom: 10%;
+          @include setSize(68%, 88%);
+        }
+      }
+      &:hover > &-overallInfo {
+        strong {
+          color: $apple-pink;
+        }
+      }
+      &-figure {
+        @include setSize(100%, 48%);
+        position: relative;
+        transition: 0.4s;
+        pointer-events: none;
+        img {
+          @include setSize(60%, 80%);
+          object-fit: contain;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: 0.4s;
+        }
+      }
+      &-overallInfo {
+        @include setSize(100%, 18%);
+        text-align: center;
+        font-weight: 450;
+        padding: 0.5rem;
+        h2 {
+          font-weight: 500;
+        }
+        strong {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $cadet-blue;
+          transition: 0.3s;
+          transition-delay: 0.1s;
+        }
+      }
+      &-detail {
+        border: none;
+        @include setSize(100%, 34%);
+        tr {
+          border: none;
+          td {
+            font-size: 0.95rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    &-links {
+      padding: 0 2rem;
+    }
+  }
+  .container {
+    padding: 1rem 1.5rem;
+    &-listItem {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 15px;
+  }
+  .wrapper {
+    padding: 0 2rem;
+    &-links {
+      padding: 0 0.4rem;
+      a {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .container {
+    padding: 1rem 1.5rem;
+    &-listItem {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 15px;
+  }
+  .wrapper {
+    &-links {
+      padding: 0;
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+  .container {
+    padding: 1rem 1.5rem;
+    &-listItem {
+      justify-content: center;
+    }
+  }
+}

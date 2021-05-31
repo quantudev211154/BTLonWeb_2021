@@ -13,9 +13,14 @@ window.onscroll = () => {
     lastScrollTop = scrollTop
   })()
   ;(function goToTop(){
-    if (window.scrollY > 800)
+    if (window.scrollY > 1300)
       backToTopIcon.classList.add('active')
     else
       backToTopIcon.classList.remove('active')
   })()
+}
+
+window.onload = () => {
+  const figure1 = document.getElementById('animate1')
+  figure1.classList.add('active')
 }

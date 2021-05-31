@@ -1,0 +1,122 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.noItem {
+  position: relative;
+  top: $header-height;
+  left: 0;
+  @include setSize(100%, 20rem);
+  border-bottom: 1px solid $wood-gray;
+  &-content {
+    @include setSize(38rem, 12rem);
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+    &-option {
+      @include setSize(100%, 40%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        @include reset_A_Tag();
+        display: inline-block;
+        @include setSize(48%, 83%);
+        background-color: $cadet-blue;
+        border-radius: 0.8rem;
+        font-size: 1.3rem;
+        color: white;
+        text-align: center;
+        line-height: 300%;
+        &:hover {
+          background: $light-blue;
+        }
+        &:last-child {
+          background-color: lavender;
+          opacity: 0.8;
+          color: black;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.suggestion {
+  @include setSize(100%, 3rem);
+  position: relative;
+  top: $header-height;
+  text-align: center;
+  strong {
+    font-size: 1.25rem;
+    line-height: 4rem;
+  }
+}
+
+.demoCart {
+  @include setSize(100%, auto);
+  position: relative;
+  top: $header-height;
+  display: flex;
+  flex-direction: column;
+  &-listItem {
+    @include setSize(100%);
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &-expand {
+    @include setSize(100%, 3rem);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    figure {
+      @include setSize(1.875rem, 1.875rem);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+      animation: moving 2s linear infinite;
+      @keyframes moving {
+        0%,
+        100% {
+          top: 0;
+        }
+        50% {
+          top: 0.5rem;
+        }
+      }
+      &:hover {
+        animation-play-state: paused;
+      }
+      &.active {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+      img {
+        @include setSize(100%, 100%);
+        object-fit: cover;
+        transition: 0.3s;
+      }
+    }
+  }
+}
