@@ -86,10 +86,186 @@
 .demoCart-listItem {
   width: 100%;
   height: 100%;
-  min-height: 0;
+  padding: 0 20%;
+  font-size: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.demoCart-listItem.active {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+.demoCart-listItem-item {
+  width: 100%;
+  height: 12em;
+  padding: 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1em solid #313639;
+  transition: 0.5s;
+}
+.demoCart-listItem-item-info {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+.demoCart-listItem-item-info-img {
+  background: white;
+}
+.demoCart-listItem-item-info-img img {
+  width: 10.2em;
+  height: 100%;
+  object-fit: contain;
+}
+.demoCart-listItem-item-info-detail {
+  width: 30em;
+  height: 100%;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.demoCart-listItem-item-info-detail-top {
+  width: 100%;
+  height: 48%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.demoCart-listItem-item-info-detail-top-name h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.demoCart-listItem-item-info-detail-top-color strong, .demoCart-listItem-item-info-detail-top-price strong {
+  font-size: 1.1em;
+}
+.demoCart-listItem-item-info-detail-bot {
+  width: 100%;
+  height: 52%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.demoCart-listItem-item-info-detail-bot-storage, .demoCart-listItem-item-info-detail-bot-quantity {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.demoCart-listItem-item-info-detail-bot-storage p, .demoCart-listItem-item-info-detail-bot-quantity p {
+  font-size: 1.1em;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure input {
+  display: none;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure label {
+  display: inline-block;
+  width: 4em;
+  height: 2.5em;
+  background: white;
+  border-radius: 0.3em;
+  text-align: center;
+  line-height: 2.5em;
+  cursor: pointer;
+  box-shadow: 0 0 5px #989699;
+  transition: 0.2s;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure label:hover {
+  box-shadow: 1px 1px 5px #e3e1e6;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure .lv1 {
+  background: #057ca0;
+  color: white;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure .lv1.active {
+  background: white;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure .lv2 {
+  margin-left: 0.5em;
+}
+.demoCart-listItem-item-info-detail-bot-storage figure .lv2.active {
+  background: #057ca0;
+  color: white;
+}
+.demoCart-listItem-item-info-detail-bot-quantity figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.demoCart-listItem-item-info-detail-bot-quantity figure img {
+  width: 1.5em;
+  height: 1.5em;
+  object-fit: contain;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: white;
+}
+.demoCart-listItem-item-info-detail-bot-quantity figure img:hover {
+  background: #d4dde0;
+}
+.demoCart-listItem-item-info-detail-bot-quantity figure input {
+  border: none;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 0.2em;
+  width: 7.5em;
+  height: 2em;
+  text-align: center;
+  font-size: 1.2em;
+  border: 0.1em solid #989699;
+  position: relative;
+}
+.demoCart-listItem-item-price {
+  width: 9.5em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.demoCart-listItem-item-price p strong {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.demoCart-listItem-item-price button {
+  width: 100%;
+  height: 3.3em;
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 0.95em;
+}
+.demoCart-listItem-item-price #removePrd {
+  background: #c50837;
+  opacity: 0.9;
+}
+.demoCart-listItem-item-price #removePrd:hover {
+  opacity: 1;
+}
+.demoCart-listItem-item-price #payment {
+  background: #28a745;
+  color: white;
+  opacity: 0.9;
+}
+.demoCart-listItem-item-price #payment:hover {
+  opacity: 1;
 }
 .demoCart-expand {
   width: 100%;
@@ -110,7 +286,7 @@
   transition: 0.3s;
   cursor: pointer;
   position: relative;
-  animation: moving 2s linear infinite;
+  animation: moving 0.8s linear infinite;
 }
 @keyframes moving {
   0%, 100% {
