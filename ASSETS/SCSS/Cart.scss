@@ -74,8 +74,8 @@
   &-listItem {
     @include setSize(100%);
     padding: 0 20%;
-    font-size: 0rem;
     display: flex;
+    font-size: 0rem;
     flex-direction: column;
     justify-content: flex-start;
     &.active {
@@ -87,10 +87,17 @@
       padding: 0.8em;
       display: flex;
       flex-wrap: wrap;
+      font-size: 1em;
+      opacity: 0;
+      visibility: hidden;
       justify-content: space-between;
       align-items: center;
       border-bottom: 0.1em solid $vest-gray;
-      transition: 0.5s;
+      transition: 0.3s;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
       &-info {
         @include setSize(80%, 100%);
         display: flex;
@@ -198,6 +205,10 @@
                   &:hover {
                     background: $light-gray;
                   }
+                  &.active {
+                    pointer-events: none;
+                    opacity: 0.3;
+                  }
                 }
                 input {
                   @include reset_Input_Text();
@@ -234,7 +245,7 @@
           transition: 0.1s;
           font-size: 0.95em;
         }
-        #removePrd {
+        .deletePrd {
           background: #c50837;
           opacity: 0.9;
           &:hover {

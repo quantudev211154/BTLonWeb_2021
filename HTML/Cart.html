@@ -14,6 +14,7 @@
   <!-- CSS for Header -->
   <link rel="stylesheet" href="../ASSETS/CSS/Header.css">
   <link rel="stylesheet" href="../ASSETS/CSS/Cart.css">
+  <link rel="stylesheet" href="../ASSETS/CSS/CartResponsive.css">
 </head>
 
 <body>
@@ -110,7 +111,7 @@
               </div>
               <div class="demoCart-listItem-item-info-detail-top-price">
                 <strong>Giá:&nbsp;</strong>
-                <strong>27.499.000</strong>
+                <strong class="price">27.499.000</strong>
                 <span>VND</span>
               </div>
             </div>
@@ -118,18 +119,16 @@
               <div class="demoCart-listItem-item-info-detail-bot-storage">
                 <p>Bộ nhớ trong:</p>
                 <figure>
-                  <input type="radio" id="sto1" name="sto" value="128GB">
+                  <input type="radio" class="sto1" name="sto" value="128GB">
                   <label for="sto1" class="lv1">128GB</label>
-                  <input type="radio" id="sto2" name="sto" value="256GB">
-                  <label for="sto2" class="lv2">256GB</label>
                 </figure>
               </div>
               <div class="demoCart-listItem-item-info-detail-bot-quantity">
                 <p>Số lượng:</p>
                 <figure>
-                  <img src="../ASSETS/IMG/Cart/RemoveIcon.svg" alt="Remove Icon">
+                  <img src="../ASSETS/IMG/Cart/RemoveIcon.svg" alt="Remove Icon" class="subtractIcon">
                   <input type="text" class="quantity">
-                  <img src="../ASSETS/IMG/Cart/AddIcon.svg" alt="Add Icon">
+                  <img src="../ASSETS/IMG/Cart/AddIcon.svg" alt="Add Icon" class="addIcon">
                 </figure>
               </div>
             </div>
@@ -137,10 +136,10 @@
         </div>
         <div class="demoCart-listItem-item-price">
           <p>
-            <strong>27.499.000</strong>
+            <strong class="totalPrice">27.499.000</strong>
             <strong>&nbsp;VND</strong>
           </p>
-          <button id="removePrd">
+          <button class="deletePrd">
             <img src="../ASSETS/IMG/Cart/BinIcon.svg" alt="Bin Icon">
           </button>
           <button id="payment">
@@ -151,20 +150,20 @@
       <div class="demoCart-listItem-item">
         <div class="demoCart-listItem-item-info">
           <div class="demoCart-listItem-item-info-img">
-            <img src="../ASSETS/IMG/12_Series/12/12-blue.jpg" alt="iPhone 12">
+            <img src="../ASSETS/IMG/11_Series/11ProMax/11pm-coral.jpg" alt="iPhone 12">
           </div>
           <div class="demoCart-listItem-item-info-detail">
             <div class="demoCart-listItem-item-info-detail-top">
               <div class="demoCart-listItem-item-info-detail-top-name">
-                <h2>iPhone 12</h2>
+                <h2>iPhone 11 Pro Max</h2>
               </div>
               <div class="demoCart-listItem-item-info-detail-top-color">
                 <strong>Màu:&nbsp;</strong>
-                <strong>Xanh</strong>
+                <strong>Khói</strong>
               </div>
               <div class="demoCart-listItem-item-info-detail-top-price">
                 <strong>Giá:&nbsp;</strong>
-                <strong>27.499.000</strong>
+                <strong class="price">32.000.000</strong>
                 <span>VND</span>
               </div>
             </div>
@@ -172,18 +171,16 @@
               <div class="demoCart-listItem-item-info-detail-bot-storage">
                 <p>Bộ nhớ trong:</p>
                 <figure>
-                  <input type="radio" id="sto1" name="sto" value="128GB">
-                  <label for="sto1" class="lv1">128GB</label>
-                  <input type="radio" id="sto2" name="sto" value="256GB">
-                  <label for="sto2" class="lv2">256GB</label>
+                  <input type="radio" class="sto1" name="sto" value="256GB">
+                  <label for="sto1" class="lv1">256GB</label>
                 </figure>
               </div>
               <div class="demoCart-listItem-item-info-detail-bot-quantity">
                 <p>Số lượng:</p>
                 <figure>
-                  <img src="../ASSETS/IMG/Cart/RemoveIcon.svg" alt="Remove Icon">
+                  <img src="../ASSETS/IMG/Cart/RemoveIcon.svg" alt="Remove Icon" class="subtractIcon">
                   <input type="text" class="quantity">
-                  <img src="../ASSETS/IMG/Cart/AddIcon.svg" alt="Add Icon">
+                  <img src="../ASSETS/IMG/Cart/AddIcon.svg" alt="Add Icon" class="addIcon">
                 </figure>
               </div>
             </div>
@@ -191,10 +188,10 @@
         </div>
         <div class="demoCart-listItem-item-price">
           <p>
-            <strong>27.499.000</strong>
+            <strong class="totalPrice">32.000.000</strong>
             <strong>&nbsp;VND</strong>
           </p>
-          <button id="removePrd">
+          <button class="deletePrd">
             <img src="../ASSETS/IMG/Cart/BinIcon.svg" alt="Bin Icon">
           </button>
           <button id="payment">

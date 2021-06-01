@@ -87,8 +87,8 @@
   width: 100%;
   height: 100%;
   padding: 0 20%;
-  font-size: 0rem;
   display: flex;
+  font-size: 0rem;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -102,10 +102,17 @@
   padding: 0.8em;
   display: flex;
   flex-wrap: wrap;
+  font-size: 1em;
+  opacity: 0;
+  visibility: hidden;
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.1em solid #313639;
-  transition: 0.5s;
+  transition: 0.3s;
+}
+.demoCart-listItem-item.active {
+  opacity: 1;
+  visibility: visible;
 }
 .demoCart-listItem-item-info {
   width: 80%;
@@ -218,6 +225,10 @@
 .demoCart-listItem-item-info-detail-bot-quantity figure img:hover {
   background: #d4dde0;
 }
+.demoCart-listItem-item-info-detail-bot-quantity figure img.active {
+  pointer-events: none;
+  opacity: 0.3;
+}
 .demoCart-listItem-item-info-detail-bot-quantity figure input {
   border: none;
   outline: none;
@@ -252,11 +263,11 @@
   transition: 0.1s;
   font-size: 0.95em;
 }
-.demoCart-listItem-item-price #removePrd {
+.demoCart-listItem-item-price .deletePrd {
   background: #c50837;
   opacity: 0.9;
 }
-.demoCart-listItem-item-price #removePrd:hover {
+.demoCart-listItem-item-price .deletePrd:hover {
   opacity: 1;
 }
 .demoCart-listItem-item-price #payment {
