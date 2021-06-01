@@ -174,18 +174,11 @@
                     box-shadow: 1px 1px 5px $thin-gray;
                   }
                 }
-                .lv1 {
+                .phoneSto {
                   background: $light-blue;
                   color: white;
                   &.active {
                     background: white;
-                  }
-                }
-                .lv2 {
-                  margin-left: 0.5em;
-                  &.active {
-                    background: $light-blue;
-                    color: white;
                   }
                 }
               }
@@ -252,7 +245,7 @@
             opacity: 1;
           }
         }
-        #payment {
+        .phonePayment {
           background: #28a745;
           color: white;
           opacity: 0.9;

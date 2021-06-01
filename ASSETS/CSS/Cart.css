@@ -194,19 +194,12 @@
 .demoCart-listItem-item-info-detail-bot-storage figure label:hover {
   box-shadow: 1px 1px 5px #e3e1e6;
 }
-.demoCart-listItem-item-info-detail-bot-storage figure .lv1 {
+.demoCart-listItem-item-info-detail-bot-storage figure .phoneSto {
   background: #057ca0;
   color: white;
 }
-.demoCart-listItem-item-info-detail-bot-storage figure .lv1.active {
+.demoCart-listItem-item-info-detail-bot-storage figure .phoneSto.active {
   background: white;
-}
-.demoCart-listItem-item-info-detail-bot-storage figure .lv2 {
-  margin-left: 0.5em;
-}
-.demoCart-listItem-item-info-detail-bot-storage figure .lv2.active {
-  background: #057ca0;
-  color: white;
 }
 .demoCart-listItem-item-info-detail-bot-quantity figure {
   display: flex;
@@ -270,12 +263,12 @@
 .demoCart-listItem-item-price .deletePrd:hover {
   opacity: 1;
 }
-.demoCart-listItem-item-price #payment {
+.demoCart-listItem-item-price .phonePayment {
   background: #28a745;
   color: white;
   opacity: 0.9;
 }
-.demoCart-listItem-item-price #payment:hover {
+.demoCart-listItem-item-price .phonePayment:hover {
   opacity: 1;
 }
 .demoCart-expand {

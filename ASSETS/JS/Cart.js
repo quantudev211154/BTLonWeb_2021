@@ -4,9 +4,14 @@ const listItemChild = document.querySelectorAll('.demoCart-listItem-item')
 const deleteItem = document.querySelectorAll('.deletePrd')
 const listSubtractIcon = document.querySelectorAll('.subtractIcon')
 const listAddIcon = document.querySelectorAll('.addIcon')
-const listQuantityInp = document.querySelectorAll('.quantity')
-const listPrice = document.querySelectorAll('.price')
-const listTotalPrice = document.querySelectorAll('.totalPrice')
+//
+const listPhoneName = document.querySelectorAll('.phoneName')
+const listPhoneColor = document.querySelectorAll('.phoneColor')
+const listPhoneSto = document.querySelectorAll('.phoneSto')
+const listQuantityInp = document.querySelectorAll('.phoneQuantity')
+const listPrice = document.querySelectorAll('.phonePrice')
+const listTotalPrice = document.querySelectorAll('.phoneTotalPrice')
+const listPaymentBtn = document.querySelectorAll('.phonePayment')
 
 ;(function expandCart(){
   activeHideCart.onclick = () => {
@@ -108,4 +113,20 @@ function convertFromStringToInt(source){
   }
   if (listItemChild.length == 0)
     alert('Gio hang rong')
+})()
+
+;(function activePayment(){
+  for (let i = 0; i < listPaymentBtn.length; ++i){
+    listPaymentBtn[i].onclick = () => {
+      localStorage.clear()
+      var data = [listPhoneName[i].innerHTML,
+                  listPhoneColor[i].innerHTML,
+                  listPhoneSto[i].innerHTML,
+                  listQuantityInp[i].value,
+                  listTotalPrice[i].innerHTML
+      ]
+      localStorage.setItem(i, data)
+      location.assign('../HTML/Payment.html')
+    }
+  }
 })()
