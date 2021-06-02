@@ -50,6 +50,9 @@
   align-items: center;
   background: inherit;
 }
+.container-listItem.remake {
+  justify-content: center;
+}
 .container-listItem-item {
   width: 18.5rem;
   height: 30rem;

@@ -44,6 +44,9 @@
     justify-content: space-between;
     align-items: center;
     background: inherit;
+    &.remake {
+      justify-content: center;
+    }
     &-item {
       @include setSize(18.5rem, 30rem);
       padding: 0.8rem;
