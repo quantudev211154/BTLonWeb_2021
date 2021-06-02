@@ -237,6 +237,7 @@ window.onload = () => {
  prdData.forEach(phone => {
    if (phone.PhoneName.includes('X'))
     loadData(phone)
+    targetInner.classList.add('remake')
  });
 }
 
@@ -259,6 +260,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('12 ')){
         loadData(phone)
+        targetInner.classList.remove('remake')
       }
     });
   }
@@ -270,6 +272,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('11 '))
         loadData(phone)
+        targetInner.classList.remove('remake')
     });
   }
 })()
@@ -280,6 +283,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('X'))
         loadData(phone)
+        targetInner.classList.add('remake')
     });
   }
 })()
@@ -290,6 +294,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('SE'))
         loadData(phone)
+        targetInner.classList.add('remake')
     });
   }
 })()

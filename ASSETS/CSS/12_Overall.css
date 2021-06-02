@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: auto;
+}
+.container-wrapper {
+  width: 100%;
+  height: auto;
+}
+.container-wrapper-coverPhoto {
+  width: 100%;
+  height: 55rem;
+}
+.container-wrapper-coverPhoto img {
+  width: 100%;
+  height: 100%;
+}
+.container-wrapper-introduce {
+  width: 100%;
+  height: 40rem;
+  background: #fafafa;
+}
+.container-wrapper-introduce-content {
+  width: 60%;
+  height: 100%;
+  padding: 19vh 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.container-wrapper-introduce-content h1 {
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+.container-wrapper-introduce-content strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 3vh;
+  color: #313639;
+}
+.container-wrapper-introduce-content strong:nth-child(3) {
+  color: #989699;
+  font-size: 1.5rem;
+}
+.container-wrapper-introduce-content p {
+  margin-top: 3vh;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.container-wrapper-5G {
+  position: relative;
+  width: 100%;
+  height: 70rem;
+}
+.container-wrapper-5G-bgr {
+  width: 100%;
+  height: 100%;
+}
+.container-wrapper-5G-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-wrapper-5G-content {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 30rem;
+  height: 15rem;
+  background: transparent;
+}
+.container-wrapper-5G-content p {
+  color: #057ca0;
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+}
+.container-wrapper-5G-content p:first-child {
+  font-size: 4rem;
+  font-weight: 450;
+  margin-top: 0;
+}
+.container-wrapper-dimension {
+  width: 100%;
+  height: 70rem;
+  position: relative;
+}
+.container-wrapper-dimension-bgr {
+  width: 100%;
+  height: 100%;
+}
+.container-wrapper-dimension-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-wrapper-dimension-content {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  right: 5%;
+  top: 10%;
+  color: #fafafa;
+}
+.container-wrapper-dimension-content li {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  font-weight: 450;
+}
+.container-wrapper-chipset {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+  background: lavender;
+}
+.container-wrapper-chipset-content {
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-wrapper-chipset-content span {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid #313639;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 450;
+  text-align: center;
+  line-height: 5rem;
+}
+.container-wrapper-chipset-content p {
+  font-size: 1.4rem;
+  color: #989699;
+  font-weight: 450;
+  margin-top: 0.8rem;
+}
+.container-wrapper-chipset-content .punchline {
+  font-size: 2.3rem;
+  position: relative;
+  margin-top: 5rem;
+  color: #313639;
+}
+.container-wrapper-chipset-content .punchline::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  height: 0.3rem;
+  width: 80%;
+  background: #313639;
+  border-radius: 0.3rem;
+}
+.container-wrapper-frontCamera {
+  width: 100%;
+  height: 100rem;
+  background: #fafafa;
+}
+.container-wrapper-frontCamera-content {
+  width: 100%;
+  height: 20rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+.container-wrapper-frontCamera-content p:nth-child(2) {
+  margin-top: 0.7rem;
+}
+.container-wrapper-frontCamera-content-icon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border: 2px solid #313639;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.container-wrapper-frontCamera-content-icon::after {
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #181818;
+  border-radius: 50%;
+}
+.container-wrapper-frontCamera-bgr {
+  width: 100%;
+  height: 65rem;
+}
+.container-wrapper-frontCamera-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.container-wrapper-rearCamera {
+  width: 100%;
+  height: 110rem;
+  background: #fafafa;
+}
+.container-wrapper-rearCamera-content {
+  margin: 0 auto;
+  width: 80%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-wrapper-rearCamera-content-icon {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border: 3px solid #313639;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container-wrapper-rearCamera-content-icon .mainCam {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.container-wrapper-rearCamera-content-icon .mainCam::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-wrapper-rearCamera-content-icon .mainCam::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-wrapper-rearCamera-content-icon .flash {
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+.container-wrapper-rearCamera-content-icon .flash::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-wrapper-rearCamera-content-icon .flash::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-wrapper-rearCamera-content-main {
+  width: 55%;
+  height: 40%;
+  margin-top: 2rem;
+}
+.container-wrapper-rearCamera-content-main p {
+  text-align: center;
+  color: #989699;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  line-height: 2rem;
+}
+.container-wrapper-rearCamera-content-main p:first-child {
+  font-size: 2.3rem;
+  font-weight: 450;
+  color: #181818;
+  margin-top: 0;
+}
+.container-wrapper-rearCamera-bgr {
+  width: 100%;
+  height: 70rem;
+}
+.container-wrapper-rearCamera-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-wrapper-wireless {
+  width: 100%;
+  height: 110rem;
+  background: #fafafa;
+}
+.container-wrapper-wireless-content {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+.container-wrapper-wireless-content-main {
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-wrapper-wireless-content-main p {
+  font-size: 1.8rem;
+  color: #313639;
+  font-weight: 450;
+  margin-top: 1rem;
+}
+.container-wrapper-wireless-content-main p:nth-child(2) {
+  margin-top: 3rem;
+}
+.container-wrapper-wireless-content-main-title {
+  width: 18rem;
+  height: 18rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s;
+  animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+  0%, 100% {
+    border: 3px solid #009e89;
+    box-shadow: 2px 2px 10px #989699;
+  }
+  50% {
+    border: 3px solid #e20d66;
+    box-shadow: 2px 2px 30px #e20d66;
+  }
+}
+.container-wrapper-wireless-content-main-title::before {
+  content: "Sạc không dây tiện dụng trong phút mốt.";
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #057ca0;
+  font-size: 1.8rem;
+  font-weight: 450;
+  line-height: 2.3rem;
+  width: 12rem;
+  height: 10rem;
+  text-align: center;
+  animation: rotate2 4s linear infinite;
+}
+@keyframes rotate2 {
+  0%, 100% {
+    color: #057ca0;
+  }
+  50% {
+    color: #e20d66;
+  }
+}
+.container-wrapper-wireless figure {
+  width: 100%;
+  height: 70rem;
+}
+.container-wrapper-wireless figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=12_Overall.css.map */

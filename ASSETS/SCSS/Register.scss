@@ -45,17 +45,6 @@
             height: 3.8rem;
             transition: 0.3s;
             border-radius: 0.6rem;
-            &.active {
-              box-shadow: -1px -1px 3px $lite-blue, 1px -1px 3px $lite-blue, -1px 1px 3px $lite-blue,
-                1px 1px 3px $lite-blue;
-              span {
-                top: 0.2rem;
-                font-size: 0.8rem;
-              }
-              input {
-                border: 1px solid $lite-blue;
-              }
-            }
             span {
               position: absolute;
               top: 1rem;
@@ -63,6 +52,10 @@
               font-size: 1rem;
               transition: 0.15s ease;
               pointer-events: none;
+              &.active {
+                top: 0.2rem;
+                font-size: 0.8rem;
+              }
             }
             input {
               @include setSize();
@@ -73,6 +66,12 @@
               border-radius: 0.6rem;
               background-color: white;
               border: 1px solid $leaf-gray;
+              transition: 0.15s;
+              &.active {
+                box-shadow: -1px -1px 3px $lite-blue, 1px -1px 3px $lite-blue, -1px 1px 3px $lite-blue,
+                  1px 1px 3px $lite-blue;
+                border: 1px solid $lite-blue;
+              }
             }
           }
           span {
@@ -99,37 +98,20 @@
             position: relative;
             transition: 0.3s;
             border-radius: 0.6rem;
-            &.active {
-              box-shadow: -1px -1px 3px $lite-blue, 1px -1px 3px $lite-blue, -1px 1px 3px $lite-blue,
-                1px 1px 3px $lite-blue;
-              &::after {
-                height: 0;
-              }
-              span {
-                top: 0.2rem;
-                font-size: 0.8rem;
-              }
-              input {
-                color: black;
-                border: 1px solid $lite-blue;
-              }
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              right: 0.1rem;
-              transform: translateY(-50%);
-              @include setSize(2rem, 2.4rem);
-              background: white;
-              transition: 0.2s;
-            }
             span {
               position: absolute;
               top: 1rem;
               left: 1rem;
               font-size: 1rem;
+              z-index: 20;
               transition: 0.15s ease;
+              &.active {
+                top: 0.2rem;
+                font-size: 0.8rem;
+                ~ input {
+                  color: black;
+                }
+              }
             }
             input {
               @include setSize();
@@ -142,6 +124,25 @@
               border: 1px solid $leaf-gray;
               color: white;
               cursor: text;
+              position: relative;
+              &.active {
+                box-shadow: -1px -1px 3px $lite-blue, 1px -1px 3px $lite-blue, -1px 1px 3px $lite-blue,
+                  1px 1px 3px $lite-blue;
+                border: 1px solid $lite-blue;
+                &::after {
+                  height: 0;
+                }
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0.1rem;
+                transform: translateY(-50%);
+                @include setSize(2rem, 2.4rem);
+                background: white;
+                transition: 0.2s;
+              }
             }
           }
           span {
@@ -159,16 +160,21 @@
       &-phone {
         &-box {
           &-mainbox {
-            &.active {
-              &::after {
-                height: 2.4rem;
-              }
+            &::after {
+              content: "";
+              position: absolute;
+              height: 2.4rem;
+              width: 2rem;
+              top: 1rem;
+              right: 0.1rem;
+              background: white;
             }
           }
         }
       }
       &-verify {
         @include setSize(100%, 2rem);
+        margin-top: 1rem;
         &-box {
           span {
             font-size: 1rem;

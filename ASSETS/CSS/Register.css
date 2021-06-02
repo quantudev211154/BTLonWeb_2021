@@ -54,16 +54,6 @@
   transition: 0.3s;
   border-radius: 0.6rem;
 }
-.container-wrapper-form-fullname-firstname-box.active, .container-wrapper-form-fullname-lastname-box.active {
-  box-shadow: -1px -1px 3px #15d3f5, 1px -1px 3px #15d3f5, -1px 1px 3px #15d3f5, 1px 1px 3px #15d3f5;
-}
-.container-wrapper-form-fullname-firstname-box.active span, .container-wrapper-form-fullname-lastname-box.active span {
-  top: 0.2rem;
-  font-size: 0.8rem;
-}
-.container-wrapper-form-fullname-firstname-box.active input, .container-wrapper-form-fullname-lastname-box.active input {
-  border: 1px solid #15d3f5;
-}
 .container-wrapper-form-fullname-firstname-box span, .container-wrapper-form-fullname-lastname-box span {
   position: absolute;
   top: 1rem;
@@ -71,6 +61,10 @@
   font-size: 1rem;
   transition: 0.15s ease;
   pointer-events: none;
+}
+.container-wrapper-form-fullname-firstname-box span.active, .container-wrapper-form-fullname-lastname-box span.active {
+  top: 0.2rem;
+  font-size: 0.8rem;
 }
 .container-wrapper-form-fullname-firstname-box input, .container-wrapper-form-fullname-lastname-box input {
   width: 100%;
@@ -84,6 +78,11 @@
   border-radius: 0.6rem;
   background-color: white;
   border: 1px solid #989699;
+  transition: 0.15s;
+}
+.container-wrapper-form-fullname-firstname-box input.active, .container-wrapper-form-fullname-lastname-box input.active {
+  box-shadow: -1px -1px 3px #15d3f5, 1px -1px 3px #15d3f5, -1px 1px 3px #15d3f5, 1px 1px 3px #15d3f5;
+  border: 1px solid #15d3f5;
 }
 .container-wrapper-form-fullname-firstname span, .container-wrapper-form-fullname-lastname span {
   font-size: 1rem;
@@ -108,37 +107,20 @@
   transition: 0.3s;
   border-radius: 0.6rem;
 }
-.container-wrapper-form-birthday-box-mainbox.active, .container-wrapper-form-email-box-mainbox.active, .container-wrapper-form-password-box-mainbox.active, .container-wrapper-form-confirmPassword-box-mainbox.active, .container-wrapper-form-phone-box-mainbox.active {
-  box-shadow: -1px -1px 3px #15d3f5, 1px -1px 3px #15d3f5, -1px 1px 3px #15d3f5, 1px 1px 3px #15d3f5;
-}
-.container-wrapper-form-birthday-box-mainbox.active::after, .container-wrapper-form-email-box-mainbox.active::after, .container-wrapper-form-password-box-mainbox.active::after, .container-wrapper-form-confirmPassword-box-mainbox.active::after, .container-wrapper-form-phone-box-mainbox.active::after {
-  height: 0;
-}
-.container-wrapper-form-birthday-box-mainbox.active span, .container-wrapper-form-email-box-mainbox.active span, .container-wrapper-form-password-box-mainbox.active span, .container-wrapper-form-confirmPassword-box-mainbox.active span, .container-wrapper-form-phone-box-mainbox.active span {
-  top: 0.2rem;
-  font-size: 0.8rem;
-}
-.container-wrapper-form-birthday-box-mainbox.active input, .container-wrapper-form-email-box-mainbox.active input, .container-wrapper-form-password-box-mainbox.active input, .container-wrapper-form-confirmPassword-box-mainbox.active input, .container-wrapper-form-phone-box-mainbox.active input {
-  color: black;
-  border: 1px solid #15d3f5;
-}
-.container-wrapper-form-birthday-box-mainbox::after, .container-wrapper-form-email-box-mainbox::after, .container-wrapper-form-password-box-mainbox::after, .container-wrapper-form-confirmPassword-box-mainbox::after, .container-wrapper-form-phone-box-mainbox::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0.1rem;
-  transform: translateY(-50%);
-  width: 2rem;
-  height: 2.4rem;
-  background: white;
-  transition: 0.2s;
-}
 .container-wrapper-form-birthday-box-mainbox span, .container-wrapper-form-email-box-mainbox span, .container-wrapper-form-password-box-mainbox span, .container-wrapper-form-confirmPassword-box-mainbox span, .container-wrapper-form-phone-box-mainbox span {
   position: absolute;
   top: 1rem;
   left: 1rem;
   font-size: 1rem;
+  z-index: 20;
   transition: 0.15s ease;
+}
+.container-wrapper-form-birthday-box-mainbox span.active, .container-wrapper-form-email-box-mainbox span.active, .container-wrapper-form-password-box-mainbox span.active, .container-wrapper-form-confirmPassword-box-mainbox span.active, .container-wrapper-form-phone-box-mainbox span.active {
+  top: 0.2rem;
+  font-size: 0.8rem;
+}
+.container-wrapper-form-birthday-box-mainbox span.active ~ input, .container-wrapper-form-email-box-mainbox span.active ~ input, .container-wrapper-form-password-box-mainbox span.active ~ input, .container-wrapper-form-confirmPassword-box-mainbox span.active ~ input, .container-wrapper-form-phone-box-mainbox span.active ~ input {
+  color: black;
 }
 .container-wrapper-form-birthday-box-mainbox input, .container-wrapper-form-email-box-mainbox input, .container-wrapper-form-password-box-mainbox input, .container-wrapper-form-confirmPassword-box-mainbox input, .container-wrapper-form-phone-box-mainbox input {
   width: 100%;
@@ -154,6 +136,25 @@
   border: 1px solid #989699;
   color: white;
   cursor: text;
+  position: relative;
+}
+.container-wrapper-form-birthday-box-mainbox input.active, .container-wrapper-form-email-box-mainbox input.active, .container-wrapper-form-password-box-mainbox input.active, .container-wrapper-form-confirmPassword-box-mainbox input.active, .container-wrapper-form-phone-box-mainbox input.active {
+  box-shadow: -1px -1px 3px #15d3f5, 1px -1px 3px #15d3f5, -1px 1px 3px #15d3f5, 1px 1px 3px #15d3f5;
+  border: 1px solid #15d3f5;
+}
+.container-wrapper-form-birthday-box-mainbox input.active::after, .container-wrapper-form-email-box-mainbox input.active::after, .container-wrapper-form-password-box-mainbox input.active::after, .container-wrapper-form-confirmPassword-box-mainbox input.active::after, .container-wrapper-form-phone-box-mainbox input.active::after {
+  height: 0;
+}
+.container-wrapper-form-birthday-box-mainbox input::after, .container-wrapper-form-email-box-mainbox input::after, .container-wrapper-form-password-box-mainbox input::after, .container-wrapper-form-confirmPassword-box-mainbox input::after, .container-wrapper-form-phone-box-mainbox input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.1rem;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2.4rem;
+  background: white;
+  transition: 0.2s;
 }
 .container-wrapper-form-birthday-box span, .container-wrapper-form-email-box span, .container-wrapper-form-password-box span, .container-wrapper-form-confirmPassword-box span, .container-wrapper-form-phone-box span {
   font-size: 1rem;
@@ -163,12 +164,19 @@
 .container-wrapper-form-email-box {
   height: 6.5rem;
 }
-.container-wrapper-form-phone-box-mainbox.active::after {
+.container-wrapper-form-phone-box-mainbox::after {
+  content: "";
+  position: absolute;
   height: 2.4rem;
+  width: 2rem;
+  top: 1rem;
+  right: 0.1rem;
+  background: white;
 }
 .container-wrapper-form-verify {
   width: 100%;
   height: 2rem;
+  margin-top: 1rem;
 }
 .container-wrapper-form-verify-box span {
   font-size: 1rem;
