@@ -2,530 +2,205 @@
 @import "Color.scss";
 @import "Mixin.scss";
 
-.wrapper {
-  @include setSize(100%, 601px);
-  font-size: 18px;
+.container {
   position: relative;
   top: $header-height;
-  display: flex;
-  padding: 2.79rem;
-  &-banner {
-    @include setSize(50%, 100%);
-    text-align: center;
-    p {
-      font-size: 2rem;
-      &:first-child {
-        font-size: 2.5em;
-        color: $apple-pink;
-      }
-    }
-    figure {
-      @include setSize(100%, 70%);
-      position: relative;
-      img {
-        @include setSize(55%, 100%);
-        margin-top: 20px;
-      }
-    }
-  }
-  &-form {
-    @include setSize(50%, 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1.12rem;
+  left: 0;
+  width: 100%;
+  height: 37rem;
+  background: white;
+  &-wrapper {
+    @include setSize(25rem, 30rem);
+    @include absolutely_Center();
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    background: white;
     &-title {
-      @include setSize(100%, 12%);
+      @include setSize(100%, 5rem);
       text-align: center;
+      margin-bottom: 1rem;
       strong {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        line-height: 5rem;
+        color: black;
       }
     }
-    &-username,
-    &-password {
-      @include setSize(100%, 18%);
+    &-form {
+      @include setSize(100%, 18rem);
       display: flex;
+      justify-content: flex-start;
       flex-direction: column;
-      justify-content: space-between;
-      font-size: 18px;
-      span {
-        font-size: 1.2rem;
-      }
-      input {
-        @include reset_Input_Text(none);
-        @include setSize(100%, 90%);
-        padding: 0 1.2rem;
-        font-size: 1rem;
-        border: 1px solid $leaf-gray;
-        border-radius: 0.6rem;
-        margin-top: 0.5rem;
-        border-radius: 0.6rem;
-        transition: 0.3s;
-        &:focus {
-          box-shadow: -1px -1px 4px $lite-blue, 1px -1px 4px $lite-blue, -1px 1px 4px $lite-blue, 1px 1px 4px $lite-blue;
-          border: 1px solid $lite-blue;
-        }
-      }
-    }
-    &-password {
-      margin-top: 1rem;
-    }
-    &-forgot {
-      @include setSize(100%, 8%);
-      margin-top: 1rem;
-      display: flex;
-      justify-content: space-between;
-      a {
-        @include reset_A_Tag();
-        color: $sky-blue;
-        &:hover {
-          color: $cadet-blue;
-        }
-      }
-      span {
-        font-size: 1rem;
-        color: red;
-        font-weight: bolder;
-      }
-    }
-    &-activeBtn {
-      @include setSize(100%, 11%);
-      button {
-        @include setSize(100%, 100%);
-        background: #08b2b2;
-        color: white;
-        border: none;
-        outline: none;
-        border-radius: 1rem;
-        font-size: 1.3rem;
-        cursor: pointer;
-        transition: 0.3s;
-        &:hover {
-          background: #03b568;
-        }
-      }
-    }
-    &-fastLogin {
-      @include setSize(100%, 20%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      span {
-        padding: 15px 0;
-        font-size: 1rem;
-      }
-      &-option {
-        @include setSize(100%, 80%);
+      &-username,
+      &-password {
+        @include setSize(100%, 34%);
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        a {
-          display: inline-block;
-          @include setSize(48%, 100%);
-          @include reset_A_Tag();
-          text-align: center;
-          border-radius: 10px;
-          border: 2px solid #03b568;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          img {
-            @include setSize(50px, 50px);
-            object-fit: cover;
+        &-top {
+          position: relative;
+          @include setSize(100%, 70%);
+          span {
+            color: $vest-gray;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-left: 2rem;
+            pointer-events: none;
+            position: absolute;
+            transition: 0.15s ease;
+            &.active {
+              font-size: 0.9rem;
+              margin-top: 0.5rem;
+            }
           }
+          input {
+            @include setSize();
+            @include reset_Input_Text();
+            border: none;
+            background: transparent;
+            padding-left: 2rem;
+            font-size: 1.2rem;
+            padding-top: 1.4rem;
+            border-radius: 0.8rem;
+            border: 1px solid $leaf-gray;
+            transition: 0.15s ease;
+            &:focus {
+              box-shadow: 1px 1px 10px $sky-blue;
+              border: 1px solid $sky-blue;
+            }
+          }
+        }
+        &-bot {
+          @include setSize(100%, 30%);
+          span {
+            pointer-events: none;
+            font-size: 0.9rem;
+            padding-left: 2rem;
+            line-height: 200%;
+            color: red;
+            font-weight: 450;
+          }
+        }
+      }
+      &-submit {
+        @include setSize(100%, 23%);
+        button {
+          text-align: center;
+          @include setSize();
+          font-size: 1.3rem;
+          border: none;
+          outline: none;
+          background: $light-blue;
+          color: white;
+          opacity: 0.9;
+          border-radius: 1rem;
+          cursor: pointer;
+          transition: 0.3s;
           &:hover {
-            border: 2px solid #08b2b2;
+            opacity: 1;
+            background: $cadet-blue;
           }
         }
       }
     }
-    &-register {
-      @include setSize(100%, 5%);
-      text-align: center;
+    &-moreOption {
+      @include setSize(100%, 3.3rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       a {
         @include reset_A_Tag();
-        color: #08b2b2;
-        font-size: 1.2rem;
-        line-height: 300%;
+        font-size: 1.05rem;
+        color: $light-blue;
+        font-weight: 420;
         &:hover {
-          color: $apple-pink;
+          color: $sky-blue;
+        }
+        &:nth-child(2) {
+          &:hover {
+            color: $apple-pink;
+          }
         }
       }
     }
   }
 }
-
-/**
-* Responsive for width = 1920px
-*/
 
 @media screen and (min-width: 1920px) {
   * {
     font-size: 20px;
   }
-  .wrapper {
-    height: 1050px;
-    padding: 2.5rem;
-    &-banner {
-      p {
-        &:first-child {
-          margin-top: 5rem;
-        }
-      }
-      figure {
-        height: 50%;
-        margin-top: 50px;
-        img {
-          width: 50%;
-        }
-      }
-    }
-    &-form {
-      &-title {
-        strong {
-          font-size: 3rem;
-        }
-      }
-      &-username,
-      &-password {
-        height: 15%;
-        span {
-          font-size: 1.5rem;
-        }
-        input {
-          font-size: 1.3rem;
-        }
-      }
-      &-forgot {
-        a,
-        span {
-          font-size: 1.2rem;
-        }
-      }
-      &-activeBtn {
-        button {
-          font-size: 1.5rem;
-        }
-      }
-      &-fastLogin {
-        height: 16%;
-        margin-top: 1rem;
-        span {
-          font-size: 1.2rem;
-        }
-        &-option {
-          a {
-            span {
-              font-size: 1.3rem;
-            }
-          }
-        }
-      }
-      &-register {
-        height: 10%;
-        margin-top: 1rem;
-      }
-    }
+
+  .container {
+    height: 50rem;
   }
 }
-
-/**
-* Responsive for width = 1100px
-*/
 
 @media screen and (max-width: 1100px) {
   * {
-    font-size: 18px;
+    font-size: 20px;
   }
-  .wrapper {
-    height: 75rem;
-    padding: 2rem;
-    &-banner {
-      display: none;
-    }
-    &-form {
-      margin-top: 3rem;
-      width: 100%;
-      &-title {
-        strong {
-          font-size: 5rem;
-        }
-      }
-      &-username,
-      &-password {
-        height: 12%;
-        span {
-          font-size: 2rem;
-        }
-        input {
-          font-size: 1.6rem;
-        }
-      }
-      &-forgot {
-        a,
-        span {
-          font-size: 1.5rem;
-        }
-      }
-      &-activeBtn {
-        height: 10%;
-        button {
-          font-size: 2rem;
-        }
-      }
-      &-fastLogin {
-        height: 14%;
-        margin-top: 2rem;
-        span {
-          font-size: 1.5rem;
-        }
-        &-option {
-          a {
-            img {
-              @include setSize(70px, 70px);
-            }
-            span {
-              font-size: 2rem;
-            }
-          }
-        }
-      }
-      &-register {
-        margin-top: 2rem;
-        a {
-          font-size: 2.2rem;
-        }
-      }
-    }
+
+  .container {
+    height: 65rem;
   }
 }
-
-/**
-* Responsive for width = 800px
-*/
 
 @media screen and (max-width: 800px) {
   * {
-    font-size: 18px;
+    font-size: 20px;
   }
-  .wrapper {
-    height: 55rem;
-    padding: 1rem 1.5rem;
-    &-banner {
-      display: none;
-    }
-    &-form {
-      margin-top: 1.5rem;
-      width: 100%;
-      &-title {
-        strong {
-          font-size: 4rem;
-        }
-      }
-      &-username,
-      &-password {
-        height: 15%;
-        span {
-          font-size: 2rem;
-        }
-        input {
-          font-size: 1.6rem;
-        }
-      }
-      &-forgot {
-        a,
-        span {
-          font-size: 1.5rem;
-        }
-      }
-      &-activeBtn {
-        height: 10%;
-        button {
-          font-size: 2rem;
-        }
-      }
-      &-fastLogin {
-        height: 14%;
-        margin-top: 2rem;
-        span {
-          font-size: 1.5rem;
-        }
-        &-option {
-          a {
-            img {
-              @include setSize(50px, 50px);
-            }
-            span {
-              font-size: 1.5rem;
-            }
-          }
-        }
-      }
-      &-register {
-        margin-top: 1rem;
-        a {
-          font-size: 1.8rem;
-        }
-      }
-    }
+
+  .container {
+    height: 48rem;
   }
 }
-
-/**
-* Responsive for width = 600px
-*/
 
 @media screen and (max-width: 600px) {
   * {
-    font-size: 16px;
+    font-size: 20px;
   }
-  .wrapper {
-    height: 50rem;
-    padding: 1rem 1.5rem;
-    &-banner {
-      display: none;
-    }
-    &-form {
-      margin-top: 1rem;
-      width: 100%;
-      &-title {
-        strong {
-          font-size: 3rem;
-        }
-      }
-      &-username,
-      &-password {
-        height: 15%;
-        span {
-          font-size: 1.6rem;
-        }
-        input {
-          font-size: 1.4rem;
-        }
-      }
-      &-forgot {
-        a,
-        span {
-          font-size: 1.5rem;
-        }
-      }
-      &-activeBtn {
-        height: 10%;
-        button {
-          font-size: 1.6rem;
-        }
-      }
-      &-fastLogin {
-        height: 14%;
-        margin-top: 1rem;
-        span {
-          font-size: 1.5rem;
-        }
-        &-option {
-          a {
-            img {
-              @include setSize(50px, 50px);
-            }
-            span {
-              font-size: 1.5rem;
-            }
-          }
-        }
-      }
-      &-register {
-        margin-top: 1.5rem;
-        a {
-          font-size: 1.5rem;
-        }
-      }
-    }
+
+  .container {
+    height: 33rem;
   }
 }
-
-/**
-* Responsive for width = 500px
-*/
 
 @media screen and (max-width: 500px) {
   * {
-    font-size: 15px;
+    font-size: 18px;
   }
-  .wrapper {
-    height: 40rem;
-    padding: 1rem 0.6rem;
-    &-banner {
-      display: none;
-    }
-    &-form {
-      margin-top: 1rem;
-      width: 100%;
-      &-title {
-        strong {
-          font-size: 3rem;
-        }
-      }
-      &-username,
-      &-password {
-        height: 15%;
-        span {
-          font-size: 1.3rem;
-        }
-        input {
-          font-size: 1.1rem;
-        }
-      }
-      &-forgot {
-        a,
-        span {
-          font-size: 1.1rem;
-        }
-      }
-      &-activeBtn {
-        height: 10%;
-        button {
-          font-size: 1.4rem;
-        }
-      }
-      &-fastLogin {
-        height: 14%;
-        margin-top: 1rem;
-        span {
-          font-size: 1rem;
-        }
-        &-option {
-          a {
-            img {
-              @include setSize(30px, 30px);
-            }
-            span {
-              font-size: 1.1rem;
-            }
-          }
-        }
-      }
-      &-register {
-        margin-top: 1.5rem;
-        a {
-          font-size: 1.5rem;
-        }
-      }
+
+  .container {
+    height: 38rem;
+    &-wrapper {
+      width: 20rem;
     }
   }
 }
 
-/**
-* Responsive for width = 400px
-*/
-
 @media screen and (max-width: 400px) {
   * {
-    font-size: 15px;
+    font-size: 16px;
   }
-  .wrapper {
-    height: 40rem;
-    padding: 1rem 0.6rem;
-    &-banner {
-      display: none;
+
+  .container {
+    height: 38rem;
+    &-wrapper {
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container {
+    height: 38rem;
+    &-wrapper {
+      width: 20rem;
     }
   }
 }

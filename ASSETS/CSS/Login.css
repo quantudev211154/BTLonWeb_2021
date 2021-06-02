@@ -4,503 +4,215 @@
 /**
 * Let's set Parent Element position is "relative" before using
 */
-.wrapper {
-  width: 100%;
-  height: 601px;
-  font-size: 18px;
+.container {
   position: relative;
   top: 3.75rem;
-  display: flex;
-  padding: 2.79rem;
+  left: 0;
+  width: 100%;
+  height: 37rem;
+  background: white;
 }
-.wrapper-banner {
-  width: 50%;
-  height: 100%;
+.container-wrapper {
+  width: 25rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  background: white;
+}
+.container-wrapper-title {
+  width: 100%;
+  height: 5rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
-.wrapper-banner p {
-  font-size: 2rem;
+.container-wrapper-title strong {
+  font-size: 2.8rem;
+  line-height: 5rem;
+  color: black;
 }
-.wrapper-banner p:first-child {
-  font-size: 2.5em;
-  color: #e20d66;
+.container-wrapper-form {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-.wrapper-banner figure {
+.container-wrapper-form-username, .container-wrapper-form-password {
+  width: 100%;
+  height: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-wrapper-form-username-top, .container-wrapper-form-password-top {
+  position: relative;
   width: 100%;
   height: 70%;
-  position: relative;
 }
-.wrapper-banner figure img {
-  width: 55%;
-  height: 100%;
-  margin-top: 20px;
-}
-.wrapper-form {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1.12rem;
-}
-.wrapper-form-title {
-  width: 100%;
-  height: 12%;
-  text-align: center;
-}
-.wrapper-form-title strong {
-  font-size: 2.5rem;
-}
-.wrapper-form-username, .wrapper-form-password {
-  width: 100%;
-  height: 18%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 18px;
-}
-.wrapper-form-username span, .wrapper-form-password span {
+.container-wrapper-form-username-top span, .container-wrapper-form-password-top span {
+  color: #313639;
   font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  pointer-events: none;
+  position: absolute;
+  transition: 0.15s ease;
 }
-.wrapper-form-username input, .wrapper-form-password input {
-  border: none;
-  outline: none;
-  border: none solid black;
-  width: 100%;
-  height: 90%;
-  padding: 0 1.2rem;
-  font-size: 1rem;
-  border: 1px solid #989699;
-  border-radius: 0.6rem;
+.container-wrapper-form-username-top span.active, .container-wrapper-form-password-top span.active {
+  font-size: 0.9rem;
   margin-top: 0.5rem;
-  border-radius: 0.6rem;
-  transition: 0.3s;
 }
-.wrapper-form-username input:focus, .wrapper-form-password input:focus {
-  box-shadow: -1px -1px 4px #15d3f5, 1px -1px 4px #15d3f5, -1px 1px 4px #15d3f5, 1px 1px 4px #15d3f5;
-  border: 1px solid #15d3f5;
-}
-.wrapper-form-password {
-  margin-top: 1rem;
-}
-.wrapper-form-forgot {
-  width: 100%;
-  height: 8%;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper-form-forgot a {
-  text-decoration: none;
-  font-size: 1rem;
-  transition: 0.3s;
-  color: black;
-  color: #1595eb;
-}
-.wrapper-form-forgot a:hover {
-  color: #009e89;
-}
-.wrapper-form-forgot span {
-  font-size: 1rem;
-  color: red;
-  font-weight: bolder;
-}
-.wrapper-form-activeBtn {
-  width: 100%;
-  height: 11%;
-}
-.wrapper-form-activeBtn button {
+.container-wrapper-form-username-top input, .container-wrapper-form-password-top input {
   width: 100%;
   height: 100%;
-  background: #08b2b2;
-  color: white;
   border: none;
   outline: none;
-  border-radius: 1rem;
+  border: 1px solid black;
+  border: none;
+  background: transparent;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  padding-top: 1.4rem;
+  border-radius: 0.8rem;
+  border: 1px solid #989699;
+  transition: 0.15s ease;
+}
+.container-wrapper-form-username-top input:focus, .container-wrapper-form-password-top input:focus {
+  box-shadow: 1px 1px 10px #1595eb;
+  border: 1px solid #1595eb;
+}
+.container-wrapper-form-username-bot, .container-wrapper-form-password-bot {
+  width: 100%;
+  height: 30%;
+}
+.container-wrapper-form-username-bot span, .container-wrapper-form-password-bot span {
+  pointer-events: none;
+  font-size: 0.9rem;
+  padding-left: 2rem;
+  line-height: 200%;
+  color: red;
+  font-weight: 450;
+}
+.container-wrapper-form-submit {
+  width: 100%;
+  height: 23%;
+}
+.container-wrapper-form-submit button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
   font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background: #057ca0;
+  color: white;
+  opacity: 0.9;
+  border-radius: 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
-.wrapper-form-activeBtn button:hover {
-  background: #03b568;
+.container-wrapper-form-submit button:hover {
+  opacity: 1;
+  background: #009e89;
 }
-.wrapper-form-fastLogin {
+.container-wrapper-moreOption {
   width: 100%;
-  height: 20%;
+  height: 3.3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.wrapper-form-fastLogin span {
-  padding: 15px 0;
-  font-size: 1rem;
-}
-.wrapper-form-fastLogin-option {
-  width: 100%;
-  height: 80%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.wrapper-form-fastLogin-option a {
-  display: inline-block;
-  width: 48%;
-  height: 100%;
+.container-wrapper-moreOption a {
   text-decoration: none;
   font-size: 1rem;
   transition: 0.3s;
   color: black;
-  text-align: center;
-  border-radius: 10px;
-  border: 2px solid #03b568;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.05rem;
+  color: #057ca0;
+  font-weight: 420;
 }
-.wrapper-form-fastLogin-option a img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+.container-wrapper-moreOption a:hover {
+  color: #1595eb;
 }
-.wrapper-form-fastLogin-option a:hover {
-  border: 2px solid #08b2b2;
-}
-.wrapper-form-register {
-  width: 100%;
-  height: 5%;
-  text-align: center;
-}
-.wrapper-form-register a {
-  text-decoration: none;
-  font-size: 1rem;
-  transition: 0.3s;
-  color: black;
-  color: #08b2b2;
-  font-size: 1.2rem;
-  line-height: 300%;
-}
-.wrapper-form-register a:hover {
+.container-wrapper-moreOption a:nth-child(2):hover {
   color: #e20d66;
 }
 
-/**
-* Responsive for width = 1920px
-*/
 @media screen and (min-width: 1920px) {
   * {
     font-size: 20px;
   }
 
-  .wrapper {
-    height: 1050px;
-    padding: 2.5rem;
-  }
-  .wrapper-banner p:first-child {
-    margin-top: 5rem;
-  }
-  .wrapper-banner figure {
-    height: 50%;
-    margin-top: 50px;
-  }
-  .wrapper-banner figure img {
-    width: 50%;
-  }
-  .wrapper-form-title strong {
-    font-size: 3rem;
-  }
-  .wrapper-form-username, .wrapper-form-password {
-    height: 15%;
-  }
-  .wrapper-form-username span, .wrapper-form-password span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-username input, .wrapper-form-password input {
-    font-size: 1.3rem;
-  }
-  .wrapper-form-forgot a,
-.wrapper-form-forgot span {
-    font-size: 1.2rem;
-  }
-  .wrapper-form-activeBtn button {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-fastLogin {
-    height: 16%;
-    margin-top: 1rem;
-  }
-  .wrapper-form-fastLogin span {
-    font-size: 1.2rem;
-  }
-  .wrapper-form-fastLogin-option a span {
-    font-size: 1.3rem;
-  }
-  .wrapper-form-register {
-    height: 10%;
-    margin-top: 1rem;
+  .container {
+    height: 50rem;
   }
 }
-/**
-* Responsive for width = 1100px
-*/
 @media screen and (max-width: 1100px) {
   * {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  .wrapper {
-    height: 75rem;
-    padding: 2rem;
-  }
-  .wrapper-banner {
-    display: none;
-  }
-  .wrapper-form {
-    margin-top: 3rem;
-    width: 100%;
-  }
-  .wrapper-form-title strong {
-    font-size: 5rem;
-  }
-  .wrapper-form-username, .wrapper-form-password {
-    height: 12%;
-  }
-  .wrapper-form-username span, .wrapper-form-password span {
-    font-size: 2rem;
-  }
-  .wrapper-form-username input, .wrapper-form-password input {
-    font-size: 1.6rem;
-  }
-  .wrapper-form-forgot a,
-.wrapper-form-forgot span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-activeBtn {
-    height: 10%;
-  }
-  .wrapper-form-activeBtn button {
-    font-size: 2rem;
-  }
-  .wrapper-form-fastLogin {
-    height: 14%;
-    margin-top: 2rem;
-  }
-  .wrapper-form-fastLogin span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-fastLogin-option a img {
-    width: 70px;
-    height: 70px;
-  }
-  .wrapper-form-fastLogin-option a span {
-    font-size: 2rem;
-  }
-  .wrapper-form-register {
-    margin-top: 2rem;
-  }
-  .wrapper-form-register a {
-    font-size: 2.2rem;
+  .container {
+    height: 65rem;
   }
 }
-/**
-* Responsive for width = 800px
-*/
 @media screen and (max-width: 800px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 48rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 33rem;
+  }
+}
+@media screen and (max-width: 500px) {
   * {
     font-size: 18px;
   }
 
-  .wrapper {
-    height: 55rem;
-    padding: 1rem 1.5rem;
+  .container {
+    height: 38rem;
   }
-  .wrapper-banner {
-    display: none;
-  }
-  .wrapper-form {
-    margin-top: 1.5rem;
-    width: 100%;
-  }
-  .wrapper-form-title strong {
-    font-size: 4rem;
-  }
-  .wrapper-form-username, .wrapper-form-password {
-    height: 15%;
-  }
-  .wrapper-form-username span, .wrapper-form-password span {
-    font-size: 2rem;
-  }
-  .wrapper-form-username input, .wrapper-form-password input {
-    font-size: 1.6rem;
-  }
-  .wrapper-form-forgot a,
-.wrapper-form-forgot span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-activeBtn {
-    height: 10%;
-  }
-  .wrapper-form-activeBtn button {
-    font-size: 2rem;
-  }
-  .wrapper-form-fastLogin {
-    height: 14%;
-    margin-top: 2rem;
-  }
-  .wrapper-form-fastLogin span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-fastLogin-option a img {
-    width: 50px;
-    height: 50px;
-  }
-  .wrapper-form-fastLogin-option a span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-register {
-    margin-top: 1rem;
-  }
-  .wrapper-form-register a {
-    font-size: 1.8rem;
+  .container-wrapper {
+    width: 20rem;
   }
 }
-/**
-* Responsive for width = 600px
-*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   * {
     font-size: 16px;
   }
 
-  .wrapper {
-    height: 50rem;
-    padding: 1rem 1.5rem;
+  .container {
+    height: 38rem;
   }
-  .wrapper-banner {
-    display: none;
-  }
-  .wrapper-form {
-    margin-top: 1rem;
-    width: 100%;
-  }
-  .wrapper-form-title strong {
-    font-size: 3rem;
-  }
-  .wrapper-form-username, .wrapper-form-password {
-    height: 15%;
-  }
-  .wrapper-form-username span, .wrapper-form-password span {
-    font-size: 1.6rem;
-  }
-  .wrapper-form-username input, .wrapper-form-password input {
-    font-size: 1.4rem;
-  }
-  .wrapper-form-forgot a,
-.wrapper-form-forgot span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-activeBtn {
-    height: 10%;
-  }
-  .wrapper-form-activeBtn button {
-    font-size: 1.6rem;
-  }
-  .wrapper-form-fastLogin {
-    height: 14%;
-    margin-top: 1rem;
-  }
-  .wrapper-form-fastLogin span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-fastLogin-option a img {
-    width: 50px;
-    height: 50px;
-  }
-  .wrapper-form-fastLogin-option a span {
-    font-size: 1.5rem;
-  }
-  .wrapper-form-register {
-    margin-top: 1.5rem;
-  }
-  .wrapper-form-register a {
-    font-size: 1.5rem;
+  .container-wrapper {
+    width: 20rem;
   }
 }
-/**
-* Responsive for width = 500px
-*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 350px) {
   * {
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  .wrapper {
-    height: 40rem;
-    padding: 1rem 0.6rem;
+  .container {
+    height: 38rem;
   }
-  .wrapper-banner {
-    display: none;
-  }
-  .wrapper-form {
-    margin-top: 1rem;
-    width: 100%;
-  }
-  .wrapper-form-title strong {
-    font-size: 3rem;
-  }
-  .wrapper-form-username, .wrapper-form-password {
-    height: 15%;
-  }
-  .wrapper-form-username span, .wrapper-form-password span {
-    font-size: 1.3rem;
-  }
-  .wrapper-form-username input, .wrapper-form-password input {
-    font-size: 1.1rem;
-  }
-  .wrapper-form-forgot a,
-.wrapper-form-forgot span {
-    font-size: 1.1rem;
-  }
-  .wrapper-form-activeBtn {
-    height: 10%;
-  }
-  .wrapper-form-activeBtn button {
-    font-size: 1.4rem;
-  }
-  .wrapper-form-fastLogin {
-    height: 14%;
-    margin-top: 1rem;
-  }
-  .wrapper-form-fastLogin span {
-    font-size: 1rem;
-  }
-  .wrapper-form-fastLogin-option a img {
-    width: 30px;
-    height: 30px;
-  }
-  .wrapper-form-fastLogin-option a span {
-    font-size: 1.1rem;
-  }
-  .wrapper-form-register {
-    margin-top: 1.5rem;
-  }
-  .wrapper-form-register a {
-    font-size: 1.5rem;
-  }
-}
-/**
-* Responsive for width = 400px
-*/
-@media screen and (max-width: 400px) {
-  * {
-    font-size: 15px;
-  }
-
-  .wrapper {
-    height: 40rem;
-    padding: 1rem 0.6rem;
-  }
-  .wrapper-banner {
-    display: none;
+  .container-wrapper {
+    width: 20rem;
   }
 }
 

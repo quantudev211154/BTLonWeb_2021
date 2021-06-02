@@ -124,7 +124,7 @@ function convertFromStringToInt(source){
                   listPhoneSto[i].innerHTML,
                   listQuantityInp[i].value,
                   listTotalPrice[i].innerHTML
-      ]
+                  ]
       localStorage.setItem(i, data)
       location.assign('../HTML/Payment.html')
     }

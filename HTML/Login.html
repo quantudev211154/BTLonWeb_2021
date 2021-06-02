@@ -73,59 +73,47 @@
       </div>
     </nav>
     <!-- Login Button Area -->
-    <a href="./Login.html" class="header-login" id="loginBtn">
+    <a href="./Login.html" class="header-login" id="loginBtn" title="Đăng nhập">
       <img src="../ASSETS/IMG/Landing/LoginIcon.svg" alt="Login Icon">
       <span>Đăng nhập</span>
     </a>
   </header>
-  <!-- Waitting for Main Content -->
-  <main class="wrapper">
-    <div class="wrapper-banner">
-      <p>Đăng kí ngay</p>
-      <p>để gia nhập hệ sinh thái của Apple</p>
-      <figure>
-        <img src="../ASSETS/IMG/Signin/AppleLogo.png" alt="">
-      </figure>
-    </div>
-    <form action="#" class="wrapper-form">
-      <div class="wrapper-form-title">
+  <!-- Main Login Area -->
+  <div class="container">
+    <div class="container-wrapper">
+      <div class="container-wrapper-title">
         <strong>Đăng nhập</strong>
       </div>
-      <div class="wrapper-form-username">
-        <span>Apple ID</span>
-        <input type="text" placeholder="AppleID của bạn" id="username" required>
-      </div>
-      <div class="wrapper-form-password">
-        <span>Mật khẩu</span>
-        <input type="password" placeholder="Mật khẩu" id="password" required>
-      </div>
-      <div class="wrapper-form-forgot">
-        <a href="#">Quên mật khẩu</a>
-        <span id="loginStatus"></span>
-      </div>
-      <div class="wrapper-form-activeBtn">
-        <button id="login">Đăng nhập</button>
-      </div>
-      <div class="wrapper-form-fastLogin">
-        <span>
-          - - - - - Hoặc đăng nhập bằng - - - - -
-        </span>
-        <div class="wrapper-form-fastLogin-option">
-          <a href="#">
-            <img src="../ASSETS/IMG/Signin/GG.png" alt="Google Logo">
-            <span>Google</span>
-          </a>
-          <a href="#">
-            <img src="../ASSETS/IMG/Signin/FbLogo.png" alt="Facebook Logo">
-            <span>Facebook</span>
-          </a>
+      <form action="#" class="container-wrapper-form">
+        <div class="container-wrapper-form-username">
+          <div class="container-wrapper-form-username-top">
+            <span class="moving">AppleID</span>
+            <input type="text" class="inputData">
+          </div>
+          <div class="container-wrapper-form-username-bot">
+            <span class="statusDataInp"></span>
+          </div>
         </div>
+        <div class="container-wrapper-form-password">
+          <div class="container-wrapper-form-password-top">
+            <span class="moving">Mật khẩu</span>
+            <input type="password" class="inputData">
+          </div>
+          <div class="container-wrapper-form-password-bot">
+            <span class="statusDataInp"></span>
+          </div>
+        </div>
+        <div class="container-wrapper-form-submit">
+          <button id="submit">Đăng nhập</button>
+        </div>
+      </form>
+      <div class="container-wrapper-moreOption">
+        <a href="#">Quên mật khẩu</a>
+        <a href="./Register.html">Chưa có AppleID?&nbsp;Tạo 1 cái liền!</a>
       </div>
-      <div class="wrapper-form-register">
-        <a href="./Register.html">Tạo Apple ID</a>
-      </div>
-    </form>
-  </main>
+    </div>
+  </div>
+  <!-- End of Main Login Area -->
   <!-- The end of Main Content -->
   <footer class="footer">
     <div class="footer-links">
