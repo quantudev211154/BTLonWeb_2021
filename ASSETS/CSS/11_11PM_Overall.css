@@ -1,0 +1,217 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+}
+.container-header {
+  width: 100%;
+  height: 80rem;
+  background: #e7eaef;
+}
+.container-header-box {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+}
+.container-header-box-content {
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-header-box-content h1 {
+  font-size: 2.5rem;
+  font-weight: 450;
+}
+.container-header-box-content h2 {
+  font-weight: 450;
+  font-size: 2rem;
+}
+.container-header-box-content h3 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+.container-header-bgr {
+  width: 100%;
+  height: 60rem;
+  overflow: hidden;
+}
+.container-header-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.3);
+  margin-left: 8rem;
+}
+.container-color {
+  width: 100%;
+  height: 80rem;
+  background: white;
+}
+.container-color-box {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+}
+.container-color-box-content {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-color-box-content h1 {
+  font-weight: 450;
+  font-size: 2.3rem;
+}
+.container-color-box-content h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.container-color-bgr {
+  width: 100%;
+  height: 60rem;
+}
+.container-color-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.container-multimedia {
+  width: 100%;
+  height: 80rem;
+}
+.container-multimedia-box {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+}
+.container-multimedia-box-content {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-multimedia-box-content h1 {
+  font-weight: 450;
+  font-size: 2.5rem;
+}
+.container-multimedia-box-content h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.container-multimedia-bgr {
+  width: 100%;
+  height: 60rem;
+  position: relative;
+}
+.container-multimedia-bgr::before {
+  content: "6.5'', Super Retina XDR";
+  width: 8rem;
+  height: 5rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  color: #fafafa;
+  transform: rotate(-10deg);
+}
+.container-multimedia-bgr::after {
+  content: "6.1'', Liquid Retina";
+  width: 8rem;
+  height: 5rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: black;
+  transform: rotate(-10deg);
+}
+.container-multimedia-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-faceID, .container-frontCam, .container-rearCam {
+  width: 100%;
+  height: 100rem;
+  background: lavenderblush;
+}
+.container-faceID-box, .container-frontCam-box, .container-rearCam-box {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+}
+.container-faceID-box-content, .container-frontCam-box-content, .container-rearCam-box-content {
+  width: 53%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-faceID-box-content h1, .container-frontCam-box-content h1, .container-rearCam-box-content h1 {
+  font-weight: 450;
+  font-size: 2.5rem;
+}
+.container-faceID-box-content h3, .container-frontCam-box-content h3, .container-rearCam-box-content h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.container-faceID-bgr, .container-frontCam-bgr, .container-rearCam-bgr {
+  width: 100%;
+  height: 70rem;
+}
+.container-faceID-bgr img, .container-frontCam-bgr img, .container-rearCam-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-frontCam-box-content {
+  position: relative;
+  height: 60%;
+}
+.container-frontCam-box-content::before {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #181818;
+  border-radius: 50%;
+  background: #181818;
+}
+.container-frontCam-box-content::after {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  top: 78%;
+  left: 51.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fff0f5;
+}
+
+/*# sourceMappingURL=11_11PM_Overall.css.map */

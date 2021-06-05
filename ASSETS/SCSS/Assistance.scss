@@ -9,7 +9,6 @@
   left: 0;
   &-header {
     @include setSize(100%, 40rem);
-    position: relative;
     &-bgr {
       @include setSize();
       img {
@@ -32,7 +31,7 @@
       background: $vest-gray;
     }
     &-box {
-      @include setSize(70%, 50%);
+      @include setSize(70%, auto);
       @include absolutely_Center();
       text-align: center;
       h1 {
@@ -129,16 +128,17 @@
         }
       }
       &-option {
-        @include setSize(100%, 6rem);
+        @include setSize(100%, auto);
         padding: 1rem 0;
         &-box {
-          @include setSize(50%, 100%);
+          @include setSize(50%, auo);
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
           span {
             display: inline-block;
-            @include setSize(10rem, 100%);
+            @include setSize(10rem, 4rem);
             border: 2px solid $leaf-gray;
             border-radius: 0.5rem;
             text-align: center;
@@ -165,6 +165,7 @@
         -webkit-overflow-scrolling: touch;
         &-item {
           min-width: 18.5rem;
+          scroll-snap-align: start;
           height: 25rem;
           padding: 0.8rem;
           border-radius: 0.8rem;

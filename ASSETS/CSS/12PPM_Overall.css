@@ -100,7 +100,7 @@
 }
 .container-5g-content {
   width: 50%;
-  height: 30rem;
+  height: 33%;
   margin: 0 auto;
   padding: 6rem 0;
   text-align: center;
@@ -149,9 +149,10 @@
   }
 }
 .container-5g-content strong {
+  display: block;
   font-size: 1.5rem;
   font-weight: 430;
-  line-height: 5rem;
+  margin: 2rem 0;
 }
 .container-5g-content p {
   font-size: 1.3rem;
@@ -159,7 +160,7 @@
 }
 .container-5g-img {
   width: 100%;
-  height: 80rem;
+  height: 67%;
 }
 .container-5g-img img {
   width: 100%;
@@ -214,7 +215,7 @@
 }
 .container-frontCamera-content {
   width: 100%;
-  height: 20rem;
+  height: 20%;
   text-align: center;
   font-size: 1.8rem;
   position: relative;
@@ -260,7 +261,7 @@
 }
 .container-frontCamera-img {
   width: 100%;
-  height: 61rem;
+  height: 62%;
 }
 .container-frontCamera-img img {
   width: 100%;
@@ -338,7 +339,7 @@
 }
 .container-rearCamera-box {
   width: 100%;
-  height: 30rem;
+  height: 33%;
   position: relative;
 }
 .container-rearCamera-box-content {
@@ -363,7 +364,6 @@
 }
 .container-rearCamera-box-content strong {
   display: inline-block;
-  margin-top: 1rem;
 }
 .container-rearCamera-box-content h3 {
   font-weight: 450;
@@ -371,7 +371,7 @@
 }
 .container-rearCamera-img {
   width: 100%;
-  height: 80rem;
+  height: 67%;
 }
 .container-rearCamera-img img {
   width: 100%;
@@ -385,7 +385,7 @@
 }
 .container-wireless-content {
   width: 100%;
-  height: 30rem;
+  height: 30%;
   position: relative;
 }
 .container-wireless-content-box {
@@ -412,7 +412,7 @@
 }
 .container-wireless-img {
   width: 100%;
-  height: 70rem;
+  height: 70%;
 }
 .container-wireless-img img {
   width: 100%;

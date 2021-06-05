@@ -15,9 +15,10 @@
     &-introduce {
       @include setSize(100%, 40rem);
       background: #fafafa;
+      position: relative;
       &-content {
-        @include setSize(60%, 100%);
-        padding: 19vh 0;
+        @include setSize(60%, 45%);
+        @include absolutely_Center();
         margin: 0 auto;
         text-align: center;
         h1 {
@@ -55,7 +56,7 @@
         position: absolute;
         top: 0;
         left: 5%;
-        @include setSize(30rem, 15rem);
+        @include setSize(30rem, 10.5%);
         background: transparent;
         p {
           color: $light-blue;
@@ -82,7 +83,7 @@
       &-content {
         position: absolute;
         width: 20rem;
-        height: 20rem;
+        height: 14%;
         right: 5%;
         top: 10%;
         color: #fafafa;
@@ -98,7 +99,7 @@
       position: relative;
       background: lavender;
       &-content {
-        @include setSize(50%, 65%);
+        @include setSize(50%, 70%);
         @include absolutely_Center();
         span {
           display: inline-block;
@@ -138,10 +139,10 @@
       @include setSize(100%, 100rem);
       background: #fafafa;
       &-content {
-        @include setSize(100%, 20rem);
-        font-size: 2.2rem;
+        @include setSize(100%, 20%);
         text-align: center;
         p {
+          font-size: 2.2rem;
           &:nth-child(2) {
             margin-top: 0.7rem;
           }
@@ -163,10 +164,10 @@
         }
       }
       &-bgr {
-        @include setSize(100%, 65rem);
+        @include setSize(100%, 70%);
         img {
           @include setSize();
-          object-fit: contain;
+          object-fit: cover;
         }
       }
     }
@@ -175,13 +176,15 @@
       background: #fafafa;
       &-content {
         margin: 0 auto;
-        @include setSize(80%, 40rem);
+        @include setSize(80%, 44%);
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        position: relative;
         &-icon {
           position: relative;
+          @include absolutely_Center(38%);
           @include setSize(8rem, 8rem);
           border: 3px solid $vest-gray;
           border-radius: 1.5rem;
@@ -227,7 +230,8 @@
           }
         }
         &-main {
-          @include setSize(55%, 40%);
+          @include setSize(55%, 30%);
+          @include absolutely_Center(65%);
           margin-top: 2rem;
           p {
             text-align: center;
@@ -245,7 +249,7 @@
         }
       }
       &-bgr {
-        @include setSize(100%, 70rem);
+        @include setSize(100%, 56%);
         img {
           @include setSize();
           object-fit: cover;
@@ -256,7 +260,7 @@
       @include setSize(100%, 110rem);
       background: $lite-gray;
       &-content {
-        @include setSize(100%, 40rem);
+        @include setSize(100%, 44%);
         position: relative;
         &-main {
           @include setSize(60%, 70%);
@@ -313,7 +317,7 @@
         }
       }
       figure {
-        @include setSize(100%, 70rem);
+        @include setSize(100%, 56%);
         img {
           @include setSize();
           object-fit: cover;

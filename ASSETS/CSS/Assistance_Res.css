@@ -1,0 +1,80 @@
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container-header {
+    height: 50rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 18px;
+  }
+
+  .container-chart-wrapper-box-description {
+    width: 100%;
+  }
+  .container-suggestion-wrapper-option-box, .container-request-wrapper-option-box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .container-suggestion-wrapper-option-box span:not(:first-child), .container-request-wrapper-option-box span:not(:first-child) {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 15px;
+  }
+
+  .container-chart-wrapper-box-description a {
+    margin-bottom: 1rem;
+  }
+  .container-suggestion-wrapper-option-box, .container-request-wrapper-option-box {
+    justify-content: space-between;
+  }
+  .container-suggestion-wrapper-option-box span, .container-request-wrapper-option-box span {
+    margin-left: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container-chart-wrapper-box-pieChart figure {
+    width: 20rem;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 370px) {
+  * {
+    font-size: 13px;
+  }
+
+  .container-chart-wrapper-box-pieChart figure {
+    width: 20rem;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 330px) {
+  * {
+    font-size: 13px;
+  }
+
+  .container-title {
+    height: 30rem;
+  }
+  .container-suggestion-wrapper-option-box, .container-request-wrapper-option-box {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=Assistance_Res.css.map */

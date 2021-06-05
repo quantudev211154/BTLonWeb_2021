@@ -1,0 +1,149 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.container {
+  @include setSize(100%, auto);
+  position: relative;
+  top: $header-height;
+  left: 0;
+  &-header {
+    @include setSize(100%, 100rem);
+    &-box {
+      @include setSize(100%, 20rem);
+      background: #ffa597;
+      position: relative;
+      &-content {
+        @include setSize(50%, 50%);
+        @include absolutely_Center();
+        text-align: center;
+        h1 {
+          font-weight: 450;
+          font-size: 2.5rem;
+        }
+        h2 {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+          margin-top: 1rem;
+          color: $vest-gray;
+        }
+        h4 {
+          font-size: 1.5rem;
+          font-weight: 450;
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-coverPhoto {
+      @include setSize(100%, 80rem);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-faceID {
+    @include setSize(100%, 80rem);
+    position: relative;
+    &-content {
+      @include setSize(50%, 20%);
+      @include absolutely_Center(20%);
+      text-align: center;
+      color: white;
+      h1 {
+        font-weight: 450;
+      }
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+    &-bgr {
+      @include setSize();
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-display {
+    @include setSize(100%, 100rem);
+    &-box {
+      @include setSize(100%, 20rem);
+      position: relative;
+      background: #83868d;
+      &-content {
+        @include setSize(50%, 50%);
+        @include absolutely_Center();
+        text-align: center;
+        color: white;
+        h1 {
+          font-size: 2.3rem;
+        }
+        h2 {
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-bgr {
+      @include setSize(100%, 80rem);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-panel {
+    @include setSize(100%, 80rem);
+    position: relative;
+    &-box {
+      @include setSize(25rem, 20rem);
+      @include absolutely_Center(40%, 75%);
+      text-align: center;
+      h1 {
+        font-size: 2.3rem;
+        color: white;
+      }
+    }
+    &-bgr {
+      @include setSize();
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-frontCam,
+  &-rearCam {
+    @include setSize(100%, 90rem);
+    &-box {
+      @include setSize(100%, 20rem);
+      position: relative;
+      background: #121212;
+      &-content {
+        @include setSize(50%, 50%);
+        @include absolutely_Center();
+        color: white;
+        text-align: center;
+        h2 {
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-bgr {
+      @include setSize(100%, 70rem);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-rearCam {
+    &-box {
+      background: #afbfd8;
+    }
+  }
+}

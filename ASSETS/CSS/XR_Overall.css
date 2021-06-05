@@ -1,0 +1,189 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+}
+.container-header {
+  width: 100%;
+  height: 100rem;
+}
+.container-header-box {
+  width: 100%;
+  height: 20rem;
+  background: #ffa597;
+  position: relative;
+}
+.container-header-box-content {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-header-box-content h1 {
+  font-weight: 450;
+  font-size: 2.5rem;
+}
+.container-header-box-content h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.container-header-box-content h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #313639;
+}
+.container-header-box-content h4 {
+  font-size: 1.5rem;
+  font-weight: 450;
+  margin-top: 1rem;
+}
+.container-header-coverPhoto {
+  width: 100%;
+  height: 80rem;
+}
+.container-header-coverPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-faceID {
+  width: 100%;
+  height: 80rem;
+  position: relative;
+}
+.container-faceID-content {
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.container-faceID-content h1 {
+  font-weight: 450;
+}
+.container-faceID-content h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.container-faceID-bgr {
+  width: 100%;
+  height: 100%;
+}
+.container-faceID-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-display {
+  width: 100%;
+  height: 100rem;
+}
+.container-display-box {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  background: #83868d;
+}
+.container-display-box-content {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.container-display-box-content h1 {
+  font-size: 2.3rem;
+}
+.container-display-box-content h2 {
+  margin-top: 1rem;
+}
+.container-display-bgr {
+  width: 100%;
+  height: 80rem;
+}
+.container-display-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-panel {
+  width: 100%;
+  height: 80rem;
+  position: relative;
+}
+.container-panel-box {
+  width: 25rem;
+  height: 20rem;
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-panel-box h1 {
+  font-size: 2.3rem;
+  color: white;
+}
+.container-panel-bgr {
+  width: 100%;
+  height: 100%;
+}
+.container-panel-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-frontCam, .container-rearCam {
+  width: 100%;
+  height: 90rem;
+}
+.container-frontCam-box, .container-rearCam-box {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  background: #121212;
+}
+.container-frontCam-box-content, .container-rearCam-box-content {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+.container-frontCam-box-content h2, .container-rearCam-box-content h2 {
+  margin-top: 1rem;
+}
+.container-frontCam-bgr, .container-rearCam-bgr {
+  width: 100%;
+  height: 70rem;
+}
+.container-frontCam-bgr img, .container-rearCam-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-rearCam-box {
+  background: #afbfd8;
+}
+
+/*# sourceMappingURL=XR_Overall.css.map */

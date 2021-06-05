@@ -14,7 +14,6 @@
 .container-header {
   width: 100%;
   height: 40rem;
-  position: relative;
 }
 .container-header-bgr {
   width: 100%;
@@ -43,7 +42,7 @@
 }
 .container-title-box {
   width: 70%;
-  height: 50%;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -147,20 +146,21 @@
 }
 .container-suggestion-wrapper-option, .container-request-wrapper-option {
   width: 100%;
-  height: 6rem;
+  height: auto;
   padding: 1rem 0;
 }
 .container-suggestion-wrapper-option-box, .container-request-wrapper-option-box {
   width: 50%;
-  height: 100%;
+  height: auo;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 .container-suggestion-wrapper-option-box span, .container-request-wrapper-option-box span {
   display: inline-block;
   width: 10rem;
-  height: 100%;
+  height: 4rem;
   border: 2px solid #989699;
   border-radius: 0.5rem;
   text-align: center;
@@ -186,6 +186,7 @@
 }
 .container-suggestion-wrapper-listItem-item, .container-request-wrapper-listItem-item {
   min-width: 18.5rem;
+  scroll-snap-align: start;
   height: 25rem;
   padding: 0.8rem;
   border-radius: 0.8rem;

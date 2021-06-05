@@ -1,0 +1,301 @@
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+  .container {
+    &-rearCamera {
+      &-icon {
+        top: 8%;
+      }
+      &-box {
+        &-content {
+          top: 73%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 18px;
+  }
+  .container {
+    &-introduce {
+      width: 80%;
+    }
+    &-chipset {
+      &-content {
+        width: 70%;
+      }
+    }
+    &-frontCamera {
+      height: 93rem;
+      &-content {
+        &-box {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 16px;
+  }
+  .container {
+    &-display {
+      &::before {
+        top: 12%;
+      }
+      &::after {
+        top: 6%;
+        right: 10%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+  .container {
+    padding: 2rem 0;
+    &-introduce {
+      padding: 0rem 0;
+      width: 90%;
+    }
+    &-coverPhoto {
+      height: 40rem;
+      img {
+        object-fit: cover;
+      }
+    }
+    &-display {
+      height: 40rem;
+      &::before,
+      &::after {
+        font-size: 1.6rem;
+      }
+      &::before {
+        top: 8%;
+        left: 8%;
+      }
+      &::after {
+        top: 3%;
+        right: 8%;
+      }
+    }
+    &-5g {
+      height: 80rem;
+      &-content {
+        padding: 3rem 0;
+        width: 85%;
+      }
+    }
+    &-chipset {
+      padding: 2rem 0;
+      &-content {
+        width: 80%;
+      }
+    }
+    &-frontCamera {
+      height: 45rem;
+      &-content {
+        &::before {
+          width: 13rem;
+          height: 6rem;
+        }
+        &-box {
+          p {
+            font-size: 1.3rem;
+          }
+          strong {
+            font-size: 1.3rem;
+            list-style: 2rem;
+          }
+        }
+      }
+    }
+    &-rearCamera {
+      height: 80rem;
+      &-icon {
+        width: 7rem;
+        height: 6.3rem;
+        &::before,
+        &::after {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+        div {
+          width: 2.2rem;
+          height: 2.2rem;
+          &::before,
+          &::after {
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+      &-box {
+        &-content {
+          width: 90%;
+        }
+      }
+    }
+    &-wireless {
+      height: 60rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 14px;
+  }
+  .container {
+    &-display {
+      height: 40rem;
+      &::before,
+      &::after {
+        font-size: 1.6rem;
+      }
+      &::before {
+        top: 8%;
+        left: 8%;
+      }
+      &::after {
+        top: 3%;
+        right: 8%;
+      }
+    }
+    &-5g {
+      height: 80rem;
+      &-content {
+        padding: 3rem 0;
+        width: 85%;
+      }
+    }
+    &-chipset {
+      &-content {
+        width: 90%;
+        strong {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    &-frontCamera {
+      height: 48rem;
+      &-content {
+        &::before {
+          width: 10rem;
+          height: 5rem;
+        }
+        &::after {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        &-box {
+          width: 80%;
+          p {
+            font-size: 1.3rem;
+          }
+          strong {
+            font-size: 1.3rem;
+            list-style: 2rem;
+          }
+        }
+      }
+      &-img {
+        height: 66%;
+      }
+    }
+    &-rearCamera {
+      height: 80rem;
+      &-icon {
+        width: 7rem;
+        height: 6.3rem;
+        &::before,
+        &::after {
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+        div {
+          width: 2.2rem;
+          height: 2.2rem;
+          &::before,
+          &::after {
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+      &-box {
+        &-content {
+          width: 95%;
+          top: 55%;
+        }
+      }
+    }
+    &-wireless {
+      height: 60rem;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  * {
+    font-size: 13px;
+  }
+  .container {
+    &-rearCamera {
+      &-box {
+        &-content {
+        }
+      }
+    }
+    &-wireless {
+      height: 60rem;
+      &-content {
+        &-box {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 13px;
+  }
+  .container {
+    &-introduce {
+      height: 24rem;
+      strong {
+        font-size: 1.3rem;
+      }
+      p {
+        display: none;
+      }
+    }
+    &-rearCamera {
+      &-box {
+        &-content {
+          width: 95%;
+          top: 60%;
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+    &-wireless {
+      height: 60rem;
+    }
+  }
+}

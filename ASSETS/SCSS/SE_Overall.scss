@@ -1,0 +1,212 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.container {
+  @include setSize(100%, auto);
+  position: relative;
+  top: $header-height;
+  left: 0;
+  &-header {
+    @include setSize(100%, 50rem);
+    position: relative;
+    background: black;
+    &-box {
+      @include setSize(40%, auto);
+      @include absolutely_Center(20%, 50%);
+      color: white;
+      z-index: 30;
+      text-align: center;
+      h1 {
+        font-weight: 450;
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+      }
+    }
+    &-coverPhoto {
+      @include setSize(100%, 70%);
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      img {
+        @include setSize();
+        object-fit: contain;
+        transform: scale(1.25) rotate(45deg);
+      }
+    }
+  }
+  &-homeBtn {
+    @include setSize(100%, 100rem);
+    &-box {
+      @include setSize(100%, 25%);
+      position: relative;
+      &-content {
+        @include setSize(55%, auto);
+        @include absolutely_Center();
+        text-align: center;
+        h2 {
+          font-size: 2.3rem;
+          font-weight: 430;
+        }
+        p {
+          font-size: 1.3rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-bgr {
+      @include setSize(100%, 75%);
+      overflow: hidden;
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-screen {
+    @include setSize(100%, 50rem);
+    position: relative;
+    &-content {
+      @include absolutely_Center(30%, 15%);
+      transform: rotate(-23deg);
+      h3 {
+        font-size: 2.3rem;
+        font-weight: 430;
+      }
+      h4 {
+        font-size: 1.8rem;
+        color: $lite-gray;
+        margin-top: 1rem;
+      }
+    }
+    &-bgr {
+      @include setSize();
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-dimension {
+    @include setSize(100%, 100rem);
+    background: lavender;
+    &-box {
+      @include setSize(100%, 20%);
+      position: relative;
+      &-content {
+        text-align: center;
+        @include setSize(60%, auto);
+        @include absolutely_Center();
+        h2 {
+          font-size: 2.3rem;
+        }
+        h3 {
+          font-size: 1.8rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-bgr {
+      @include setSize(100%, 80%);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-rearCam {
+    @include setSize(100%, 100rem);
+    background: $lite-gray;
+    &-box {
+      @include setSize(100%, 20%);
+      text-align: center;
+      position: relative;
+      &-content {
+        @include setSize(60%, auto);
+        @include absolutely_Center();
+        h2 {
+          font-size: 2rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+        }
+        p {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &-bgr {
+      @include setSize(100%, 80%);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-chipset {
+    @include setSize(100%, 40rem);
+    position: relative;
+    &-box {
+      @include setSize(40%, auto);
+      @include absolutely_Center();
+      strong {
+        display: inline-block;
+        @include setSize(6rem, 6rem);
+        border: 2px solid $wood-gray;
+        border-radius: 0.5rem;
+        text-align: center;
+        line-height: 6rem;
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+      }
+      p {
+        font-size: 1.7rem;
+        position: relative;
+        margin-top: 4.5rem;
+        &::before {
+          content: "";
+          @include setSize(15rem, 0.3rem);
+          border-radius: 1rem;
+          background: black;
+          @include absolutely_Center(-30%, 23%);
+        }
+      }
+    }
+  }
+  &-frontCam {
+    @include setSize(100%, 100rem);
+    &-box {
+      @include setSize(100%, 20%);
+      position: relative;
+      &-content {
+        @include setSize(50%, auto);
+        @include absolutely_Center();
+        h2 {
+          font-size: 2.3rem;
+          font-weight: 450;
+        }
+        h3 {
+          font-size: 1.5rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-bgr {
+      @include setSize(100%, 80%);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+}
