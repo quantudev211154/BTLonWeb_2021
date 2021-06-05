@@ -1,0 +1,343 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.container {
+  @include setSize(100%, auto);
+  position: relative;
+  top: $header-height;
+  left: 0;
+  background: lavender;
+  padding: 3rem 0;
+  &-introduce {
+    @include setSize(50%, 35rem);
+    text-align: center;
+    margin: 0 auto;
+    padding: 2.2rem 0;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    strong {
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      font-weight: 450;
+      line-height: 1.8rem;
+      color: $leaf-gray;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 450;
+      margin-top: 1rem;
+      color: $vest-gray;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 450;
+      color: black;
+      margin-top: 1.3rem;
+    }
+  }
+  &-coverPhoto {
+    @include setSize(100%, 80rem);
+    img {
+      @include setSize();
+      object-fit: cover;
+    }
+  }
+  &-display {
+    @include setSize(100%, 80rem);
+    position: relative;
+    &::before {
+      content: "6.7'', Super Retina XDR";
+      @include absolutely_Center(15%, 10%);
+      @include setSize(12rem, 5rem);
+      font-size: 2rem;
+      color: $vest-gray;
+      text-align: center;
+      font-weight: 450;
+      transform: rotate(-18deg) skewX(10deg);
+    }
+    &::after {
+      content: "6.1'', Super Retina XDR";
+      position: absolute;
+      top: 7%;
+      right: 15%;
+      @include setSize(12rem, 5rem);
+      font-size: 2rem;
+      color: $vest-gray;
+      text-align: center;
+      font-weight: 450;
+      transform: rotate(7.5deg) skewX(15deg);
+    }
+    img {
+      @include setSize();
+      object-fit: cover;
+    }
+  }
+  &-5g {
+    @include setSize(100%, 110rem);
+    background: #c9c2bc;
+    &-content {
+      @include setSize(50%, 30rem);
+      margin: 0 auto;
+      padding: 6rem 0;
+      text-align: center;
+      position: relative;
+      h2 {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        @include setSize(7rem, 7rem);
+        border: 3px solid $light-blue;
+        color: $sky-blue;
+        border-radius: 50%;
+        font-size: 2rem;
+        font-weight: 450;
+        line-height: 7rem;
+        &::before {
+          content: "";
+          position: absolute;
+          background: transparent;
+          top: -8%;
+          left: -8%;
+          @include setSize(7rem, 7rem);
+          border-radius: 50%;
+          animation: 3s zoom linear infinite;
+          transition: 0.0005s;
+          @keyframes zoom {
+            0% {
+              transform: scale(1);
+              border: 5px solid $leaf-gray;
+              opacity: 0;
+            }
+            50% {
+              transform: scale(1.4);
+              border: 5px solid $sky-blue;
+              opacity: 1;
+            }
+            100% {
+              transform: scale(1.6);
+              border: 5px solid $lite-blue;
+              opacity: 0;
+            }
+          }
+        }
+      }
+      strong {
+        font-size: 1.5rem;
+        font-weight: 430;
+        line-height: 5rem;
+      }
+      p {
+        font-size: 1.3rem;
+        color: $vest-gray;
+      }
+    }
+    &-img {
+      @include setSize(100%, 80rem);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-chipset {
+    @include setSize(100%, 35rem);
+    padding: 5rem 0;
+    &-content {
+      @include setSize(50%, 100%);
+      margin: 0 auto;
+      h2 {
+        @include setSize(6rem, 6rem);
+        border: 2px solid $wood-gray;
+        border-radius: 0.5rem;
+        text-align: center;
+        line-height: 6rem;
+        font-size: 1.8rem;
+        font-weight: 430;
+      }
+      p {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        color: $leaf-gray;
+      }
+      strong {
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 430;
+        top: 4rem;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -30%;
+          left: 0;
+          width: 15rem;
+          height: 0.5rem;
+          border-radius: 1rem;
+          background: $vest-gray;
+        }
+      }
+    }
+  }
+  &-frontCamera {
+    @include setSize(100%, 100rem);
+    background: $lite-gray;
+    &-content {
+      @include setSize(100%, 20rem);
+      text-align: center;
+      font-size: 1.8rem;
+      position: relative;
+      &::before {
+        content: "";
+        @include absolutely_Center(-10%, 50%);
+        @include setSize(20rem, 8rem);
+        border-left: 5px solid $wood-gray;
+        border-bottom: 5px solid $wood-gray;
+        border-right: 5px solid $wood-gray;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+      &::after {
+        content: "";
+        @include absolutely_Center(-10%, 50%);
+        @include setSize(3rem, 3rem);
+        border: 3px solid $wood-gray;
+        border-radius: 50%;
+      }
+      &-box {
+        @include setSize(60%, 70%);
+        margin: 0 auto;
+        @include absolutely_Center(65%, 50%);
+        strong {
+          font-size: 1.8rem;
+          line-height: 4rem;
+          font-weight: 430;
+        }
+      }
+    }
+    &-img {
+      @include setSize(100%, 61rem);
+      img {
+        @include setSize();
+      }
+    }
+  }
+  &-rearCamera {
+    @include setSize(100%, 110rem);
+    position: relative;
+    &-icon {
+      @include setSize(8.3rem, 8rem);
+      @include absolutely_Center(5%);
+      border: 3px solid $vest-gray;
+      border-radius: 1rem;
+      &::before {
+        content: "";
+        @include absolutely_Center(25%, 28%);
+        @include setSize(3rem, 3rem);
+        border: 2px solid $vest-gray;
+        border-radius: 50%;
+      }
+      &::after {
+        content: "";
+        @include absolutely_Center(75%, 28%);
+        @include setSize(3rem, 3rem);
+        border: 2px solid $vest-gray;
+        border-radius: 50%;
+      }
+      div {
+        @include absolutely_Center(50%, 75%);
+        @include setSize(3rem, 3rem);
+        border: 2px solid $vest-gray;
+        border-radius: 50%;
+        &::before {
+          content: "";
+          @include absolutely_Center(143%, 53%);
+          @include setSize(1.5rem, 1.5rem);
+          border: 2px solid $vest-gray;
+          border-radius: 50%;
+        }
+        &::after {
+          content: "";
+          @include absolutely_Center(-43%, 53%);
+          @include setSize(1.5rem, 1.5rem);
+          border: 2px solid $vest-gray;
+          border-radius: 50%;
+          background-color: $light-gray;
+        }
+      }
+    }
+    &-box {
+      @include setSize(100%, 30rem);
+      position: relative;
+      &-content {
+        @include setSize(60%, 50%);
+        @include absolutely_Center(63%);
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.3rem;
+        h2 {
+          font-weight: 430;
+        }
+        strong,
+        p {
+          color: $vest-gray;
+          line-height: 2rem;
+          margin-top: 1rem;
+        }
+        strong {
+          display: inline-block;
+          margin-top: 1rem;
+        }
+        h3 {
+          font-weight: 450;
+          margin-top: 1rem;
+        }
+      }
+    }
+    &-img {
+      @include setSize(100%, 80rem);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-wireless {
+    background: #edf2f6;
+    @include setSize(100%, 100rem);
+    &-content {
+      @include setSize(100%, 30rem);
+      position: relative;
+      &-box {
+        @include setSize(60%, 50%);
+        @include absolutely_Center();
+        text-align: center;
+        h1 {
+          font-weight: 430;
+        }
+        h2 {
+          margin-top: 1rem;
+        }
+        strong {
+          font-size: 1.3rem;
+          font-weight: 450;
+          color: $vest-gray;
+          margin-top: 1rem;
+          display: block;
+        }
+      }
+    }
+    &-img {
+      @include setSize(100%, 70rem);
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+}

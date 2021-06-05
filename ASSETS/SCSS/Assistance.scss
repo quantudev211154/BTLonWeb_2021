@@ -1,0 +1,245 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.container {
+  @include setSize(100%, auto);
+  position: relative;
+  top: $header-height;
+  left: 0;
+  &-header {
+    @include setSize(100%, 40rem);
+    position: relative;
+    &-bgr {
+      @include setSize();
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-title {
+    @include setSize(100%, 25rem);
+    position: relative;
+    padding: 2rem 0;
+    &::after {
+      @include setSize(60%, 0.05rem);
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $vest-gray;
+    }
+    &-box {
+      @include setSize(70%, 50%);
+      @include absolutely_Center();
+      text-align: center;
+      h1 {
+        font-size: 2.5rem;
+        line-height: 5rem;
+        position: relative;
+        &::after {
+          content: "";
+          @include setSize(8rem, 0.2rem);
+          background: black;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 2rem;
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+  &-chart {
+    @include setSize(100%, auto);
+    padding: 3rem 0;
+    &-wrapper {
+      @include setSize(80%, auto);
+      margin: 0 auto;
+      &-title {
+        @include setSize(100%, 10%);
+        text-align: center;
+        h2 {
+          font-weight: 450;
+          line-height: 5rem;
+        }
+      }
+      &-box {
+        @include setSize(100%, auto);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-pieChart {
+          @include setSize(100%, 25rem);
+          position: relative;
+          figure {
+            @include setSize(25rem, 90%);
+            @include absolutely_Center();
+            border-radius: 50%;
+            background: conic-gradient(
+              #b90751 0,
+              #b90751 45%,
+              #075568 0,
+              #075568 70%,
+              #0f93bb 0,
+              #0f93bb 80%,
+              #0fb65a 0,
+              #0fb65a 90%,
+              #b2dd15 0,
+              #b2dd15 100%
+            );
+          }
+        }
+        &-description {
+          @include setSize(80%, auto);
+          padding: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 auto;
+          a {
+            @include reset_A_Tag();
+            font-size: 1.2rem;
+            font-weight: 450;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-suggestion,
+  &-request {
+    @include setSize(100%, auto);
+    padding: 2rem 3rem;
+    &-wrapper {
+      @include setSize(100%, auto);
+      margin: 0 auto;
+      &-title {
+        h2 {
+          font-weight: 450;
+        }
+      }
+      &-option {
+        @include setSize(100%, 6rem);
+        padding: 1rem 0;
+        &-box {
+          @include setSize(50%, 100%);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            display: inline-block;
+            @include setSize(10rem, 100%);
+            border: 2px solid $leaf-gray;
+            border-radius: 0.5rem;
+            text-align: center;
+            line-height: 4rem;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+              border: 2px solid $wood-gray;
+            }
+            &.active {
+              color: $light-blue;
+              border: 2px solid $light-blue;
+            }
+          }
+        }
+      }
+      &-listItem {
+        height: 30rem;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 2rem;
+        -webkit-overflow-scrolling: touch;
+        &-item {
+          min-width: 18.5rem;
+          height: 25rem;
+          padding: 0.8rem;
+          border-radius: 0.8rem;
+          text-decoration: none;
+          color: black;
+          background: white;
+          box-shadow: 0 0 10px $leaf-gray;
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+            box-shadow: 0 0 15px $vest-gray;
+          }
+          &:hover > &-figure {
+            img {
+              bottom: 10%;
+              @include setSize(68%, 88%);
+            }
+          }
+          &:hover > &-overallInfo {
+            strong {
+              color: $apple-pink;
+            }
+          }
+          &-figure {
+            @include setSize(100%, 48%);
+            position: relative;
+            transition: 0.4s;
+            pointer-events: none;
+            img {
+              @include setSize(60%, 80%);
+              object-fit: contain;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              transition: 0.4s;
+            }
+          }
+          &-overallInfo {
+            @include setSize(100%, 18%);
+            text-align: center;
+            font-weight: 450;
+            padding: 0.5rem;
+            h2 {
+              font-weight: 500;
+            }
+            strong {
+              font-size: 1.5rem;
+              font-weight: 600;
+              color: $cadet-blue;
+              transition: 0.3s;
+              transition-delay: 0.1s;
+            }
+          }
+          &-detail {
+            border: none;
+            @include setSize(100%, 34%);
+            tr {
+              border: none;
+              td {
+                font-size: 0.95rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-request {
+    &-wrapper {
+      &-option {
+        &-box {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

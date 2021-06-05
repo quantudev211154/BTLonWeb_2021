@@ -1,4 +1,7 @@
-const prdData = [
+/**
+ * - All Product Data
+ */
+ const prdData = [
   {
     "Direction": "./11PM_Detail.html",
     "ImgLink": "../ASSETS/IMG/11_Series/11ProMax/11pm-yellow.jpg",
@@ -235,8 +238,10 @@ function loadData(obj){
 
 window.onload = () => {
  prdData.forEach(phone => {
-   if (phone.PhoneName.includes('12 '))
-    loadData(phone)
+   if (phone.PhoneName.includes('12 ')){
+     loadData(phone)
+   }
+   targetInner.classList.remove('remake')
  });
 }
 
@@ -259,6 +264,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('12 ')){
         loadData(phone)
+        targetInner.classList.remove('remake')
       }
     });
   }
@@ -270,6 +276,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('11 '))
         loadData(phone)
+        targetInner.classList.remove('remake')
     });
   }
 })()
@@ -280,6 +287,7 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('X'))
         loadData(phone)
+        targetInner.classList.add('remake')
     });
   }
 })()
@@ -290,6 +298,63 @@ const watchSE = document.getElementById('SE')
     prdData.forEach(phone => {
       if (phone.PhoneName.includes('SE'))
         loadData(phone)
+        targetInner.classList.add('remake')
     });
   }
 })()
+
+
+/**
+ * - Chi dung khi tren may ban co 1 local server dang hoat dong
+ * - Bang khong, neu muon chay tren nhieu trinh duyet, hay vao Setting cua Window -> Chuyen trinh duyet mac dinh sang trinh duyet muon chay -> Vao lai VS Code, bat live server tro lai
+ */
+// function loadData(){
+//   var request = new XMLHttpRequest()
+//   request.onreadystatechange = () => {
+//     if (request.readyState == 4 && request.status == 200){
+//       var obj = JSON.parse(request.response)
+//       for (let i = 0; i < obj.length; ++i){
+//         targetInner.innerHTML +=
+//       `<a href="${obj[i].Direction}" class="container-listItem-item">
+//       <figure class="container-listItem-item-figure">
+//         <img src=${obj[i].ImgLink}>
+//       </figure>
+//       <div class="container-listItem-item-overallInfo">
+//         <h2>${obj[i].PhoneName}</h2>
+//         <strong>${obj[i].Price}</strong>
+//       </div>
+//       <table class="container-listItem-item-detail">
+//         <tr>
+//           <td>Màn hình:</td>
+//           <td>${obj[i].ScreenSize}</td>
+//         </tr>
+//         <tr>
+//           <td>Vi xử lý:</td>
+//           <td>${obj[i].CPU}</td>
+//         </tr>
+//         <tr>
+//           <td>Bộ nhớ:</td>
+//           <td>${obj[i].Storage}</td>
+//         </tr>
+//         <tr>
+//           <td>Camera sau:</td>
+//           <td>${obj[i].RearCamera}</td>
+//         </tr>
+//         <tr>
+//           <td>Camera trước:</td>
+//           <td>${obj[i].FrontCamera}</td>
+//         </tr>
+//         <tr>
+//           <td>Dung lượng pin:&nbsp;</td>
+//           <td>${obj[i].Battery}</td>
+//         </tr>
+//       </table>
+//     </a>`
+//       }
+//     }
+//   }
+//   request.open('GET', '../ASSETS/JS/ProductData.json', true)
+//     request.send()
+// }
+
+// loadData()

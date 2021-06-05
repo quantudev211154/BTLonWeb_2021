@@ -50,8 +50,10 @@
     img {
       @include setSize();
       transition: 3s ease;
+      border-radius: 50%;
+      object-fit: cover;
       &:hover {
-        transform: rotate(360deg);
+        transform: rotate(720deg);
       }
     }
   }

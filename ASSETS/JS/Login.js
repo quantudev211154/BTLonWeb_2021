@@ -5,7 +5,7 @@ const submitBtn = document.getElementById('submit')
 
 ;(function createAnimationForInput(){
   for (let i = 0; i < listInput.length; ++i){
-    listInput[i].onclick = () => {
+    listInput[i].onfocus = () => {
       listSpanInInp[i].classList.add('active')
     }
   }

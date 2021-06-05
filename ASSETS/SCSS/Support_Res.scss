@@ -1,0 +1,184 @@
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 18px;
+  }
+  .container {
+    &-header {
+      &-content {
+        width: 75%;
+      }
+    }
+    &-content {
+      &-box {
+        &-listIns {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &-contact {
+      &-box {
+        &-content {
+          justify-content: center;
+          &-op1,
+          &-op2,
+          &-op3 {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 16px;
+  }
+  .container {
+    &-header {
+      &-content {
+        width: 80%;
+      }
+    }
+    &-content {
+      &-box {
+        &-listIns {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &-options {
+      &-box {
+        a {
+          width: 100%;
+        }
+      }
+    }
+    &-contact {
+      &-box {
+        &-content {
+          justify-content: center;
+          &-op1,
+          &-op2,
+          &-op3 {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 15px;
+  }
+  .container {
+    &-header {
+      &-content {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    &-options {
+      padding: 1.5rem 1rem;
+      &-box {
+        a {
+          width: 48% !important;
+          height: 10rem;
+          figure {
+            height: 60%;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    &-content {
+      padding: 1rem 0;
+      &-box {
+        &-listIns {
+          a {
+            font-size: 1.2rem;
+            height: 6rem;
+            line-height: 6rem;
+            padding: 0 1rem;
+          }
+        }
+        &-moreIns {
+          &-title {
+            font-size: 1.5rem;
+          }
+          &-option {
+            &-op1,
+            &-op2,
+            &-op3,
+            &-op4,
+            &-op5,
+            &-op6 {
+              padding: 0;
+              &-content {
+                a {
+                  font-size: 0.85em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-options {
+      &-box {
+        a {
+          width: 100%;
+        }
+      }
+    }
+    &-contact {
+      &-box {
+        &-title {
+          font-size: 2rem;
+        }
+        &-content {
+          justify-content: center;
+          &-op1,
+          &-op2,
+          &-op3 {
+            width: 100%;
+            li {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  * {
+    font-size: 14px;
+  }
+  .container {
+    &-header {
+      &-content {
+        h1 {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
+}

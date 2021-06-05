@@ -1,3 +1,289 @@
-
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+}
+.container-header {
+  width: 100%;
+  height: 38rem;
+  position: relative;
+}
+.container-header-content {
+  width: 50%;
+  height: 3rem;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-header-content h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 5rem;
+  color: #fafafa;
+}
+.container-header-coverPhoto {
+  width: 100%;
+  height: 100%;
+}
+.container-header-coverPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-options {
+  width: 100%;
+  height: auto;
+  padding: 3rem 1rem;
+  position: relative;
+}
+.container-options-box {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container-options-box a {
+  display: inline-block;
+  width: 15rem;
+  height: 13rem;
+  border: 2px solid white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  margin-bottom: 1rem;
+}
+.container-options-box a figure {
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+.container-options-box a figure img {
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+.container-options-box a p {
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  color: #1595eb;
+}
+.container-options-box a:hover {
+  border: 2px solid #1595eb;
+  border-radius: 2rem;
+}
+.container-content {
+  width: 100%;
+  height: auto;
+  padding: 2rem 1rem;
+}
+.container-content-box {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.container-content-box-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.container-content-box-listIns {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container-content-box-listIns a {
+  display: inline-block;
+  width: 48%;
+  height: 8rem;
+  border: 2px solid #313639;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 8rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  font-size: 1.4rem;
+  padding: 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container-content-box-listIns a::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: white;
+  transition: 0.3s;
+}
+.container-content-box-listIns a:hover {
+  border: 2px solid #057ca0;
+  color: #057ca0;
+}
+.container-content-box-listIns a:hover::before {
+  background: #057ca0;
+}
+.container-content-box-moreIns {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
+.container-content-box-moreIns-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.container-content-box-moreIns-option {
+  width: 100%;
+  height: auto;
+}
+.container-content-box-moreIns-option-op1, .container-content-box-moreIns-option-op2, .container-content-box-moreIns-option-op3, .container-content-box-moreIns-option-op4, .container-content-box-moreIns-option-op5, .container-content-box-moreIns-option-op6 {
+  width: 100%;
+  height: auto;
+  padding: 0 2rem;
+  background: white;
+}
+.container-content-box-moreIns-option-op1-title, .container-content-box-moreIns-option-op2-title, .container-content-box-moreIns-option-op3-title, .container-content-box-moreIns-option-op4-title, .container-content-box-moreIns-option-op5-title, .container-content-box-moreIns-option-op6-title {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container-content-box-moreIns-option-op1-title p, .container-content-box-moreIns-option-op2-title p, .container-content-box-moreIns-option-op3-title p, .container-content-box-moreIns-option-op4-title p, .container-content-box-moreIns-option-op5-title p, .container-content-box-moreIns-option-op6-title p {
+  line-height: 4rem;
+  font-size: 1.2rem;
+}
+.container-content-box-moreIns-option-op1-title img, .container-content-box-moreIns-option-op2-title img, .container-content-box-moreIns-option-op3-title img, .container-content-box-moreIns-option-op4-title img, .container-content-box-moreIns-option-op5-title img, .container-content-box-moreIns-option-op6-title img {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: 0.4s;
+  transform: rotate(45deg);
+}
+.container-content-box-moreIns-option-op1-title.active img, .container-content-box-moreIns-option-op2-title.active img, .container-content-box-moreIns-option-op3-title.active img, .container-content-box-moreIns-option-op4-title.active img, .container-content-box-moreIns-option-op5-title.active img, .container-content-box-moreIns-option-op6-title.active img {
+  transform: rotate(180deg);
+}
+.container-content-box-moreIns-option-op1-title.active ~ .container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op1-title.active ~ .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op1-title.active ~ .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op1-title.active ~ .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op1-title.active ~ .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op1-title.active ~ .container-content-box-moreIns-option-op6-content, .container-content-box-moreIns-option-op2-title.active ~ .container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op2-title.active ~ .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op2-title.active ~ .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op2-title.active ~ .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op2-title.active ~ .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op2-title.active ~ .container-content-box-moreIns-option-op6-content, .container-content-box-moreIns-option-op3-title.active ~ .container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op3-title.active ~ .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op3-title.active ~ .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op3-title.active ~ .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op3-title.active ~ .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op3-title.active ~ .container-content-box-moreIns-option-op6-content, .container-content-box-moreIns-option-op4-title.active ~ .container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op4-title.active ~ .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op4-title.active ~ .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op4-title.active ~ .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op4-title.active ~ .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op4-title.active ~ .container-content-box-moreIns-option-op6-content, .container-content-box-moreIns-option-op5-title.active ~ .container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op5-title.active ~ .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op5-title.active ~ .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op5-title.active ~ .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op5-title.active ~ .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op5-title.active ~ .container-content-box-moreIns-option-op6-content, .container-content-box-moreIns-option-op6-title.active ~ .container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op6-title.active ~ .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op6-title.active ~ .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op6-title.active ~ .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op6-title.active ~ .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op6-title.active ~ .container-content-box-moreIns-option-op6-content {
+  font-size: 1rem;
+  opacity: 1;
+  visibility: visible;
+  height: 15rem;
+  font-size: 1rem;
+}
+.container-content-box-moreIns-option-op1-content, .container-content-box-moreIns-option-op2-content, .container-content-box-moreIns-option-op3-content, .container-content-box-moreIns-option-op4-content, .container-content-box-moreIns-option-op5-content, .container-content-box-moreIns-option-op6-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 0rem;
+  transition: 0.3s;
+  font-size: 1em;
+  opacity: 0;
+  visibility: hidden;
+}
+.container-content-box-moreIns-option-op1-content a, .container-content-box-moreIns-option-op2-content a, .container-content-box-moreIns-option-op3-content a, .container-content-box-moreIns-option-op4-content a, .container-content-box-moreIns-option-op5-content a, .container-content-box-moreIns-option-op6-content a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  color: #1595eb;
+  display: inline-block;
+  width: 100%;
+  height: 3rem;
+  font-size: 1em;
+  line-height: 3rem;
+  transition: 0.1s !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container-content-box-moreIns-option-op1-content a:hover, .container-content-box-moreIns-option-op2-content a:hover, .container-content-box-moreIns-option-op3-content a:hover, .container-content-box-moreIns-option-op4-content a:hover, .container-content-box-moreIns-option-op5-content a:hover, .container-content-box-moreIns-option-op6-content a:hover {
+  text-decoration: underline;
+}
+.container-contact {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-top: 1px solid #989699;
+  padding: 5rem 0;
+}
+.container-contact-box {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.container-contact-box-title {
+  font-size: 2.3rem;
+  text-align: center;
+  font-weight: 450;
+}
+.container-contact-box-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.container-contact-box-content-op1, .container-contact-box-content-op2, .container-contact-box-content-op3 {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  display: inline-block;
+  width: 20rem;
+  height: 13rem;
+  border: 2px solid #989699;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+.container-contact-box-content-op1 h3, .container-contact-box-content-op2 h3, .container-contact-box-content-op3 h3 {
+  font-size: 1.5rem;
+  font-weight: 430;
+}
+.container-contact-box-content-op1 li, .container-contact-box-content-op2 li, .container-contact-box-content-op3 li {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container-contact-box-content-op1:hover, .container-contact-box-content-op2:hover, .container-contact-box-content-op3:hover {
+  border: 2px solid #181818;
+  opacity: 1;
+}
 
 /*# sourceMappingURL=Support.css.map */

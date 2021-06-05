@@ -1,7 +1,4 @@
-/**
- * - All Product Data
- */
- const prdData = [
+const prdData = [
   {
     "Direction": "./11PM_Detail.html",
     "ImgLink": "../ASSETS/IMG/11_Series/11ProMax/11pm-yellow.jpg",
@@ -195,19 +192,21 @@
     "Battery": "1821 mAh, sạc nhanh"
   }
 ]
-const targetInner = document.getElementById('godFather')
+
+const priceList = document.querySelectorAll('.priceLevel')
+const targetInner = document.querySelector('.container-suggestion-wrapper-listItem')
 
 function loadData(obj){
   targetInner.innerHTML +=
-  `<a href="${obj.Direction}" class="container-listItem-item">
-    <figure class="container-listItem-item-figure">
+  `<a href="${obj.Direction}" class="container-suggestion-wrapper-listItem-item">
+    <figure class="container-suggestion-wrapper-listItem-item-figure">
       <img src=${obj.ImgLink}>
     </figure>
-    <div class="container-listItem-item-overallInfo">
+    <div class="container-suggestion-wrapper-listItem-item-overallInfo">
       <h2>${obj.PhoneName}</h2>
       <strong>${obj.Price}</strong>
     </div>
-    <table class="container-listItem-item-detail">
+    <table class="container-suggestion-wrapper-listItem-item-detail">
       <tr>
         <td>Màn hình:</td>
         <td>${obj.ScreenSize}</td>
@@ -236,125 +235,237 @@ function loadData(obj){
   </a>`
 }
 
-window.onload = () => {
- prdData.forEach(phone => {
-   if (phone.PhoneName.includes('11 ')){
-     loadData(phone)
-   }
-   targetInner.classList.remove('remake')
- });
-}
-
-/**
- * - Xoa tat ca cac con cua class container-listItem
- */
 function clearAll(){
   while (targetInner.firstChild)
     targetInner.removeChild(targetInner.firstChild);
 }
 
-const watch12Series = document.getElementById('12Sr')
-const watch11Series = document.getElementById('11Sr')
-const watchXSeries = document.getElementById('XSr')
-const watchSE = document.getElementById('SE')
-
-;(function loadDataOf12Sr(){
-  watch12Series.onclick = () => {
-    clearAll()
-    prdData.forEach(phone => {
-      if (phone.PhoneName.includes('12 ')){
-        loadData(phone)
-        targetInner.classList.remove('remake')
+function loadDataOfUnder20M(){
+  clearAll()
+    for (let i = 0; i < prdData.length; ++i){
+      if (prdData[i].Price < '20.000.000'){
+        loadData(prdData[i]);
       }
-    });
+    }
+    priceList[0].classList.add('active')
+    priceList[1].classList.remove('active')
+    priceList[2].classList.remove('active')
+}
+
+;(function prdPriceUnder20M(){
+  priceList[0].onclick = () => {
+    loadDataOfUnder20M()
   }
 })()
 
-;(function loadDataOf11Sr(){
-  watch11Series.onclick = () => {
+;(function prdPriceFrom20MTo25M(){
+  priceList[1].onclick = () => {
     clearAll()
-    prdData.forEach(phone => {
-      if (phone.PhoneName.includes('11 '))
-        loadData(phone)
-        targetInner.classList.remove('remake')
-    });
+    for (let i = 0; i < prdData.length; ++i){
+      if (prdData[i].Price > '20.000.000' && prdData[i].Price < '28.000.000'){
+        loadData(prdData[i]);
+      }
+    }
+    priceList[0].classList.remove('active')
+    priceList[1].classList.add('active')
+    priceList[2].classList.remove('active')
   }
 })()
 
-;(function loadDataOfXSr(){
-  watchXSeries.onclick = () => {
+;(function prdPriceAbove25M(){
+  priceList[2].onclick = () => {
     clearAll()
-    prdData.forEach(phone => {
-      if (phone.PhoneName.includes('X'))
-        loadData(phone)
-        targetInner.classList.add('remake')
-    });
+    for (let i = 0; i < prdData.length; ++i){
+      if (prdData[i].Price > '28.000.000'){
+        loadData(prdData[i]);
+      }
+    }
+    priceList[0].classList.remove('active')
+    priceList[1].classList.remove('active')
+    priceList[2].classList.add('active')
   }
 })()
 
-;(function loadDataOfSE(){
-  watchSE.onclick = () => {
-    clearAll()
-    prdData.forEach(phone => {
-      if (phone.PhoneName.includes('SE'))
-        loadData(phone)
-        targetInner.classList.add('remake')
-    });
+const requesterCus = document.querySelectorAll('.requester')
+const innerPrdFollowRequest = document.querySelector('.container-request-wrapper-listItem')
+
+function loadDataFollowRequest(obj){
+  innerPrdFollowRequest.innerHTML +=
+  `<a href="${obj.Direction}" class="container-request-wrapper-listItem-item">
+    <figure class="container-request-wrapper-listItem-item-figure">
+      <img src=${obj.ImgLink}>
+    </figure>
+    <div class="container-request-wrapper-listItem-item-overallInfo">
+      <h2>${obj.PhoneName}</h2>
+      <strong>${obj.Price}</strong>
+    </div>
+    <table class="container-request-wrapper-listItem-item-detail">
+      <tr>
+        <td>Màn hình:</td>
+        <td>${obj.ScreenSize}</td>
+      </tr>
+      <tr>
+        <td>Vi xử lý:</td>
+        <td>${obj.CPU}</td>
+      </tr>
+      <tr>
+        <td>Bộ nhớ:</td>
+        <td>${obj.Storage}</td>
+      </tr>
+      <tr>
+        <td>Camera sau:</td>
+        <td>${obj.RearCamera}</td>
+      </tr>
+      <tr>
+        <td>Camera trước:</td>
+        <td>${obj.FrontCamera}</td>
+      </tr>
+      <tr>
+        <td>Dung lượng pin:&nbsp;</td>
+        <td>${obj.Battery}</td>
+      </tr>
+    </table>
+  </a>`
+}
+
+function clearAll_2(){
+  while (innerPrdFollowRequest.firstChild)
+  innerPrdFollowRequest.removeChild(innerPrdFollowRequest.firstChild);
+}
+
+
+const goodPhoto = [
+  '11 Pro Max 512GB',
+  '12 Pro Max 256GB',
+  '12 Pro 256GB',
+  '12 256GB',
+  '11 256GB'
+]
+const goodScreen = [
+  '11 Pro Max 512GB',
+  '12 Pro Max 256GB',
+  '12 Pro 256GB',
+  '12 256GB',
+  '12 Mini 256GB'
+]
+const goodBatterry = [
+  '11 Pro Max 512GB',
+  '12 Pro Max 256GB',
+  '12 Pro 256GB',
+  '12 256GB',
+  'XR 128GB'
+]
+const goodDimension = [
+  '12 Pro 256GB',
+  '12 256GB',
+  'XR 128GB',
+  '12 Mini 256GB',
+  'SE 128GB'
+]
+const goodLaunch = [
+  '12 Pro Max 256GB',
+  '12 Pro 256GB',
+  '12 256GB',
+  '12 Mini 256GB'
+]
+
+function loadPrdGP(){
+  clearAll_2()
+  for (let i = 0; i < prdData.length; ++i){
+    for (let j = 0; j < goodPhoto.length; ++j){
+      if (prdData[i].PhoneName.includes(goodPhoto[j])){
+        loadDataFollowRequest(prdData[i])
+      }
+    }
+  }
+  requesterCus[0].classList.add('active')
+  requesterCus[1].classList.remove('active')
+  requesterCus[2].classList.remove('active')
+  requesterCus[3].classList.remove('active')
+  requesterCus[4].classList.remove('active')
+}
+
+;(function loadPrdGoodPhoto(){
+  requesterCus[0].onclick = () => {
+    loadPrdGP()
   }
 })()
 
+;(function loadPrdGoodScreen(){
+  requesterCus[1].onclick = () => {
+    clearAll_2()
+    for (let i = 0; i < prdData.length; ++i){
+      for (let j = 0; j < goodPhoto.length; ++j){
+        if (prdData[i].PhoneName.includes(goodScreen[j])){
+          loadDataFollowRequest(prdData[i])
+        }
+      }
+    }
+    requesterCus[0].classList.remove('active')
+    requesterCus[1].classList.add('active')
+    requesterCus[2].classList.remove('active')
+    requesterCus[3].classList.remove('active')
+    requesterCus[4].classList.remove('active')
+  }
+})()
 
-/**
- * - Chi dung khi tren may ban co 1 local server dang hoat dong
- * - Bang khong, neu muon chay tren nhieu trinh duyet, hay vao Setting cua Window -> Chuyen trinh duyet mac dinh sang trinh duyet muon chay -> Vao lai VS Code, bat live server tro lai
- */
-// function loadData(){
-//   var request = new XMLHttpRequest()
-//   request.onreadystatechange = () => {
-//     if (request.readyState == 4 && request.status == 200){
-//       var obj = JSON.parse(request.response)
-//       for (let i = 0; i < obj.length; ++i){
-//         targetInner.innerHTML +=
-//       `<a href="${obj[i].Direction}" class="container-listItem-item">
-//       <figure class="container-listItem-item-figure">
-//         <img src=${obj[i].ImgLink}>
-//       </figure>
-//       <div class="container-listItem-item-overallInfo">
-//         <h2>${obj[i].PhoneName}</h2>
-//         <strong>${obj[i].Price}</strong>
-//       </div>
-//       <table class="container-listItem-item-detail">
-//         <tr>
-//           <td>Màn hình:</td>
-//           <td>${obj[i].ScreenSize}</td>
-//         </tr>
-//         <tr>
-//           <td>Vi xử lý:</td>
-//           <td>${obj[i].CPU}</td>
-//         </tr>
-//         <tr>
-//           <td>Bộ nhớ:</td>
-//           <td>${obj[i].Storage}</td>
-//         </tr>
-//         <tr>
-//           <td>Camera sau:</td>
-//           <td>${obj[i].RearCamera}</td>
-//         </tr>
-//         <tr>
-//           <td>Camera trước:</td>
-//           <td>${obj[i].FrontCamera}</td>
-//         </tr>
-//         <tr>
-//           <td>Dung lượng pin:&nbsp;</td>
-//           <td>${obj[i].Battery}</td>
-//         </tr>
-//       </table>
-//     </a>`
-//       }
-//     }
-//   }
-//   request.open('GET', '../ASSETS/JS/ProductData.json', true)
-//     request.send()
-// }
+;(function loadPrdGoodBatterry(){
+  requesterCus[2].onclick = () => {
+    clearAll_2()
+    for (let i = 0; i < prdData.length; ++i){
+      for (let j = 0; j < goodPhoto.length; ++j){
+        if (prdData[i].PhoneName.includes(goodBatterry[j])){
+          loadDataFollowRequest(prdData[i])
+        }
+      }
+    }
+    requesterCus[0].classList.remove('active')
+    requesterCus[1].classList.remove('active')
+    requesterCus[2].classList.add('active')
+    requesterCus[3].classList.remove('active')
+    requesterCus[4].classList.remove('active')
+  }
+})()
 
-// loadData()
+;(function loadPrdGoodDimension(){
+  requesterCus[3].onclick = () => {
+    clearAll_2()
+    for (let i = 0; i < prdData.length; ++i){
+      for (let j = 0; j < goodPhoto.length; ++j){
+        if (prdData[i].PhoneName.includes(goodDimension[j])){
+          loadDataFollowRequest(prdData[i])
+        }
+      }
+    }
+    requesterCus[0].classList.remove('active')
+    requesterCus[1].classList.remove('active')
+    requesterCus[2].classList.remove('active')
+    requesterCus[3].classList.add('active')
+    requesterCus[4].classList.remove('active')
+  }
+})()
+
+;(function loadPrdGoodLaunch(){
+  requesterCus[4].onclick = () => {
+    clearAll_2()
+    for (let i = 0; i < prdData.length; ++i){
+      for (let j = 0; j < goodPhoto.length; ++j){
+        if (prdData[i].PhoneName.includes(goodLaunch[j])){
+          loadDataFollowRequest(prdData[i])
+        }
+      }
+    }
+    requesterCus[0].classList.remove('active')
+    requesterCus[1].classList.remove('active')
+    requesterCus[2].classList.remove('active')
+    requesterCus[3].classList.remove('active')
+    requesterCus[4].classList.add('active')
+  }
+})()
+
+;(function loadDfPrd(){
+  window.onload = () => {
+    loadDataOfUnder20M()
+    loadPrdGP()
+  }
+})()

@@ -1,0 +1,247 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.container {
+  @include setSize(100%, auto);
+  position: relative;
+  top: $header-height;
+  left: 0;
+  &-header {
+    @include setSize(100%, 38rem);
+    position: relative;
+    &-content {
+      @include setSize(50%, 3rem);
+      position: absolute;
+      @include absolutely_Center();
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        line-height: 5rem;
+        color: $lite-gray;
+      }
+    }
+    &-coverPhoto {
+      @include setSize();
+      img {
+        @include setSize();
+        object-fit: cover;
+      }
+    }
+  }
+  &-options {
+    @include setSize(100%, auto);
+    padding: 3rem 1rem;
+    position: relative;
+    &-box {
+      @include setSize(80%, auto);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      a {
+        display: inline-block;
+        @include setSize(15rem, 13rem);
+        border: 2px solid white;
+        @include reset_A_Tag();
+        margin-bottom: 1rem;
+        figure {
+          @include setSize(100%, 70%);
+          position: relative;
+          img {
+            @include setSize(50%, 40%);
+            @include absolutely_Center();
+            transition: 1s;
+          }
+        }
+        p {
+          text-align: center;
+          line-height: 2rem;
+          font-size: 1.3rem;
+          color: $sky-blue;
+        }
+        &:hover {
+          border: 2px solid $sky-blue;
+          border-radius: 2rem;
+        }
+      }
+    }
+  }
+  &-content {
+    @include setSize(100%, auto);
+    padding: 2rem 1rem;
+    &-box {
+      @include setSize(80%, auto);
+      margin: 0 auto;
+      &-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+      &-listIns {
+        @include setSize(100%, auto);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        a {
+          display: inline-block;
+          @include setSize(48%, 8rem);
+          border: 2px solid $vest-gray;
+          border-radius: 2rem;
+          margin-bottom: 1.5rem;
+          line-height: 8rem;
+          @include reset_A_Tag();
+          font-size: 1.4rem;
+          padding: 0 2.5rem;
+          position: relative;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          &::before {
+            content: "";
+            @include setSize(1rem, 1rem);
+            @include absolutely_Center(50%, 3%);
+            border-radius: 50%;
+            background: white;
+            transition: 0.3s;
+          }
+          &:hover {
+            border: 2px solid $light-blue;
+            color: $light-blue;
+            &::before {
+              background: $light-blue;
+            }
+          }
+        }
+      }
+      &-moreIns {
+        @include setSize(100%, auto);
+        padding: 1rem 0;
+        &-title {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+        &-option {
+          @include setSize(100%, auto);
+          &-op1,
+          &-op2,
+          &-op3,
+          &-op4,
+          &-op5,
+          &-op6 {
+            @include setSize(100%, auto);
+            padding: 0 2rem;
+            background: white;
+            &-title {
+              @include setSize(100%, 4rem);
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              cursor: pointer;
+              p {
+                line-height: 4rem;
+                font-size: 1.2rem;
+              }
+              img {
+                @include setSize(1.5rem, 1.5rem);
+                transition: 0.4s;
+                transform: rotate(45deg);
+              }
+              &.active {
+                img {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+            &-title.active ~ &-content {
+              font-size: 1rem;
+              opacity: 1;
+              visibility: visible;
+              height: 15rem;
+              font-size: 1rem;
+            }
+            &-content {
+              display: flex;
+              justify-content: flex-start;
+              flex-direction: column;
+              @include setSize(100%, 0rem);
+              transition: 0.3s;
+              font-size: 1em;
+              opacity: 0;
+              visibility: hidden;
+              a {
+                @include reset_A_Tag();
+                color: $sky-blue;
+                display: inline-block;
+                @include setSize(100%, 3rem);
+                font-size: 1em;
+                line-height: 3rem;
+                transition: 0.1s !important;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-contact {
+    @include setSize(100%, auto);
+    position: relative;
+    border-top: 1px solid $leaf-gray;
+    padding: 5rem 0;
+    &-box {
+      @include setSize(80%, auto);
+      margin: 0 auto;
+      &-title {
+        font-size: 2.3rem;
+        text-align: center;
+        font-weight: 450;
+      }
+      &-content {
+        @include setSize(100%, auto);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 2rem;
+        &-op1,
+        &-op2,
+        &-op3 {
+          @include reset_A_Tag();
+          display: inline-block;
+          @include setSize(20rem, 13rem);
+          border: 2px solid $leaf-gray;
+          border-radius: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 2rem;
+          opacity: 0.9;
+          margin-bottom: 1.5rem;
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 430;
+          }
+          li {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          &:hover {
+            border: 2px solid $wood-gray;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

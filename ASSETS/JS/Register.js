@@ -174,6 +174,14 @@ function testRePassword(){
 
 const regexPhone = /^0\d{9}$/
 
+;(function onlyNumber(){
+  inpTarget[6].onkeypress = (e) => {
+    if (!/[0-9.]/.test(e.key)){
+      e.preventDefault();
+    }
+  }
+})()
+
 function testPhoneNumber(){
   if (inpTarget[6].value == ''){
     inpTarget[6].style.border = '1px solid red'

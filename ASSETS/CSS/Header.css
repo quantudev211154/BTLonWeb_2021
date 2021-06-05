@@ -63,9 +63,11 @@
   width: 100%;
   height: 100%;
   transition: 3s ease;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .header-logo img:hover {
-  transform: rotate(360deg);
+  transform: rotate(720deg);
 }
 .header-nav {
   width: 50%;

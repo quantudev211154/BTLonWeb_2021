@@ -1,0 +1,423 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+  background: lavender;
+  padding: 3rem 0;
+}
+.container-introduce {
+  width: 50%;
+  height: 35rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2.2rem 0;
+}
+.container-introduce h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.container-introduce strong {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+}
+.container-introduce p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 450;
+  line-height: 1.8rem;
+  color: #989699;
+}
+.container-introduce h2 {
+  font-size: 1.4rem;
+  font-weight: 450;
+  margin-top: 1rem;
+  color: #313639;
+}
+.container-introduce h3 {
+  font-size: 1.5rem;
+  font-weight: 450;
+  color: black;
+  margin-top: 1.3rem;
+}
+.container-coverPhoto {
+  width: 100%;
+  height: 80rem;
+}
+.container-coverPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-display {
+  width: 100%;
+  height: 80rem;
+  position: relative;
+}
+.container-display::before {
+  content: "6.7'', Super Retina XDR";
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 12rem;
+  height: 5rem;
+  font-size: 2rem;
+  color: #313639;
+  text-align: center;
+  font-weight: 450;
+  transform: rotate(-18deg) skewX(10deg);
+}
+.container-display::after {
+  content: "6.1'', Super Retina XDR";
+  position: absolute;
+  top: 7%;
+  right: 15%;
+  width: 12rem;
+  height: 5rem;
+  font-size: 2rem;
+  color: #313639;
+  text-align: center;
+  font-weight: 450;
+  transform: rotate(7.5deg) skewX(15deg);
+}
+.container-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-5g {
+  width: 100%;
+  height: 110rem;
+  background: #c9c2bc;
+}
+.container-5g-content {
+  width: 50%;
+  height: 30rem;
+  margin: 0 auto;
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+}
+.container-5g-content h2 {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7rem;
+  height: 7rem;
+  border: 3px solid #057ca0;
+  color: #1595eb;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 450;
+  line-height: 7rem;
+}
+.container-5g-content h2::before {
+  content: "";
+  position: absolute;
+  background: transparent;
+  top: -8%;
+  left: -8%;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  animation: 3s zoom linear infinite;
+  transition: 0.0005s;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+    border: 5px solid #989699;
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4);
+    border: 5px solid #1595eb;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    border: 5px solid #15d3f5;
+    opacity: 0;
+  }
+}
+.container-5g-content strong {
+  font-size: 1.5rem;
+  font-weight: 430;
+  line-height: 5rem;
+}
+.container-5g-content p {
+  font-size: 1.3rem;
+  color: #313639;
+}
+.container-5g-img {
+  width: 100%;
+  height: 80rem;
+}
+.container-5g-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-chipset {
+  width: 100%;
+  height: 35rem;
+  padding: 5rem 0;
+}
+.container-chipset-content {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+.container-chipset-content h2 {
+  width: 6rem;
+  height: 6rem;
+  border: 2px solid #181818;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 6rem;
+  font-size: 1.8rem;
+  font-weight: 430;
+}
+.container-chipset-content p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #989699;
+}
+.container-chipset-content strong {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 430;
+  top: 4rem;
+}
+.container-chipset-content strong::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 15rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background: #313639;
+}
+.container-frontCamera {
+  width: 100%;
+  height: 100rem;
+  background: #fafafa;
+}
+.container-frontCamera-content {
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+}
+.container-frontCamera-content::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 8rem;
+  border-left: 5px solid #181818;
+  border-bottom: 5px solid #181818;
+  border-right: 5px solid #181818;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.container-frontCamera-content::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid #181818;
+  border-radius: 50%;
+}
+.container-frontCamera-content-box {
+  width: 60%;
+  height: 70%;
+  margin: 0 auto;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-frontCamera-content-box strong {
+  font-size: 1.8rem;
+  line-height: 4rem;
+  font-weight: 430;
+}
+.container-frontCamera-img {
+  width: 100%;
+  height: 61rem;
+}
+.container-frontCamera-img img {
+  width: 100%;
+  height: 100%;
+}
+.container-rearCamera {
+  width: 100%;
+  height: 110rem;
+  position: relative;
+}
+.container-rearCamera-icon {
+  width: 8.3rem;
+  height: 8rem;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #313639;
+  border-radius: 1rem;
+}
+.container-rearCamera-icon::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-rearCamera-icon::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-rearCamera-icon div {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-rearCamera-icon div::before {
+  content: "";
+  position: absolute;
+  top: 143%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+}
+.container-rearCamera-icon div::after {
+  content: "";
+  position: absolute;
+  top: -43%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid #313639;
+  border-radius: 50%;
+  background-color: #d4dde0;
+}
+.container-rearCamera-box {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+}
+.container-rearCamera-box-content {
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.container-rearCamera-box-content h2 {
+  font-weight: 430;
+}
+.container-rearCamera-box-content strong,
+.container-rearCamera-box-content p {
+  color: #313639;
+  line-height: 2rem;
+  margin-top: 1rem;
+}
+.container-rearCamera-box-content strong {
+  display: inline-block;
+  margin-top: 1rem;
+}
+.container-rearCamera-box-content h3 {
+  font-weight: 450;
+  margin-top: 1rem;
+}
+.container-rearCamera-img {
+  width: 100%;
+  height: 80rem;
+}
+.container-rearCamera-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-wireless {
+  background: #edf2f6;
+  width: 100%;
+  height: 100rem;
+}
+.container-wireless-content {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+}
+.container-wireless-content-box {
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-wireless-content-box h1 {
+  font-weight: 430;
+}
+.container-wireless-content-box h2 {
+  margin-top: 1rem;
+}
+.container-wireless-content-box strong {
+  font-size: 1.3rem;
+  font-weight: 450;
+  color: #313639;
+  margin-top: 1rem;
+  display: block;
+}
+.container-wireless-img {
+  width: 100%;
+  height: 70rem;
+}
+.container-wireless-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=12PPM_Overall.css.map */

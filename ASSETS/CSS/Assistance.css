@@ -1,0 +1,259 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+}
+.container-header {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+.container-header-bgr {
+  width: 100%;
+  height: 100%;
+}
+.container-header-bgr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-title {
+  width: 100%;
+  height: 25rem;
+  position: relative;
+  padding: 2rem 0;
+}
+.container-title::after {
+  width: 60%;
+  height: 0.05rem;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #313639;
+}
+.container-title-box {
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-title-box h1 {
+  font-size: 2.5rem;
+  line-height: 5rem;
+  position: relative;
+}
+.container-title-box h1::after {
+  content: "";
+  width: 8rem;
+  height: 0.2rem;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+.container-title-box h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.container-chart {
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+}
+.container-chart-wrapper {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+.container-chart-wrapper-title {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+}
+.container-chart-wrapper-title h2 {
+  font-weight: 450;
+  line-height: 5rem;
+}
+.container-chart-wrapper-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-chart-wrapper-box-pieChart {
+  width: 100%;
+  height: 25rem;
+  position: relative;
+}
+.container-chart-wrapper-box-pieChart figure {
+  width: 25rem;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: conic-gradient(#b90751 0, #b90751 45%, #075568 0, #075568 70%, #0f93bb 0, #0f93bb 80%, #0fb65a 0, #0fb65a 90%, #b2dd15 0, #b2dd15 100%);
+}
+.container-chart-wrapper-box-description {
+  width: 80%;
+  height: auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.container-chart-wrapper-box-description a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 450;
+}
+.container-chart-wrapper-box-description a:hover {
+  text-decoration: underline;
+}
+.container-suggestion, .container-request {
+  width: 100%;
+  height: auto;
+  padding: 2rem 3rem;
+}
+.container-suggestion-wrapper, .container-request-wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.container-suggestion-wrapper-title h2, .container-request-wrapper-title h2 {
+  font-weight: 450;
+}
+.container-suggestion-wrapper-option, .container-request-wrapper-option {
+  width: 100%;
+  height: 6rem;
+  padding: 1rem 0;
+}
+.container-suggestion-wrapper-option-box, .container-request-wrapper-option-box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-suggestion-wrapper-option-box span, .container-request-wrapper-option-box span {
+  display: inline-block;
+  width: 10rem;
+  height: 100%;
+  border: 2px solid #989699;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 4rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container-suggestion-wrapper-option-box span:hover, .container-request-wrapper-option-box span:hover {
+  border: 2px solid #181818;
+}
+.container-suggestion-wrapper-option-box span.active, .container-request-wrapper-option-box span.active {
+  color: #057ca0;
+  border: 2px solid #057ca0;
+}
+.container-suggestion-wrapper-listItem, .container-request-wrapper-listItem {
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+.container-suggestion-wrapper-listItem-item, .container-request-wrapper-listItem-item {
+  min-width: 18.5rem;
+  height: 25rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  color: black;
+  background: white;
+  box-shadow: 0 0 10px #989699;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container-suggestion-wrapper-listItem-item:hover, .container-request-wrapper-listItem-item:hover {
+  box-shadow: 0 0 15px #313639;
+}
+.container-suggestion-wrapper-listItem-item:hover > .container-suggestion-wrapper-listItem-item-figure img, .container-suggestion-wrapper-listItem-item:hover > .container-request-wrapper-listItem-item-figure img, .container-request-wrapper-listItem-item:hover > .container-suggestion-wrapper-listItem-item-figure img, .container-request-wrapper-listItem-item:hover > .container-request-wrapper-listItem-item-figure img {
+  bottom: 10%;
+  width: 68%;
+  height: 88%;
+}
+.container-suggestion-wrapper-listItem-item:hover > .container-suggestion-wrapper-listItem-item-overallInfo strong, .container-suggestion-wrapper-listItem-item:hover > .container-request-wrapper-listItem-item-overallInfo strong, .container-request-wrapper-listItem-item:hover > .container-suggestion-wrapper-listItem-item-overallInfo strong, .container-request-wrapper-listItem-item:hover > .container-request-wrapper-listItem-item-overallInfo strong {
+  color: #e20d66;
+}
+.container-suggestion-wrapper-listItem-item-figure, .container-request-wrapper-listItem-item-figure {
+  width: 100%;
+  height: 48%;
+  position: relative;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.container-suggestion-wrapper-listItem-item-figure img, .container-request-wrapper-listItem-item-figure img {
+  width: 60%;
+  height: 80%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.container-suggestion-wrapper-listItem-item-overallInfo, .container-request-wrapper-listItem-item-overallInfo {
+  width: 100%;
+  height: 18%;
+  text-align: center;
+  font-weight: 450;
+  padding: 0.5rem;
+}
+.container-suggestion-wrapper-listItem-item-overallInfo h2, .container-request-wrapper-listItem-item-overallInfo h2 {
+  font-weight: 500;
+}
+.container-suggestion-wrapper-listItem-item-overallInfo strong, .container-request-wrapper-listItem-item-overallInfo strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #009e89;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+.container-suggestion-wrapper-listItem-item-detail, .container-request-wrapper-listItem-item-detail {
+  border: none;
+  width: 100%;
+  height: 34%;
+}
+.container-suggestion-wrapper-listItem-item-detail tr, .container-request-wrapper-listItem-item-detail tr {
+  border: none;
+}
+.container-suggestion-wrapper-listItem-item-detail tr td, .container-request-wrapper-listItem-item-detail tr td {
+  font-size: 0.95rem;
+}
+.container-request-wrapper-option-box {
+  width: 80%;
+}
+
+/*# sourceMappingURL=Assistance.css.map */
