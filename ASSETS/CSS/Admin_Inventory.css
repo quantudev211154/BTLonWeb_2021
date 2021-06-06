@@ -1,0 +1,342 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  scroll-behavior: smooth;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.container-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 100%;
+  padding: 1rem;
+  background: #f9fafe;
+  transition: 0.3s;
+}
+.container-menu.active {
+  width: 5rem;
+}
+.container-menu-logo {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+}
+.container-menu-logo-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  cursor: pointer;
+}
+.container-menu-logo-icon img {
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.container-menu-listOption {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+.container-menu-listOption-option {
+  width: 100%;
+  height: 3.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.container-menu-listOption-option-box {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.2s;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+.container-menu-listOption-option-box:hover {
+  background: #1595eb;
+}
+.container-menu-listOption-option-box:hover > .container-menu-listOption-option-box-text h3 {
+  color: white;
+}
+.container-menu-listOption-option-box-icon {
+  height: 100%;
+  position: relative;
+}
+.container-menu-listOption-option-box-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.2rem;
+  margin-top: 0.5rem;
+  line-height: 3.5rem;
+  object-fit: contain;
+}
+.container-menu-listOption-option-box-text {
+  font-size: 1rem;
+  transition: 0.2s;
+  margin-left: 1.3rem;
+  transition: 0.2s;
+}
+.container-menu-listOption-option-box-text.active {
+  font-size: 0rem;
+}
+.container-menu-listOption-option-box-text h3 {
+  font-size: 1.2em;
+}
+.container-menu-openMenu {
+  width: 100%;
+  height: 3.5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+}
+.container-menu-openMenu.active figure img {
+  transform: rotate(5deg);
+}
+.container-menu-openMenu figure {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: 1px solid #989699;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.container-menu-openMenu figure:hover {
+  border: 1px solid #009e89;
+  opacity: 1;
+}
+.container-menu-openMenu figure img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  transform: rotate(-180deg);
+}
+.container-wrapper {
+  width: calc(100% - 15rem);
+  height: auto;
+  padding: 1.5rem;
+  background: #dee1e7;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s;
+}
+.container-wrapper.active {
+  width: calc(100% - 5rem);
+}
+.container-wrapper-toolBar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-wrapper-toolBar-searchBar {
+  width: 95%;
+  height: 100%;
+  position: relative;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-wrapper-toolBar-searchBar input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  padding: 0 3rem;
+  font-size: 1.1rem;
+}
+.container-wrapper-toolBar-searchBar img {
+  position: absolute;
+  cursor: pointer;
+}
+.container-wrapper-toolBar-searchBar img:first-child {
+  left: 1rem;
+}
+.container-wrapper-toolBar-searchBar img:last-child {
+  right: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.container-wrapper-toolBar-searchBar img:last-child.active {
+  opacity: 1;
+  visibility: visible;
+}
+.container-wrapper-toolBar-user {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.container-wrapper-toolBar-user-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+.container-wrapper-toolBar-user-box figure img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.container-wrapper-toolBar-user-box-listOption {
+  width: 13rem;
+  height: 0rem;
+  border-radius: 0.8rem;
+  background: #009e89;
+  position: absolute;
+  z-index: 50;
+  top: 3.5rem;
+  left: -10rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+.container-wrapper-toolBar-user-box-listOption.active {
+  height: 8rem;
+  opacity: 1;
+  visibility: visible;
+}
+.container-wrapper-toolBar-user-box-listOption::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: 1.2rem;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #009e89;
+}
+.container-wrapper-toolBar-user-box-listOption li {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.2s;
+}
+.container-wrapper-toolBar-user-box-listOption li p {
+  color: whitesmoke;
+  margin-left: 0.5rem;
+}
+.container-wrapper-toolBar-user-box-listOption li:hover {
+  background: #f9fafe;
+}
+.container-wrapper-toolBar-user-box-listOption li:hover p {
+  color: black;
+}
+.container-wrapper-inventory {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-wrapper-inventory-export, .container-wrapper-inventory-import, .container-wrapper-inventory-exception, .container-wrapper-inventory-return {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1rem;
+}
+.container-wrapper-inventory-export-title, .container-wrapper-inventory-import-title, .container-wrapper-inventory-exception-title, .container-wrapper-inventory-return-title {
+  width: 100%;
+  height: auto;
+}
+.container-wrapper-inventory-export-title h3, .container-wrapper-inventory-import-title h3, .container-wrapper-inventory-exception-title h3, .container-wrapper-inventory-return-title h3 {
+  font-size: 1.5rem;
+  font-weight: 450;
+}
+.container-wrapper-inventory-export-chart, .container-wrapper-inventory-import-chart, .container-wrapper-inventory-exception-chart, .container-wrapper-inventory-return-chart {
+  width: 100%;
+  height: 85%;
+}
+@media screen and (min-width: 1920px) {
+  .container * {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .container * {
+    font-size: 18px;
+  }
+  .container .container-wrapper {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .container .container-wrapper.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container * {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container * {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container * {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container * {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .container * {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=Admin_Inventory.css.map */

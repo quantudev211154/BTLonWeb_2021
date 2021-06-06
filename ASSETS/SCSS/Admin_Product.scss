@@ -1,0 +1,374 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+* {
+  @include resetCSS("Roboto");
+  font-weight: 400;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  @include setSize(100%, auto);
+  position: relative;
+  &-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include setSize(15rem, 100%);
+    padding: 1rem;
+    background: #f9fafe;
+    transition: 0.3s;
+    &.active {
+      width: 5rem;
+    }
+    &-logo {
+      @include setSize(100%, 4rem);
+      position: relative;
+      &-icon {
+        @include absolutely_Center();
+        position: relative;
+        cursor: pointer;
+        img {
+          @include setSize(3.5rem, 3.5rem);
+          @include absolutely_Center();
+          border-radius: 50%;
+        }
+      }
+    }
+    &-listOption {
+      @include setSize(100%, auto);
+      margin-top: 1.5rem;
+      &-option {
+        @include setSize(100%, 3.5rem);
+        position: relative;
+        cursor: pointer;
+        &-box {
+          @include setSize(100%, 100%);
+          padding: 0.5rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          transition: 0.2s;
+          border-top-right-radius: 3rem;
+          border-bottom-right-radius: 3rem;
+          &:hover {
+            background: $sky-blue;
+          }
+          &:hover > &-text {
+            h3 {
+              color: white;
+            }
+          }
+          &-icon {
+            height: 100%;
+            position: relative;
+            img {
+              @include setSize(1.5rem, 1.5rem);
+              margin-left: 0.2rem;
+              margin-top: 0.5rem;
+              line-height: 3.5rem;
+              object-fit: contain;
+            }
+          }
+          &-text {
+            font-size: 1rem;
+            transition: 0.2s;
+            margin-left: 1.3rem;
+            transition: 0.2s;
+            &.active {
+              font-size: 0rem;
+            }
+            h3 {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+    }
+    &-openMenu {
+      @include setSize(100%, 3.5rem);
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      &.active {
+        figure {
+          img {
+            transform: rotate(5deg);
+          }
+        }
+      }
+      figure {
+        @include setSize(3rem, 3rem);
+        @include absolutely_Center();
+        cursor: pointer;
+        border: 1px solid $leaf-gray;
+        border-radius: 50%;
+        opacity: 0.7;
+        transition: 0.3s;
+        &:hover {
+          border: 1px solid $cadet-blue;
+          opacity: 1;
+        }
+        img {
+          @include setSize();
+          transition: 0.3s;
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  &-wrapper {
+    @include setSize(calc(100% - 15rem), auto);
+    padding: 1.5rem;
+    background: #dee1e7;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
+    &.active {
+      width: calc(100% - 5rem);
+    }
+    &-toolBar {
+      @include setSize(100%, 4rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-searchBar {
+        @include setSize(95%, 100%);
+        position: relative;
+        padding: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+          @include setSize();
+          outline: none;
+          border: none;
+          border-radius: 1rem;
+          padding: 0 3rem;
+          font-size: 1.1rem;
+        }
+        img {
+          position: absolute;
+          cursor: pointer;
+          &:first-child {
+            left: 1rem;
+          }
+          &:last-child {
+            right: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s;
+            &.active {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+      &-user {
+        border-radius: 1rem;
+        cursor: pointer;
+        &-box {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          position: relative;
+          figure {
+            img {
+              @include setSize(2.5rem, 2.5rem);
+              border-radius: 50%;
+            }
+          }
+          &-listOption {
+            @include setSize(13rem, 0rem);
+            border-radius: 0.8rem;
+            background: $cadet-blue;
+            position: absolute;
+            z-index: 50;
+            top: 3.5rem;
+            left: -10rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.2s;
+            &.active {
+              height: 8rem;
+              opacity: 1;
+              visibility: visible;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: -12px;
+              right: 1.2rem;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-bottom: 12px solid $cadet-blue;
+            }
+            li {
+              @include setSize(100%, 3rem);
+              border-radius: 0.5rem;
+              list-style: none;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              transition: 0.2s;
+              p {
+                color: whitesmoke;
+                margin-left: 0.5rem;
+              }
+              &:hover {
+                background: #f9fafe;
+                p {
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // Waitting For The Next SCSS
+    &-staff {
+      @include setSize(100%, auto);
+      padding: 0.5rem 0;
+      &-listAct {
+        @include setSize(100%, auto);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4rem;
+        &-option {
+          @include setSize(calc(100% / 3.2), 12rem);
+          background: white;
+          border-radius: 1rem;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          transition: 0.3s;
+          text-align: center;
+          &:hover {
+            background: lightseagreen;
+          }
+          &-icon,
+          &-title {
+            @include setSize(100%, 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &-title {
+            h3 {
+              font-size: 1.5rem;
+              font-weight: 450;
+            }
+          }
+        }
+      }
+      &-statitic,
+      &-allStaffData {
+        @include setSize(100%, 30rem);
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        border-radius: 1rem;
+        background: white;
+        padding: 1rem;
+        &-title {
+          @include setSize(100%, auto);
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 450;
+          }
+        }
+      }
+    }
+    // Code Right here
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 18px;
+  }
+  .container {
+    &-wrapper {
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 15px;
+  }
+  .container {
+    &-wrapper {
+      &-staff {
+        &-listAct {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 15px;
+  }
+  .container {
+    &-wrapper {
+      &-staff {
+        &-listAct {
+          &-option {
+            width: 100%;
+            height: 10rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  * {
+    font-size: 13px;
+  }
+}
