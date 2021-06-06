@@ -1,0 +1,287 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include setSize(100%, 100%);
+  background: rgba($color: black, $alpha: 0.6);
+  transition: 0.3s;
+  z-index: 50;
+  opacity: 1;
+  visibility: visible;
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &-popup {
+    @include setSize(28rem, 15rem);
+    background: white;
+    @include absolutely_Center();
+    border-radius: 1rem;
+    padding: 2rem;
+    &-title {
+      @include setSize(100%, 50%);
+      text-align: center;
+      h2 {
+        font-weight: 450;
+        font-size: 2rem;
+        line-height: 5rem;
+      }
+    }
+    &-option {
+      @include setSize(100%, 50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        display: inline-block;
+        @include setSize(48%, 70%);
+        text-align: center;
+        border-radius: 0.5rem;
+        line-height: 4rem;
+        transition: 0.3s;
+        border: 2px solid $leaf-gray;
+        cursor: pointer;
+        font-size: 1.2rem;
+        &:first-child {
+          background: $light-blue;
+          color: white;
+          border: 2px solid $light-blue;
+          opacity: 0.9;
+          &:hover {
+            opacity: 1;
+          }
+        }
+        &:last-child:hover {
+          border: 2px solid black;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  @include setSize(100%, 50rem);
+  position: relative;
+  top: $header-height;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  &-fillInfo {
+    @include setSize(60%, auto);
+    position: relative;
+    &-box {
+      @include setSize(50%);
+      @include absolutely_Center();
+      padding: 2rem 0;
+      &-title {
+        @include setSize(100%, 4rem);
+        margin-bottom: 1rem;
+        h2 {
+          font-size: 2.3rem;
+          font-weight: 450;
+        }
+      }
+      &-inputData {
+        @include setSize(100%, 6rem);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 0.5rem;
+        &-top {
+          @include setSize(100%, 70%);
+          position: relative;
+          input {
+            @include setSize();
+            @include reset_Input_Text();
+            font-size: 1.2rem;
+            border-radius: 0.8rem;
+            padding-top: 1.6rem;
+            padding-left: 2rem;
+            color: white;
+            position: relative;
+            transition: 0.2s;
+            cursor: text;
+            &.active {
+              box-shadow: 1px 1px 8px $sky-blue;
+              border: 1px solid $sky-blue;
+              color: black;
+              &::after {
+                height: 0;
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 1rem;
+              right: 0.2rem;
+              width: 1.5rem;
+              height: 3rem;
+              background: white;
+              transition: 0.2s;
+            }
+          }
+          span {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            pointer-events: none;
+            z-index: 20;
+            &.active {
+              font-size: 0.95rem;
+              top: 0.5rem;
+              ~ input {
+                color: black;
+              }
+            }
+          }
+        }
+        &-bot {
+          @include setSize(100%, 30%);
+          span {
+            font-size: 1rem;
+            line-height: 170%;
+            color: red;
+          }
+        }
+      }
+      &-checkBtn {
+        @include setSize(100%, 5rem);
+        button {
+          @include setSize();
+          border: none;
+          outline: none;
+          background: $light-blue;
+          font-size: 1.3rem;
+          border-radius: 0.5rem;
+          color: white;
+          cursor: pointer;
+          opacity: 0.8;
+          transition: 0.3s;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &-checkout {
+    @include setSize(40%, 80%);
+    position: relative;
+    &-box {
+      @include setSize(100%, 50%);
+      @include absolutely_Center();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 2rem;
+      &-prdInfo {
+        @include setSize(100%, 80%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-overall {
+          @include setSize(100%, 80%);
+          &-table {
+            @include setSize();
+            font-size: 1.3rem;
+          }
+        }
+        &-price {
+          @include setSize(100%, 20%);
+          margin-top: 1rem;
+          span {
+            font-size: 1.4rem;
+            font-weight: bolder;
+          }
+        }
+      }
+      &-paid {
+        @include setSize(100%, 4rem);
+        button {
+          @include setSize();
+          border: none;
+          outline: none;
+          color: white;
+          font-size: 1.2rem;
+          border-radius: 0.5rem;
+          background: $leaf-gray;
+          transition: 0.3s;
+          pointer-events: none;
+          &.active {
+            background: $apple-pink;
+            cursor: pointer;
+            pointer-events: all;
+            opacity: 0.8;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 16px;
+  }
+  .container {
+    flex-direction: column;
+    height: 80rem;
+    position: relative;
+    &-fillInfo {
+      width: 100%;
+      height: 50%;
+    }
+    &-checkout {
+      width: 100%;
+      height: 50%;
+      &-box {
+        width: 60%;
+        height: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 13px;
+  }
+}
